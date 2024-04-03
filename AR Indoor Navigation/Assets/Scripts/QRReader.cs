@@ -8,14 +8,15 @@ using ZXing;
 
 public class QRReader : MonoBehaviour
 {
-    public Renderer cubeRenderer;
-
     [SerializeField]
     private ARSession session;
     [SerializeField]
     private XROrigin sessionOrigin;
     [SerializeField]
     private ARCameraManager cameraManager;
+    [SerializeField]
+    private List<Target> navigationTargetObjects = new List<Target>();
+
 
     private Texture2D cameraImageTexture;
     private IBarcodeReader reader = new BarcodeReader(); //Barcode reader instance
@@ -32,7 +33,7 @@ public class QRReader : MonoBehaviour
         //use the result
         if (result != null)
         {
-
+            SetQrCodeRecenterTarget(result.Text);
         }
     }
 
@@ -54,8 +55,8 @@ public class QRReader : MonoBehaviour
 
         var conversionParams = new XRCpuImage.ConversionParams
         {
-            inputRect = new RectInt(0, 0, image.width / 2, image.height / 2),
-            outputDimensions = new Vector2Int(image.width / 2, image.height / 2),
+            inputRect = new RectInt(0, 0, image.width, image.height),
+            outputDimensions = new Vector2Int(image.width, image.height),
             outputFormat = TextureFormat.RGBA32,
             transformation = XRCpuImage.Transformation.MirrorY
         };
@@ -80,5 +81,16 @@ public class QRReader : MonoBehaviour
 
         }
 
+    }
+    private void SetQrCodeRecenterTarget(string targetText)
+    {
+        Target currentTarget = navigationTargetObjects.Find(x => x.Name.ToLower().Equals(targetText.ToLower()));
+        if (currentTarget != null)
+        {
+           // session.Reset();
+            //sets the postion and rotation to the target
+            sessionOrigin.transform.position = currentTarget.PositionObject.transform.position;
+            sessionOrigin.transform.rotation = currentTarget.PositionObject.transform.rotation;
+        }
     }
 }
