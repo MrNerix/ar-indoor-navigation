@@ -154,8 +154,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0f52090ccc59a141bc5a9947f1ce91e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  topDownCamera: {fileID: 65284394}
-  navTargetObject: {fileID: 680524793}
+  navigationTargetDropDown: {fileID: 1101008988}
+  navigationTargetObjects:
+  - Name: 
+    PositionObject: {fileID: 0}
+  - Name: 
+    PositionObject: {fileID: 0}
+  - Name: 
+    PositionObject: {fileID: 0}
 --- !u!120 &40919616
 LineRenderer:
   serializedVersion: 2
@@ -780,7 +786,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 180137894}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 40919615}
+        m_TargetAssemblyTypeName: SetNav, Assembly-CSharp
+        m_MethodName: ToggleVisibility
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &180137894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1952,13 +1970,13 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 40919615}
+        m_TargetAssemblyTypeName: SetNav, Assembly-CSharp
+        m_MethodName: SetCurrentNavigationTarget
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
