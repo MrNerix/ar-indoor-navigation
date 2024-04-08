@@ -24,6 +24,9 @@ public class SetNav : MonoBehaviour
         path = new NavMeshPath();
         line = transform.GetComponent<LineRenderer>();
         line.enabled = lineToggle;
+
+
+
     }
 
     // Update is called once per frame
