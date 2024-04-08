@@ -67,7 +67,6 @@
     <Compile Include="Assets\Scripts\SetNav.cs" />
     <Compile Include="Assets\Scripts\QRReader.cs" />
     <Compile Include="Assets\Scripts\Target.cs" />
-    <Compile Include="Assets\Scripts\DropDown.cs" />
     <Compile Include="Assets\Scripts\SceneLoader.cs" />
   </ItemGroup>
   <ItemGroup>
