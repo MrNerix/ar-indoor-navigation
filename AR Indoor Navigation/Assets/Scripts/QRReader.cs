@@ -19,22 +19,10 @@ public class QRReader : MonoBehaviour
 
 
     private Texture2D cameraImageTexture;
-    private IBarcodeReader reader = new BarcodeReader(); //Barcode reader instance
-    // Update is called once per frame
+    private IBarcodeReader reader = new BarcodeReader();
     private void Update()
     {
-        //Graphics.Blit(null, targetRenderTexture, aRCameraBackground.material);
-        //cameraImageTexture = new Texture2D(targetRenderTexture.width, targetRenderTexture.height, TextureFormat.RGBA32, false);
-        //Graphics.CopyTexture(targetRenderTexture, cameraImageTexture);
 
-        //detects and decodes the barcode inside the bitmap
-        var result = reader.Decode(cameraImageTexture.GetPixels32(), cameraImageTexture.width, cameraImageTexture.height);
-
-        //use the result
-        if (result != null)
-        {
-            SetQrCodeRecenterTarget(result.Text);
-        }
     }
 
     private void OnEnable()
@@ -55,15 +43,25 @@ public class QRReader : MonoBehaviour
 
         var conversionParams = new XRCpuImage.ConversionParams
         {
+            // Get entire image
             inputRect = new RectInt(0, 0, image.width, image.height),
-            outputDimensions = new Vector2Int(image.width, image.height),
+
+            // Downsample by 2
+            outputDimensions = new Vector2Int(image.width / 2, image.height / 2),
+
+            // Choose RGBA format
             outputFormat = TextureFormat.RGBA32,
+
+            // Flip across the vertical axis (mirror image)
             transformation = XRCpuImage.Transformation.MirrorY
         };
 
         int size = image.GetConvertedDataSize(conversionParams);
         var buffer = new NativeArray<byte>(size, Allocator.Temp);
+
         image.Convert(conversionParams, buffer);
+
+
         image.Dispose();
 
         cameraImageTexture = new Texture2D(
@@ -78,7 +76,7 @@ public class QRReader : MonoBehaviour
         var result = reader.Decode(cameraImageTexture.GetPixels32(), cameraImageTexture.width, cameraImageTexture.height);
         if (result != null)
         {
-
+            SetQrCodeRecenterTarget(result.Text);
         }
 
     }
@@ -87,8 +85,8 @@ public class QRReader : MonoBehaviour
         Target currentTarget = navigationTargetObjects.Find(x => x.Name.ToLower().Equals(targetText.ToLower()));
         if (currentTarget != null)
         {
-           // session.Reset();
-            //sets the postion and rotation to the target
+            session.Reset();
+
             sessionOrigin.transform.position = currentTarget.PositionObject.transform.position;
             sessionOrigin.transform.rotation = currentTarget.PositionObject.transform.rotation;
         }
