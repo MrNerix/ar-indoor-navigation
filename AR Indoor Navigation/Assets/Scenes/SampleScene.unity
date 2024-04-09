@@ -3946,36 +3946,29 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 680524797}
-  - {fileID: 1032281302}
-  - {fileID: 933281813}
   - {fileID: 1375274351}
+  - {fileID: 95284098}
   - {fileID: 941090849}
-  - {fileID: 994750465}
-  - {fileID: 673316484}
-  - {fileID: 1593493731}
-  - {fileID: 1770508007}
-  - {fileID: 374376860}
-  - {fileID: 285656754}
-  - {fileID: 824268047}
-  - {fileID: 171231704}
-  - {fileID: 638401279}
-  - {fileID: 960151507}
-  - {fileID: 811249838}
+  - {fileID: 395649829}
+  - {fileID: 1774318817}
   - {fileID: 2066306852}
   - {fileID: 154715062}
-  - {fileID: 1774318817}
+  - {fileID: 811249838}
+  - {fileID: 824268047}
+  - {fileID: 374376860}
+  - {fileID: 1593493731}
+  - {fileID: 994750465}
   - {fileID: 1114859806}
   - {fileID: 475867737}
   - {fileID: 861966365}
   - {fileID: 663358651}
   - {fileID: 736054148}
   - {fileID: 1618460927}
-  - {fileID: 1363335518}
-  - {fileID: 1051409739}
   - {fileID: 1322157356}
-  - {fileID: 95284098}
-  - {fileID: 395649829}
+  - {fileID: 1363335518}
+  - {fileID: 680524797}
+  - {fileID: 1032281302}
+  - {fileID: 933281813}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1073342969
@@ -4268,6 +4261,8 @@ MonoBehaviour:
     - m_Text: Location 1
       m_Image: {fileID: 0}
     - m_Text: Location 2
+      m_Image: {fileID: 0}
+    - m_Text: Location 3
       m_Image: {fileID: 0}
     - m_Text: Location 3
       m_Image: {fileID: 0}
@@ -6406,7 +6401,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1008299477}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.6701307
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
