@@ -4135,7 +4135,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1080348808}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 40919615}
+        m_TargetAssemblyTypeName: SetNav, Assembly-CSharp
+        m_MethodName: ToggleVisibility
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1080348808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4265,19 +4277,19 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Elevator 1
+    - m_Text: Elevator_1
       m_Image: {fileID: 0}
-    - m_Text: Elevator 2
+    - m_Text: Elevator_2
       m_Image: {fileID: 0}
-    - m_Text: Stairs 1
+    - m_Text: Stairs_1
       m_Image: {fileID: 0}
-    - m_Text: Stairs 2
+    - m_Text: Stairs_2
       m_Image: {fileID: 0}
-    - m_Text: WC 1
+    - m_Text: WC_1
       m_Image: {fileID: 0}
-    - m_Text: WC 2
+    - m_Text: WC_2
       m_Image: {fileID: 0}
-    - m_Text: WC Handicap
+    - m_Text: WC_HC
       m_Image: {fileID: 0}
     - m_Text: Lockers
       m_Image: {fileID: 0}
@@ -5639,7 +5651,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Elevator 1
+  m_text: Elevator_1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
