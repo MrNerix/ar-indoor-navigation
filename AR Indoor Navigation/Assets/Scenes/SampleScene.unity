@@ -3562,7 +3562,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 2}
-  m_SizeDelta: {x: 0, y: 303.1504}
+  m_SizeDelta: {x: 0, y: 750}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &998549027
 MonoBehaviour:
@@ -3946,36 +3946,36 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 680524797}
-  - {fileID: 1032281302}
-  - {fileID: 933281813}
   - {fileID: 1375274351}
+  - {fileID: 95284098}
   - {fileID: 941090849}
-  - {fileID: 994750465}
-  - {fileID: 673316484}
-  - {fileID: 1593493731}
-  - {fileID: 1770508007}
-  - {fileID: 374376860}
-  - {fileID: 285656754}
-  - {fileID: 824268047}
-  - {fileID: 171231704}
+  - {fileID: 395649829}
   - {fileID: 638401279}
+  - {fileID: 736054148}
+  - {fileID: 1051409739}
+  - {fileID: 171231704}
+  - {fileID: 285656754}
+  - {fileID: 1770508007}
+  - {fileID: 673316484}
   - {fileID: 960151507}
-  - {fileID: 811249838}
+  - {fileID: 1774318817}
   - {fileID: 2066306852}
   - {fileID: 154715062}
-  - {fileID: 1774318817}
+  - {fileID: 811249838}
+  - {fileID: 824268047}
+  - {fileID: 374376860}
+  - {fileID: 1593493731}
+  - {fileID: 994750465}
   - {fileID: 1114859806}
   - {fileID: 475867737}
   - {fileID: 861966365}
   - {fileID: 663358651}
-  - {fileID: 736054148}
   - {fileID: 1618460927}
-  - {fileID: 1363335518}
-  - {fileID: 1051409739}
   - {fileID: 1322157356}
-  - {fileID: 95284098}
-  - {fileID: 395649829}
+  - {fileID: 1363335518}
+  - {fileID: 680524797}
+  - {fileID: 1032281302}
+  - {fileID: 933281813}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1073342969
@@ -4135,7 +4135,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1080348808}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 40919615}
+        m_TargetAssemblyTypeName: SetNav, Assembly-CSharp
+        m_MethodName: ToggleVisibility
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1080348808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4260,16 +4272,70 @@ MonoBehaviour:
   m_CaptionText: {fileID: 1508620494}
   m_CaptionImage: {fileID: 0}
   m_Placeholder: {fileID: 0}
-  m_ItemText: {fileID: 0}
+  m_ItemText: {fileID: 1224297217}
   m_ItemImage: {fileID: 0}
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Location 1
+    - m_Text: Elevator_1
       m_Image: {fileID: 0}
-    - m_Text: Location 2
+    - m_Text: Elevator_2
       m_Image: {fileID: 0}
-    - m_Text: Location 3
+    - m_Text: Stairs_1
+      m_Image: {fileID: 0}
+    - m_Text: Stairs_2
+      m_Image: {fileID: 0}
+    - m_Text: WC_1
+      m_Image: {fileID: 0}
+    - m_Text: WC_2
+      m_Image: {fileID: 0}
+    - m_Text: WC_HC
+      m_Image: {fileID: 0}
+    - m_Text: Lockers
+      m_Image: {fileID: 0}
+    - m_Text: Printer
+      m_Image: {fileID: 0}
+    - m_Text: Coffee
+      m_Image: {fileID: 0}
+    - m_Text: C04.01
+      m_Image: {fileID: 0}
+    - m_Text: C04.03
+      m_Image: {fileID: 0}
+    - m_Text: C04.04
+      m_Image: {fileID: 0}
+    - m_Text: C04.05
+      m_Image: {fileID: 0}
+    - m_Text: C04.06
+      m_Image: {fileID: 0}
+    - m_Text: C04.07
+      m_Image: {fileID: 0}
+    - m_Text: C04.08
+      m_Image: {fileID: 0}
+    - m_Text: C04.09
+      m_Image: {fileID: 0}
+    - m_Text: C04.10
+      m_Image: {fileID: 0}
+    - m_Text: C04.11
+      m_Image: {fileID: 0}
+    - m_Text: C04.12
+      m_Image: {fileID: 0}
+    - m_Text: C04.13a
+      m_Image: {fileID: 0}
+    - m_Text: C04.13b
+      m_Image: {fileID: 0}
+    - m_Text: C04.14
+      m_Image: {fileID: 0}
+    - m_Text: C04.15
+      m_Image: {fileID: 0}
+    - m_Text: C04.16
+      m_Image: {fileID: 0}
+    - m_Text: C04.17
+      m_Image: {fileID: 0}
+    - m_Text: C04.18
+      m_Image: {fileID: 0}
+    - m_Text: C04.19
+      m_Image: {fileID: 0}
+    - m_Text: C04.20
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4358,7 +4424,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.0000076293945}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &1114040580
@@ -5585,7 +5651,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Location 1
+  m_text: Elevator_1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
