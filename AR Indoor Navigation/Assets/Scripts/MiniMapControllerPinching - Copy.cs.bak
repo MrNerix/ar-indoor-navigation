@@ -1,0 +1,76 @@
+using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
+
+public class MiniMapControllerPinching : MonoBehaviour, IDragHandler, IPointerDownHandler, IScrollHandler
+{
+    private Vector2 lastPanPosition;
+    private int panFingerId; // Touch mode only
+
+    private float zoomSpeedTouch = 0.1f;
+    private float[] bounds = new float[] { 10f, 100f }; // Min and Max Zoom
+    private RectTransform rectTransform;
+
+    void Awake()
+    {
+        rectTransform = GetComponent<RectTransform>();
+    }
+
+    // Dragging the image
+    public void OnDrag(PointerEventData eventData)
+    {
+        if (eventData.pointerId < -1 || eventData.pointerId == panFingerId)
+        {
+            Vector2 currentPanPosition = eventData.position;
+            Vector2 delta = currentPanPosition - lastPanPosition;
+            rectTransform.anchoredPosition += delta;
+            lastPanPosition = currentPanPosition;
+        }
+    }
+
+    // Dragging the image
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        lastPanPosition = eventData.position;
+        panFingerId = eventData.pointerId;
+    }
+
+    // Pinching the image
+    public void OnScroll(PointerEventData data)
+    {
+        Vector3 scale = rectTransform.localScale;
+        scale += Vector3.one * (data.scrollDelta.y * zoomSpeedTouch);
+        scale.x = Mathf.Clamp(scale.x, bounds[0], bounds[1]);
+        scale.y = Mathf.Clamp(scale.y, bounds[0], bounds[1]);
+        rectTransform.localScale = scale;
+    }
+
+    // Pinching the image
+    private void Zoom(float increment)
+    {
+        Vector3 scale = rectTransform.localScale;
+        scale += Vector3.one * increment;
+        scale.x = Mathf.Clamp(scale.x, bounds[0], bounds[1]);
+        scale.y = Mathf.Clamp(scale.y, bounds[0], bounds[1]);
+        rectTransform.localScale = scale;
+    }
+
+    void Update()
+    {
+        if (Input.touchCount == 2)
+        {
+            Touch touchZero = Input.GetTouch(0);
+            Touch touchOne = Input.GetTouch(1);
+
+            Vector2 touchZeroPrevPos = touchZero.position - touchZero.deltaPosition;
+            Vector2 touchOnePrevPos = touchOne.position - touchOne.deltaPosition;
+
+            float prevMagnitude = (touchZeroPrevPos - touchOnePrevPos).magnitude;
+            float currentMagnitude = (touchZero.position - touchOne.position).magnitude;
+
+            float difference = currentMagnitude - prevMagnitude;
+
+            Zoom(difference * zoomSpeedTouch);
+        }
+    }
+}
