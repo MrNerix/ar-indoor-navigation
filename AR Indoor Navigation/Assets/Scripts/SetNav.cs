@@ -40,7 +40,11 @@ public class SetNav : MonoBehaviour
             NavMesh.CalculatePath(transform.position, targetPosition, NavMesh.AllAreas, path);
             line.positionCount = path.corners.Length;
             line.SetPositions(path.corners);
-            float length = CalculateLineLength(path.corners);
+            if (CalculateLineLength(path.corners) <= 2)
+            {
+
+            }
+
             //Debug.Log("Line length: " + length);
         }
     }
