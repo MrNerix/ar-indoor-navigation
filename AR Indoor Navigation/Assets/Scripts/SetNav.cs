@@ -17,7 +17,7 @@ public class SetNav : MonoBehaviour
     private Vector3 targetPosition = Vector3.zero;
     private bool lineToggle = false;
 
-    public GameObject navMangager; 
+    public GameObject navMangager;
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +40,8 @@ public class SetNav : MonoBehaviour
             NavMesh.CalculatePath(transform.position, targetPosition, NavMesh.AllAreas, path);
             line.positionCount = path.corners.Length;
             line.SetPositions(path.corners);
+            float length = CalculateLineLength(path.corners);
+            //Debug.Log("Line length: " + length);
         }
     }
 
@@ -59,4 +61,15 @@ public class SetNav : MonoBehaviour
         lineToggle = !lineToggle;
         line.enabled = lineToggle;
     }
+
+    private float CalculateLineLength(Vector3[] corners)
+    {
+        float length = 0f;
+        for (int i = 0; i < corners.Length - 1; i++)
+        {
+            length += Vector3.Distance(corners[i], corners[i + 1]);
+        }
+        return length;
+    }
+
 }
