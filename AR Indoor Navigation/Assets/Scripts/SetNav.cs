@@ -17,6 +17,8 @@ public class SetNav : MonoBehaviour
     private Vector3 targetPosition = Vector3.zero;
     private bool lineToggle = false;
 
+    public GameObject navMangager; 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +26,8 @@ public class SetNav : MonoBehaviour
         line = transform.GetComponent<LineRenderer>();
         line.enabled = lineToggle;
 
-
+        navMangager = GameObject.Find("NavigationManager");
+        SetCurrentNavigationTarget(navMangager.GetComponent<TargetValue>().GetTargetedText());
 
     }
 
@@ -40,10 +43,10 @@ public class SetNav : MonoBehaviour
         }
     }
 
-    public void SetCurrentNavigationTarget(int selectedValue)
+    public void SetCurrentNavigationTarget(string selectedText)
     {
         targetPosition = Vector3.zero;
-        string selectedText = navigationTargetDropDown.options[selectedValue].text;
+        //string selectedText = navigationTargetDropDown.options[selectedValue].text;
         Target currentTarget = navigationTargetObjects.Find(x => x.Name.Equals(selectedText));
         if (currentTarget != null)
         {
