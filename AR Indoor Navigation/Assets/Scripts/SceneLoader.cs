@@ -13,7 +13,10 @@ public class SceneLoader : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        if (gameObject.name == "NavigationManager")
+        {
+            DontDestroyOnLoad(gameObject);
+        }
     }
 
     public void SceneChange(int index)
