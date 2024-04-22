@@ -20,8 +20,21 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene(index);
     }
+    // To Main Menu (where filters and choose destination is) from Main Scene (navigation) 
+    public void ToSelection()
+    {
+        GameObject OldNavManager = GameObject.Find("NavigationManager");
 
-    public void SetTarget()
+        // Check if the GameObject exists
+        if (OldNavManager != null)
+        {
+            // If it exists, destroy it
+            Destroy(OldNavManager);
+        }
+        SceneManager.LoadScene("Main_Menu");
+    }
+    // To Main Scene (navigation) from Main Menu (where filters and choose destination is)
+    public void ToNavigation()
     {
         selectedText = navigationTargetDropDown.options[navigationTargetDropDown.value].text;
         SceneManager.LoadScene("Main_Scene");

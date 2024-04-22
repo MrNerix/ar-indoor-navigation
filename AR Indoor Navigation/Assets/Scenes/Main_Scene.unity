@@ -1522,6 +1522,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ecb1eed1bbd6a84cba0b4270613d192, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  navigationTargetDropDown: {fileID: 0}
+  selectedText: 
 --- !u!1 &411381040
 GameObject:
   m_ObjectHideFlags: 0
@@ -1954,8 +1956,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 407515126}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: SceneChange
-        m_Mode: 3
+        m_MethodName: ToSelection
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

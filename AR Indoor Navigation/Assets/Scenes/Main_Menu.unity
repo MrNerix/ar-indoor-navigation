@@ -3308,7 +3308,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 307854993}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: SetTarget
+        m_MethodName: ToNavigation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
