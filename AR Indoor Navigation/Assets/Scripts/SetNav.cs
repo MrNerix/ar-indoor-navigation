@@ -31,26 +31,28 @@ public class SetNav : MonoBehaviour
         line.enabled = lineToggle;
 
         navMangager = GameObject.Find("NavigationManager");
-        SetCurrentNavigationTarget(navMangager.GetComponent<TargetValue>().GetTargetedText());
+        SetCurrentNavigationTarget(navMangager.GetComponent<SceneLoader>().GetTargetedText());
 
     }
 
     // Update is called once per frame
     private void Update()
     {
+        Debug.Log("Line length: " + CalculateLineLength(path.corners) + ". target is " + navMangager.GetComponent<SceneLoader>().GetTargetedText());
 
         if (lineToggle && targetPosition != Vector3.zero)
         {
+
             NavMesh.CalculatePath(transform.position, targetPosition, NavMesh.AllAreas, path);
             line.positionCount = path.corners.Length;
             line.SetPositions(path.corners);
             if (isFinished == false && CalculateLineLength(path.corners) != 0 && CalculateLineLength(path.corners) <= 2)
             {
-                ArrivedAtDestinationText.text = "You have arrived at your destination: " + navMangager.GetComponent<TargetValue>().GetTargetedText();
+                ArrivedAtDestinationText.text = "You have arrived at your destination: " + navMangager.GetComponent<SceneLoader>().GetTargetedText();
                 isFinished = true;
                 StartCoroutine(ShowAndHideObject());
             }
-            Debug.Log("Line length: " + CalculateLineLength(path.corners));
+            //Debug.Log("Line length: " + CalculateLineLength(path.corners) + ". target is " + navMangager.GetComponent<TargetValue>().GetTargetedText());
         }
     }
 
