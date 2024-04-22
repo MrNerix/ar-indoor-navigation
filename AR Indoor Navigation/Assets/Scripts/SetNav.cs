@@ -3,19 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using TMPro;
+using UnityEngine.UI;
+using Unity.VisualScripting;
 
 public class SetNav : MonoBehaviour
 {
 
-    [SerializeField]
-    private TMP_Dropdown navigationTargetDropDown;
+    //[SerializeField]
+    //private TMP_Dropdown navigationTargetDropDown;
     [SerializeField]
     private List<Target> navigationTargetObjects = new List<Target>();
-
+    [SerializeField]
+    private TextMeshProUGUI ArrivedAtDestinationText;
     private NavMeshPath path;
     private LineRenderer line;
     private Vector3 targetPosition = Vector3.zero;
     private bool lineToggle = false;
+    private bool isFinished = false;
 
     public GameObject navMangager;
 
@@ -40,12 +44,13 @@ public class SetNav : MonoBehaviour
             NavMesh.CalculatePath(transform.position, targetPosition, NavMesh.AllAreas, path);
             line.positionCount = path.corners.Length;
             line.SetPositions(path.corners);
-            if (CalculateLineLength(path.corners) <= 2)
+            if (isFinished == false && CalculateLineLength(path.corners) != 0 && CalculateLineLength(path.corners) <= 2)
             {
-
+                ArrivedAtDestinationText.text = "You have arrived at your destination: " + navMangager.GetComponent<TargetValue>().GetTargetedText();
+                isFinished = true;
+                StartCoroutine(ShowAndHideObject());
             }
-
-            //Debug.Log("Line length: " + length);
+            Debug.Log("Line length: " + CalculateLineLength(path.corners));
         }
     }
 
@@ -74,6 +79,20 @@ public class SetNav : MonoBehaviour
             length += Vector3.Distance(corners[i], corners[i + 1]);
         }
         return length;
+    }
+
+    IEnumerator ShowAndHideObject()
+    {
+        Debug.Log("set true");
+        // Show the object
+        ArrivedAtDestinationText.gameObject.SetActive(true);
+
+        // Wait for 5 seconds
+        yield return new WaitForSeconds(5f);
+
+        // Hide the object after 5 seconds
+        ArrivedAtDestinationText.gameObject.SetActive(false);
+        Debug.Log("set false");
     }
 
 }

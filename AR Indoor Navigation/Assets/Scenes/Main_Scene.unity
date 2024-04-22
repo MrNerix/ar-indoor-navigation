@@ -154,7 +154,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0f52090ccc59a141bc5a9947f1ce91e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  navigationTargetDropDown: {fileID: 0}
   navigationTargetObjects:
   - Name: C04.18
     PositionObject: {fileID: 680524793}
@@ -212,6 +211,7 @@ MonoBehaviour:
     PositionObject: {fileID: 960151506}
   - Name: C04.01
     PositionObject: {fileID: 673316483}
+  ArrivedAtDestinationText: {fileID: 1198115357}
   navMangager: {fileID: 0}
 --- !u!120 &40919616
 LineRenderer:
@@ -4560,9 +4560,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You have arrived at your destination:
-
-    Elevator B02'
+  m_text: 'You have arrived at your destination:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
