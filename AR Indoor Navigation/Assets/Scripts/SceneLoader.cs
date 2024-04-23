@@ -40,7 +40,7 @@ public class SceneLoader : MonoBehaviour
     public void ToNavigation()
     {
         selectedText = navigationTargetDropDown.options[navigationTargetDropDown.value].text;
-        SceneManager.LoadScene("Main_Scene");
+        SceneManager.LoadScene("Navigation");
     }
     public string GetTargetedText()
     {
