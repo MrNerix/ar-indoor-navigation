@@ -154,7 +154,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0f52090ccc59a141bc5a9947f1ce91e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  navigationTargetDropDown: {fileID: 0}
   navigationTargetObjects:
   - Name: C04.18
     PositionObject: {fileID: 680524793}
