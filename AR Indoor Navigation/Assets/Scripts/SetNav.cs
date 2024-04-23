@@ -56,4 +56,10 @@ public class SetNav : MonoBehaviour
         lineToggle = !lineToggle;
         line.enabled = lineToggle;
     }
+
+    public void VoidTargetPosition() {
+        targetPosition = Vector3.zero;
+        line.enabled = false;
+        lineToggle = false;
+    }
 }
