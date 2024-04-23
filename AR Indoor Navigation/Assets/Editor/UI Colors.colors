@@ -43,3 +43,5 @@ MonoBehaviour:
     m_Color: {r: 0.54147387, g: 0.64167124, b: 0.6792453, a: 1}
   - m_Name: 
     m_Color: {r: 0.18396229, g: 0.18396229, b: 0.18396229, a: 1}
+  - m_Name: Filter Background
+    m_Color: {r: 0.23529412, g: 0.3882353, b: 0.50980395, a: 1}
