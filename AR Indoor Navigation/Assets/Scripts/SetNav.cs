@@ -11,6 +11,7 @@ public class SetNav : MonoBehaviour
     private TMP_Dropdown navigationTargetDropDown;
     [SerializeField]
     private List<Target> navigationTargetObjects = new List<Target>();
+    public TextMeshProUGUI locationNameTMP;
 
     private NavMeshPath path;
     private LineRenderer line;
@@ -44,6 +45,7 @@ public class SetNav : MonoBehaviour
     {
         targetPosition = Vector3.zero;
         string selectedText = navigationTargetDropDown.options[selectedValue].text;
+        locationNameTMP.text = selectedText;
         Target currentTarget = navigationTargetObjects.Find(x => x.Name.Equals(selectedText));
         if (currentTarget != null)
         {

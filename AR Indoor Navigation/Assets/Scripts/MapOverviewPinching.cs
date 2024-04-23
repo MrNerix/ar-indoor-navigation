@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class MapOverviewPinching : MonoBehaviour, IDragHandler, IPointerDownHandler, IScrollHandler
+public class MapOverviewPinching : MonoBehaviour, IDragHandler, IPointerDownHandler
 {
     public Camera topDownCameraFar;
     private Vector2 lastPanPosition;
@@ -11,21 +11,26 @@ public class MapOverviewPinching : MonoBehaviour, IDragHandler, IPointerDownHand
 
     private float zoomSpeedTouch = 0.001f;
     private float[] bounds = new float[] { 5f, 100f }; // Min and Max Zoom
-    private RectTransform rectTransform;
-    private RectTransform initialRectTransform;
+    private Transform transformCam;
 
     void Awake()
     {
-       rectTransform = GetComponent<RectTransform>();
+           transformCam = topDownCameraFar.transform;
     }
     public void OnDrag(PointerEventData eventData)
     {
-        // TODO: change the fucntion behaviour so that it doesnt change position of image, but rather of the camera
         if (eventData.pointerId < -1 || eventData.pointerId == panFingerId)
         {
             Vector2 currentPanPosition = eventData.position;
             Vector2 delta = currentPanPosition - lastPanPosition;
-            rectTransform.anchoredPosition += delta;
+            float newX = transformCam.position.x + delta.x/20;
+            float newZ = transformCam.position.z + delta.y/20;
+            float newY = transformCam.position.y;
+            Vector3 newPosition = new Vector3(newX, newY, newZ);
+        
+            // Apply the movement
+            transformCam.position = newPosition;
+            // Debug.Log("x " + newPosition.x + " | y " + newPosition.y  + " | z " + newPosition.z);
             lastPanPosition = currentPanPosition;
         }
     }
@@ -36,19 +41,10 @@ public class MapOverviewPinching : MonoBehaviour, IDragHandler, IPointerDownHand
         panFingerId = eventData.pointerId;
     }
 
-    public void OnScroll(PointerEventData eventData)
-    {
-        Vector3 scale = rectTransform.localScale;
-        scale += Vector3.one * (eventData.scrollDelta.y * zoomSpeedTouch);
-        scale.x = Mathf.Clamp(scale.x, bounds[0], bounds[1]);
-        scale.y = Mathf.Clamp(scale.y, bounds[0], bounds[1]);
-        rectTransform.localScale = scale;
-    }
-
    private void Zoom(float increment)
     {
         increment = increment * -1;
-        float fieldOfView =topDownCameraFar.fieldOfView + topDownCameraFar.fieldOfView * increment;
+        float fieldOfView = topDownCameraFar.fieldOfView + topDownCameraFar.fieldOfView * increment;
         fieldOfView = Mathf.Clamp(fieldOfView, bounds[0], bounds[1]);
         topDownCameraFar.fieldOfView = fieldOfView;
         // Debug.Log("AAA: " + diff);

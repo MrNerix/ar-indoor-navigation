@@ -212,6 +212,7 @@ MonoBehaviour:
     PositionObject: {fileID: 960151506}
   - Name: C04.01
     PositionObject: {fileID: 673316483}
+  locationNameTMP: {fileID: 1605312530}
 --- !u!120 &40919616
 LineRenderer:
   serializedVersion: 2
@@ -5158,7 +5159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 14.1453, y: -841804}
+  m_AnchoredPosition: {x: 14.1453, y: -1483004}
   m_SizeDelta: {x: 28.2906, y: 360.6635}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &1114040580
@@ -6381,7 +6382,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 500
-  field of view: 34.9
+  field of view: 25.1
   orthographic: 0
   orthographic size: 20
   m_Depth: 0
@@ -6682,7 +6683,7 @@ GameObject:
   - component: {fileID: 1605312531}
   - component: {fileID: 1605312530}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: LocationNameText (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6727,7 +6728,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Location 1
+  m_text: Location name
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7193,6 +7194,18 @@ MonoBehaviour:
       - m_Target: {fileID: 40919615}
         m_TargetAssemblyTypeName: SetNav, Assembly-CSharp
         m_MethodName: VoidTargetPosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 779975991}
+        m_TargetAssemblyTypeName: CanvasLightCameraManager, Assembly-CSharp
+        m_MethodName: ShowARModeCanvas
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7778,8 +7791,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.000030517578, y: 0}
-  m_SizeDelta: {x: 2033.7969, y: 2033.7969}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 2033.7969, y: 2036.5}
   m_Pivot: {x: 0, y: 0}
 --- !u!331 &1956178473
 SpriteMask:
