@@ -2553,6 +2553,7 @@ MonoBehaviour:
   blockSlider: {fileID: 801770912}
   floorSlider: {fileID: 1325555084}
   typeDropdown: {fileID: 41679094}
+  destinations: {fileID: 1338302919}
   chosenBlock: {fileID: 299377627}
   chosenFloor: {fileID: 977528694}
 --- !u!4 &868195803
@@ -5099,6 +5100,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 868195802}
+        m_TargetAssemblyTypeName: Filter, Assembly-CSharp
+        m_MethodName: ApplyFilters
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 770464512}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive

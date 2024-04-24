@@ -10,6 +10,7 @@ public class Filter : MonoBehaviour
     public Slider blockSlider;
     public Slider floorSlider;
     public TMP_Dropdown typeDropdown;
+    public TMP_Dropdown destinations;
     public TMP_Text chosenBlock;
     public TMP_Text chosenFloor;
 
@@ -83,6 +84,7 @@ public class Filter : MonoBehaviour
 
     public void ApplyFilters()
     {
+        destinations.ClearOptions();
         filteredOptions.Clear();
         if (typeDropdown.value == 0)
         {
@@ -95,11 +97,11 @@ public class Filter : MonoBehaviour
             filteredOptions.AddRange(coffeeSpots);
             filteredOptions.AddRange(printers);
             filteredOptions.AddRange(lockers);
-            Debug.Log(filteredOptions.Count);
         }
         else
         {
             filteredOptions.AddRange(listDictionary[typeDropdown.options[typeDropdown.value].text]);
+            destinations.AddOptions(filteredOptions);
         }
     }
 }
