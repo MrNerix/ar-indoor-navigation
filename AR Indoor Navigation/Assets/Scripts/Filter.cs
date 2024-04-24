@@ -1,9 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Filter : MonoBehaviour
 {
+
+    public Slider blockSlider;
+    public Slider floorSlider;
+    public TMP_Dropdown typeDropdown;
+
     // Lists (used before we implement a database)
     private List<string> classrooms = new List<string>();
     private List<string> groupRooms = new List<string>();
@@ -48,5 +55,13 @@ public class Filter : MonoBehaviour
         printers.Add("C04.Printer");
 
         lockers.Add("C04.Lockers");
+    }
+
+    public void ClearFilters()
+    {
+        blockSlider.value = 0f;
+        floorSlider.value = 0f;
+        typeDropdown.value = 0;
+        typeDropdown.RefreshShownValue();
     }
 }
