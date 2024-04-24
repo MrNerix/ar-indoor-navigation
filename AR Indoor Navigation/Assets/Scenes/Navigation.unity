@@ -185,27 +185,27 @@ MonoBehaviour:
     PositionObject: {fileID: 1363335517}
   - Name: C04.16
     PositionObject: {fileID: 1322157355}
-  - Name: Stairs_1
+  - Name: C04.Stairs_1
     PositionObject: {fileID: 941090848}
   - Name: C04.04
     PositionObject: {fileID: 1774318816}
-  - Name: Elevator_1
+  - Name: C04.Elevator_1
     PositionObject: {fileID: 1375274350}
-  - Name: Elevator_2
+  - Name: C04.Elevator_2
     PositionObject: {fileID: 95284097}
-  - Name: Stairs_2
+  - Name: C04.Stairs_2
     PositionObject: {fileID: 395649828}
-  - Name: WC_1
+  - Name: C04.WC_1
     PositionObject: {fileID: 638401278}
-  - Name: WC_2
+  - Name: C04.WC_2
     PositionObject: {fileID: 736054147}
-  - Name: WC_HC
+  - Name: C04.WC_HC
     PositionObject: {fileID: 1051409738}
-  - Name: Printer
+  - Name: C04.Printer
     PositionObject: {fileID: 285656753}
-  - Name: Lockers
+  - Name: C04.Lockers
     PositionObject: {fileID: 171231703}
-  - Name: Coffee
+  - Name: C04.Coffee
     PositionObject: {fileID: 1770508006}
   - Name: C04.03
     PositionObject: {fileID: 960151506}
@@ -584,7 +584,7 @@ GameObject:
   - component: {fileID: 95284100}
   - component: {fileID: 95284099}
   m_Layer: 0
-  m_Name: Elevator_2
+  m_Name: C04.Elevator_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -966,7 +966,7 @@ GameObject:
   - component: {fileID: 171231706}
   - component: {fileID: 171231705}
   m_Layer: 0
-  m_Name: Lockers
+  m_Name: C04.Lockers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1191,7 +1191,7 @@ GameObject:
   - component: {fileID: 285656756}
   - component: {fileID: 285656755}
   m_Layer: 0
-  m_Name: Printer
+  m_Name: C04.Printer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1401,7 +1401,7 @@ GameObject:
   - component: {fileID: 395649831}
   - component: {fileID: 395649830}
   m_Layer: 0
-  m_Name: Stairs_2
+  m_Name: C04.Stairs_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1912,7 +1912,7 @@ GameObject:
   - component: {fileID: 638401281}
   - component: {fileID: 638401280}
   m_Layer: 0
-  m_Name: WC_1
+  m_Name: C04.WC_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2426,7 +2426,7 @@ GameObject:
   - component: {fileID: 736054150}
   - component: {fileID: 736054149}
   m_Layer: 0
-  m_Name: WC_2
+  m_Name: C04.WC_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3164,7 +3164,7 @@ GameObject:
   - component: {fileID: 941090851}
   - component: {fileID: 941090850}
   m_Layer: 0
-  m_Name: Stairs_1
+  m_Name: C04.Stairs_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3894,7 +3894,7 @@ GameObject:
   - component: {fileID: 1051409741}
   - component: {fileID: 1051409740}
   m_Layer: 0
-  m_Name: WC_HC
+  m_Name: C04.WC_HC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4695,7 +4695,7 @@ GameObject:
   - component: {fileID: 1375274353}
   - component: {fileID: 1375274352}
   m_Layer: 0
-  m_Name: Elevator_1
+  m_Name: C04.Elevator_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5661,7 +5661,7 @@ GameObject:
   - component: {fileID: 1770508009}
   - component: {fileID: 1770508008}
   m_Layer: 0
-  m_Name: Coffee
+  m_Name: C04.Coffee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

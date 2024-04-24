@@ -4052,25 +4052,25 @@ MonoBehaviour:
     m_Options:
     - m_Text: Choose Location
       m_Image: {fileID: 0}
-    - m_Text: Elevator_1
+    - m_Text: C04.Elevator_1
       m_Image: {fileID: 0}
-    - m_Text: Elevator_2
+    - m_Text: C04.Elevator_2
       m_Image: {fileID: 0}
-    - m_Text: Stairs_1
+    - m_Text: C04.Stairs_1
       m_Image: {fileID: 0}
-    - m_Text: Stairs_2
+    - m_Text: C04.Stairs_2
       m_Image: {fileID: 0}
-    - m_Text: WC_1
+    - m_Text: C04.WC_1
       m_Image: {fileID: 0}
-    - m_Text: WC_2
+    - m_Text: C04.WC_2
       m_Image: {fileID: 0}
-    - m_Text: WC_HC
+    - m_Text: C04.WC_HC
       m_Image: {fileID: 0}
-    - m_Text: Lockers
+    - m_Text: C04.Lockers
       m_Image: {fileID: 0}
-    - m_Text: Printer
+    - m_Text: C04.Printer
       m_Image: {fileID: 0}
-    - m_Text: Coffee
+    - m_Text: C04.Coffee
       m_Image: {fileID: 0}
     - m_Text: C04.01
       m_Image: {fileID: 0}

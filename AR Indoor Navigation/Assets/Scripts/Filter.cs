@@ -30,22 +30,22 @@ public class Filter : MonoBehaviour
         groupRooms.Add("C04.10");
         groupRooms.Add("C04.11");
 
-        wc.Add("C04.60");
-        wc.Add("C04.61");
+        wc.Add("C04.WC_1");
+        wc.Add("C04.WC_2");
 
-        wcHandicapped.Add("C04.63");
+        wcHandicapped.Add("C04.WC_HC");
 
-        stairs.Add("C04.50");
-        stairs.Add("C04.52");
-        stairs.Add("C04.54");
+        stairs.Add("C04.Stairs_1");
+        stairs.Add("C04.Stairs_2");
+        //stairs.Add("C04.54");
 
-        elevators.Add("C04.51");
-        elevators.Add("C04.53");
-        elevators.Add("C04.55");
+        elevators.Add("C04.Elevator_1");
+        elevators.Add("C04.Elevator_2");
+        //elevators.Add("C04.55");
 
         coffeeSpots.Add("C04.Coffee");
 
-        printers.Add("C04.Print");
+        printers.Add("C04.Printer");
 
         lockers.Add("C04.Lockers");
     }
