@@ -228,7 +228,7 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: Elevator
       m_Image: {fileID: 0}
-    - m_Text: Coffee
+    - m_Text: Coffee Spot
       m_Image: {fileID: 0}
     - m_Text: Printer
       m_Image: {fileID: 0}
@@ -2553,6 +2553,8 @@ MonoBehaviour:
   blockSlider: {fileID: 801770912}
   floorSlider: {fileID: 1325555084}
   typeDropdown: {fileID: 41679094}
+  chosenBlock: {fileID: 299377627}
+  chosenFloor: {fileID: 977528694}
 --- !u!4 &868195803
 Transform:
   m_ObjectHideFlags: 0

@@ -10,8 +10,13 @@ public class Filter : MonoBehaviour
     public Slider blockSlider;
     public Slider floorSlider;
     public TMP_Dropdown typeDropdown;
+    public TMP_Text chosenBlock;
+    public TMP_Text chosenFloor;
 
     // Lists (used before we implement a database)
+
+    public Dictionary<string, List<string>> listDictionary = new Dictionary<string, List<string>>();
+    private List<string> filteredOptions = new List<string>();
     private List<string> classrooms = new List<string>();
     private List<string> groupRooms = new List<string>();
     private List<string> wc = new List<string>();
@@ -24,6 +29,17 @@ public class Filter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        listDictionary.Add("Classroom", classrooms);
+        listDictionary.Add("Group Room", groupRooms);
+        listDictionary.Add("WC", wc);
+        listDictionary.Add("WC (Handicap)", wcHandicapped);
+        listDictionary.Add("Stairs", stairs);
+        listDictionary.Add("Elevator", elevators);
+        listDictionary.Add("Coffee Spot", coffeeSpots);
+        listDictionary.Add("Printer", printers);
+        listDictionary.Add("Lockers", lockers);
+
         classrooms.Add("C04.12");
         classrooms.Add("C04.13a");
         classrooms.Add("C04.13b");
@@ -63,5 +79,27 @@ public class Filter : MonoBehaviour
         floorSlider.value = 0f;
         typeDropdown.value = 0;
         typeDropdown.RefreshShownValue();
+    }
+
+    public void ApplyFilters()
+    {
+        filteredOptions.Clear();
+        if (typeDropdown.value == 0)
+        {
+            filteredOptions.AddRange(classrooms);
+            filteredOptions.AddRange(groupRooms);
+            filteredOptions.AddRange(wc);
+            filteredOptions.AddRange(wcHandicapped);
+            filteredOptions.AddRange(stairs);
+            filteredOptions.AddRange(elevators);
+            filteredOptions.AddRange(coffeeSpots);
+            filteredOptions.AddRange(printers);
+            filteredOptions.AddRange(lockers);
+            Debug.Log(filteredOptions.Count);
+        }
+        else
+        {
+            filteredOptions.AddRange(listDictionary[typeDropdown.options[typeDropdown.value].text]);
+        }
     }
 }
