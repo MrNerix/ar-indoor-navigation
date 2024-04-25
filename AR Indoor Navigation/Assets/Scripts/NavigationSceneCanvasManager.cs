@@ -2,15 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DisableFooter : MonoBehaviour
+public class NavigationSceneCanvasManager : MonoBehaviour
 {
     public GameObject footerExpanded;
     public GameObject footerSmall;
+    public GameObject qrScanner;
 
     public void Start()
     {
         footerSmall.SetActive(false);
-        footerExpanded.SetActive(true);
+        footerExpanded.SetActive(false);
+        qrScanner.SetActive(true);
+    }
+
+    public void DisableQRScannerCanver()
+    {
+        qrScanner.SetActive(false);
     }
     
     public void CompressButton()

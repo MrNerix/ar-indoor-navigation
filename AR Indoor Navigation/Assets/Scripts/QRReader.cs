@@ -20,6 +20,7 @@ public class QRReader : MonoBehaviour
 
     private Texture2D cameraImageTexture;
     private IBarcodeReader reader = new BarcodeReader();
+    private NavigationSceneCanvasManager canvasManager; 
     private void Update()
     {
 
@@ -85,6 +86,7 @@ public class QRReader : MonoBehaviour
         Target currentTarget = navigationTargetObjects.Find(x => x.Name.ToLower().Equals(targetText.ToLower()));
         if (currentTarget != null)
         {
+            canvasManager.DisableQRScannerCanver();
             session.Reset();
 
             sessionOrigin.transform.position = currentTarget.PositionObject.transform.position;
