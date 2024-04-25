@@ -117,6 +117,7 @@ public class Filter : MonoBehaviour
             }
         }
         filteredOptions.Sort();
+        destinations.options.Insert(0, new TMP_Dropdown.OptionData("Choose Location"));
         destinations.AddOptions(filteredOptions);
     }
 }
