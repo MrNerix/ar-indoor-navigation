@@ -78,6 +78,8 @@ public class QRReader : MonoBehaviour
         if (result != null)
         {
             SetQrCodeRecenterTarget(result.Text);
+            canvasManager.DisableQRScannerCanvas();
+            canvasManager.EnableFooter();
         }
 
     }
@@ -87,8 +89,8 @@ public class QRReader : MonoBehaviour
         if (currentTarget != null)
         {
             session.Reset();
-            canvasManager.DisableQRScannerCanver();
-            canvasManager.EnableFooter();
+            //canvasManager.DisableQRScannerCanvas();
+            //canvasManager.EnableFooter();
 
             sessionOrigin.transform.position = currentTarget.PositionObject.transform.position;
             sessionOrigin.transform.rotation = currentTarget.PositionObject.transform.rotation;

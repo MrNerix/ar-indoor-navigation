@@ -15,7 +15,7 @@ public class NavigationSceneCanvasManager : MonoBehaviour
         qrScanner.SetActive(true);
     }
 
-    public void DisableQRScannerCanver()
+    public void DisableQRScannerCanvas()
     {
         qrScanner.SetActive(false);
     }
