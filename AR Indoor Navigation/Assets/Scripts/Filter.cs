@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -101,7 +102,20 @@ public class Filter : MonoBehaviour
         else
         {
             filteredOptions.AddRange(listDictionary[typeDropdown.options[typeDropdown.value].text]);
-            destinations.AddOptions(filteredOptions);
         }
+
+        for (int i = filteredOptions.Count - 1; i >= 0; i--)
+        {
+            if (!filteredOptions[i].StartsWith(chosenBlock.text))
+            {
+                Debug.Log(filteredOptions[i] + " is not at " + chosenBlock.text + " block");
+                filteredOptions.RemoveAt(i);
+            }
+            else if (filteredOptions[i][2] != chosenFloor.text[0])
+            {
+                filteredOptions.RemoveAt(i);
+            }
+        }
+        destinations.AddOptions(filteredOptions);
     }
 }
