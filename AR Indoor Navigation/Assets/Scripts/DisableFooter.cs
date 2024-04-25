@@ -10,7 +10,7 @@ public class DisableFooter : MonoBehaviour
     public void Start()
     {
         footerSmall.SetActive(false);
-        //footerExpanded.SetActive(true);
+        footerExpanded.SetActive(true);
     }
     
     public void CompressButton()
