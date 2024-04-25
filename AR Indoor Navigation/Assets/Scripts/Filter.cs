@@ -116,6 +116,7 @@ public class Filter : MonoBehaviour
                 filteredOptions.RemoveAt(i);
             }
         }
+        filteredOptions.Sort();
         destinations.AddOptions(filteredOptions);
     }
 }
