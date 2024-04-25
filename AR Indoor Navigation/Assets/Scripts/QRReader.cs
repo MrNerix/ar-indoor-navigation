@@ -86,8 +86,9 @@ public class QRReader : MonoBehaviour
         Target currentTarget = navigationTargetObjects.Find(x => x.Name.ToLower().Equals(targetText.ToLower()));
         if (currentTarget != null)
         {
-            canvasManager.DisableQRScannerCanver();
             session.Reset();
+            canvasManager.DisableQRScannerCanver();
+            canvasManager.EnableFooter();
 
             sessionOrigin.transform.position = currentTarget.PositionObject.transform.position;
             sessionOrigin.transform.rotation = currentTarget.PositionObject.transform.rotation;

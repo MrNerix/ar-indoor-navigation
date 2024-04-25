@@ -8,7 +8,7 @@ public class NavigationSceneCanvasManager : MonoBehaviour
     public GameObject footerSmall;
     public GameObject qrScanner;
 
-    public void Start()
+    private void Start()
     {
         footerSmall.SetActive(false);
         footerExpanded.SetActive(false);
@@ -18,6 +18,11 @@ public class NavigationSceneCanvasManager : MonoBehaviour
     public void DisableQRScannerCanver()
     {
         qrScanner.SetActive(false);
+    }
+
+    public void EnableFooter()
+    {
+        footerExpanded.SetActive(true);
     }
     
     public void CompressButton()

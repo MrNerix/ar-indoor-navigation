@@ -1077,7 +1077,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &175396979
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1150,6 +1150,7 @@ GameObject:
   - component: {fileID: 223974229}
   - component: {fileID: 223974228}
   - component: {fileID: 223974227}
+  - component: {fileID: 223974231}
   m_Layer: 5
   m_Name: MiniMapCanvas
   m_TagString: Untagged
@@ -1244,6 +1245,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &223974231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223974226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf70696f8066dd04ea914bd9a537a688, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footerExpanded: {fileID: 175396978}
+  footerSmall: {fileID: 515991000}
+  qrScanner: {fileID: 1266159074}
 --- !u!4 &229235674
 Transform:
   m_ObjectHideFlags: 0
@@ -2117,8 +2133,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf70696f8066dd04ea914bd9a537a688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  footerExpanded: {fileID: 175396978}
-  footerSmall: {fileID: 515991000}
+  footerExpanded: {fileID: 0}
+  footerSmall: {fileID: 0}
   qrScanner: {fileID: 0}
 --- !u!95 &412295537
 Animator:
@@ -2263,7 +2279,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &515991001
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5724,8 +5740,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf70696f8066dd04ea914bd9a537a688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  footerExpanded: {fileID: 175396978}
-  footerSmall: {fileID: 515991000}
+  footerExpanded: {fileID: 0}
+  footerSmall: {fileID: 0}
   qrScanner: {fileID: 0}
 --- !u!114 &1192490426
 MonoBehaviour:
@@ -8286,7 +8302,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1848346801}
   m_Layer: 0
-  m_Name: Evelator_1
+  m_Name: Elevator_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
