@@ -13,6 +13,8 @@ public class SetNav : MonoBehaviour
     //private TMP_Dropdown navigationTargetDropDown;
     [SerializeField]
     private List<Target> navigationTargetObjects = new List<Target>();
+    public TextMeshProUGUI locationNameTMP;
+
     [SerializeField]
     private TextMeshProUGUI ArrivedAtDestinationText;
     private NavMeshPath path;
@@ -32,7 +34,7 @@ public class SetNav : MonoBehaviour
 
         navMangager = GameObject.Find("NavigationManager");
         SetCurrentNavigationTarget(navMangager.GetComponent<SceneLoader>().GetTargetedText());
-
+        locationNameTMP.text = navMangager.GetComponent<SceneLoader>().GetTargetedText();
     }
 
     // Update is called once per frame
@@ -60,6 +62,7 @@ public class SetNav : MonoBehaviour
     {
         targetPosition = Vector3.zero;
         //string selectedText = navigationTargetDropDown.options[selectedValue].text;
+        //locationNameTMP.text = navigationTargetDropDown.options[selectedValue].text;
         Target currentTarget = navigationTargetObjects.Find(x => x.Name.Equals(selectedText));
         if (currentTarget != null)
         {
@@ -71,6 +74,12 @@ public class SetNav : MonoBehaviour
     {
         lineToggle = !lineToggle;
         line.enabled = lineToggle;
+    }
+
+    public void VoidTargetPosition() {
+        targetPosition = Vector3.zero;
+        line.enabled = false;
+        lineToggle = false;
     }
 
     private float CalculateLineLength(Vector3[] corners)
