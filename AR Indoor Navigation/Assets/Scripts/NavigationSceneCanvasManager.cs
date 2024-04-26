@@ -11,8 +11,8 @@ public class NavigationSceneCanvasManager : MonoBehaviour
     private void Start()
     {
         footerSmall.SetActive(false);
-        footerExpanded.SetActive(false);
-        qrScanner.SetActive(true);
+        footerExpanded.SetActive(true);
+        qrScanner.SetActive(false);
     }
 
     public void DisableQRScannerCanvas()

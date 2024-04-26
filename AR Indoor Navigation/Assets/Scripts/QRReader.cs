@@ -20,7 +20,8 @@ public class QRReader : MonoBehaviour
 
     private Texture2D cameraImageTexture;
     private IBarcodeReader reader = new BarcodeReader();
-    private NavigationSceneCanvasManager canvasManager; 
+    public NavigationSceneCanvasManager canvasManager;
+    
     private void Update()
     {
 
@@ -78,8 +79,9 @@ public class QRReader : MonoBehaviour
         if (result != null)
         {
             SetQrCodeRecenterTarget(result.Text);
-            canvasManager.DisableQRScannerCanvas();
-            canvasManager.EnableFooter();
+            //TODO it might go here as well
+            //canvasManager.DisableQRScannerCanvas();
+            //canvasManager.EnableFooter();
         }
 
     }
@@ -89,6 +91,7 @@ public class QRReader : MonoBehaviour
         if (currentTarget != null)
         {
             session.Reset();
+            //TODO for QR UI to disappear after the values are received
             //canvasManager.DisableQRScannerCanvas();
             //canvasManager.EnableFooter();
 
