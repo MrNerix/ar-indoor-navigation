@@ -1,4 +1,6 @@
+using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.Collections;
 using Unity.XR.CoreUtils;
 using UnityEngine;
@@ -8,6 +10,8 @@ using ZXing;
 
 public class QRReader : MonoBehaviour
 {
+    [SerializeField]
+    private TMP_Text popup;
     [SerializeField]
     private ARSession session;
     [SerializeField]
@@ -86,9 +90,24 @@ public class QRReader : MonoBehaviour
         if (currentTarget != null)
         {
             session.Reset();
-
+            popup.text = " your current location is set to " + targetText;
+            StartCoroutine(ShowAndHideObject());
             sessionOrigin.transform.position = currentTarget.PositionObject.transform.position;
             sessionOrigin.transform.rotation = currentTarget.PositionObject.transform.rotation;
         }
+    }
+
+    IEnumerator ShowAndHideObject()
+    {
+        Debug.Log("set true");
+        // Show the object
+        popup.gameObject.SetActive(true);
+
+        // Wait for 5 seconds
+        yield return new WaitForSeconds(5f);
+
+        // Hide the object after 5 seconds
+        popup.gameObject.SetActive(false);
+        Debug.Log("set false");
     }
 }
