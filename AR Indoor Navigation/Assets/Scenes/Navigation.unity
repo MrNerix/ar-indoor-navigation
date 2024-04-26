@@ -212,7 +212,7 @@ MonoBehaviour:
   - Name: C04.01
     PositionObject: {fileID: 673316483}
   locationNameTMP: {fileID: 1605312530}
-  ArrivedAtDestinationText: {fileID: 0}
+  ArrivedAtDestinationText: {fileID: 1421467831}
   navMangager: {fileID: 0}
 --- !u!120 &40919616
 LineRenderer:
@@ -2624,6 +2624,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62db0b813afef5c45a5420a8ceb82336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popup: {fileID: 1421467831}
   session: {fileID: 1115450773}
   sessionOrigin: {fileID: 596374145}
   cameraManager: {fileID: 1378089892}
@@ -5935,7 +5936,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1316448369
 RectTransform:
   m_ObjectHideFlags: 0
