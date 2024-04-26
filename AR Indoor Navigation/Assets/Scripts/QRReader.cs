@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using Unity.Collections;
 using Unity.XR.CoreUtils;
 using UnityEngine;
@@ -8,6 +9,8 @@ using ZXing;
 
 public class QRReader : MonoBehaviour
 {
+    [SerializeField]
+    private TMP_Text popup;
     [SerializeField]
     private ARSession session;
     [SerializeField]
@@ -86,7 +89,8 @@ public class QRReader : MonoBehaviour
         if (currentTarget != null)
         {
             session.Reset();
-
+            popup.text = " your current location is set to " + targetText;
+            popup.gameObject.SetActive(true);
             sessionOrigin.transform.position = currentTarget.PositionObject.transform.position;
             sessionOrigin.transform.rotation = currentTarget.PositionObject.transform.rotation;
         }
