@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Navigation.unity
     guid: 5193f8ecd86aa0945b953c74183fa7a7
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Map overview.unity
     guid: 77ca611fa4b8df04b8a3a28331f2f789
   m_configObjects:
