@@ -14,6 +14,7 @@ public class SetNav : MonoBehaviour
     [SerializeField]
     private List<Target> navigationTargetObjects = new List<Target>();
     public TextMeshProUGUI locationNameTMP;
+    public Canvas mapOverViewCanvas;
 
     [SerializeField]
     private TextMeshProUGUI ArrivedAtDestinationText;
@@ -25,9 +26,11 @@ public class SetNav : MonoBehaviour
 
     public GameObject navMangager;
 
+
     // Start is called before the first frame update
     void Start()
     {
+        mapOverViewCanvas.gameObject.SetActive(true);
         path = new NavMeshPath();
         line = transform.GetComponent<LineRenderer>();
         line.enabled = lineToggle;
