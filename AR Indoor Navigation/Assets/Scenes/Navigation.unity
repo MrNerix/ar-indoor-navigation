@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -212,9 +212,7 @@ MonoBehaviour:
   - Name: C04.01
     PositionObject: {fileID: 673316483}
   locationNameTMP: {fileID: 1605312530}
-  mapOverViewCanvas: {fileID: 1070075791}
   ArrivedAtDestinationText: {fileID: 1421467831}
-  navMangager: {fileID: 0}
 --- !u!120 &40919616
 LineRenderer:
   serializedVersion: 2
@@ -5900,6 +5898,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1220680239}
   m_CullTransparentMesh: 1
+--- !u!1 &1243129045
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1243129046}
+  m_Layer: 0
+  m_Name: DestinationEstimateData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1243129046
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243129045}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.631424, y: 0.8416939, z: -5.3173676}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1266067574
 GameObject:
   m_ObjectHideFlags: 0
@@ -8677,3 +8706,4 @@ SceneRoots:
   - {fileID: 1489335449}
   - {fileID: 818897728}
   - {fileID: 779975990}
+  - {fileID: 1243129046}
