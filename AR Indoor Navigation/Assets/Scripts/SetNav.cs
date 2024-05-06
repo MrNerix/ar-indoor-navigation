@@ -22,7 +22,7 @@ public class SetNav : MonoBehaviour
     private bool lineToggle = false;
     private bool isFinished = false;
 
-    public GameObject navMangager;
+    private GameObject navManager;
 
     // Start is called before the first frame update
     void Start()
@@ -33,9 +33,9 @@ public class SetNav : MonoBehaviour
         //Debug.Log("Startuota");
         if (GameObject.Find("NavigationManager") != null)
         {
-            navMangager = GameObject.Find("NavigationManager");
-            SetCurrentNavigationTarget(navMangager.GetComponent<SceneLoader>().GetTargetedText());
-            locationNameTMP.text = navMangager.GetComponent<SceneLoader>().GetTargetedText();
+            navManager = GameObject.Find("NavigationManager");
+            SetCurrentNavigationTarget(navManager.GetComponent<SceneLoader>().GetTargetedText());
+            locationNameTMP.text = navManager.GetComponent<SceneLoader>().GetTargetedText();
         }
         else
         {
@@ -59,7 +59,7 @@ public class SetNav : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        Debug.Log("Line length: " + CalculateLineLength(path.corners) + ". target is " + navMangager.GetComponent<SceneLoader>().GetTargetedText());
+        Debug.Log("Line length: " + CalculateLineLength(path.corners) + ". target is " + navManager.GetComponent<SceneLoader>().GetTargetedText());
 
         if (lineToggle && targetPosition != Vector3.zero)
         {
@@ -69,7 +69,7 @@ public class SetNav : MonoBehaviour
             line.SetPositions(path.corners);
             if (isFinished == false && CalculateLineLength(path.corners) != 0 && CalculateLineLength(path.corners) <= 2)
             {
-                ArrivedAtDestinationText.text = "You have arrived at your destination: " + navMangager.GetComponent<SceneLoader>().GetTargetedText();
+                ArrivedAtDestinationText.text = "You have arrived at your destination: " + navManager.GetComponent<SceneLoader>().GetTargetedText();
                 isFinished = true;
                 StartCoroutine(ShowAndHideObject());
             }
