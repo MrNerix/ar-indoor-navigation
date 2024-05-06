@@ -8,7 +8,8 @@ using Unity.VisualScripting;
 
 public class SetNav : MonoBehaviour
 {
-    private Dictionary<string, float> locations = new Dictionary<string, float>();
+    public EstimateData estimateData;
+    public Dictionary<string, float> locations = new Dictionary<string, float>();
 
     [SerializeField]
     private List<Target> navigationTargetObjects = new List<Target>();
@@ -30,7 +31,6 @@ public class SetNav : MonoBehaviour
         path = new NavMeshPath();
         line = transform.GetComponent<LineRenderer>();
         line.enabled = lineToggle;
-        //Debug.Log("Startuota");
         if (GameObject.Find("NavigationManager") != null)
         {
             navManager = GameObject.Find("NavigationManager");
@@ -39,20 +39,18 @@ public class SetNav : MonoBehaviour
         }
         else
         {
-            //Debug.Log("Checkinu...");
-
             foreach (Target target in navigationTargetObjects)
             {
                 SetCurrentNavigationTarget(target.Name);
                 lineToggle = true;
-                Debug.Log("nusetintas targetas i " + target.Name + ". Ar linija ijungta? " + lineToggle);
+                Debug.Log("target set: " + target.Name + ". Is the line on? " + lineToggle);
                 NavMesh.CalculatePath(transform.position, targetPosition, NavMesh.AllAreas, path);
                 line.positionCount = path.corners.Length;
                 line.SetPositions(path.corners);
-                //Debug.Log("bandau skaiciuot ir gaunu " + CalculateLineLength(path.corners));
                 locations.Add(target.Name, CalculateLineLength(path.corners));
                 Debug.Log("Path length to " + target.Name + ": " + CalculateLineLength(path.corners));
             }
+            estimateData.CollectEstimates(locations);
         }
     }
 
