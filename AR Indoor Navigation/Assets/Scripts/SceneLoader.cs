@@ -39,6 +39,8 @@ public class SceneLoader : MonoBehaviour
     // To Main Scene (navigation) from Main Menu (where filters and choose destination is)
     public void ToNavigation()
     {
+        GameObject OldEstimatedDistances = GameObject.Find("DestinationEstimateData");
+        Destroy(OldEstimatedDistances);
         selectedText = navigationTargetDropDown.options[navigationTargetDropDown.value].text;
         SceneManager.LoadScene("Navigation");
     }
