@@ -12,9 +12,13 @@ public class EstimateData : MonoBehaviour
     public void CollectEstimates(Dictionary<string, float> locations)
     {
         collectedEstimates = new Dictionary<string, float>(locations);
+        WriteEstimates();
+    }
+    public void WriteEstimates()
+    {
         foreach (KeyValuePair<string, float> pair in collectedEstimates)
         {
-            Debug.Log("(ED)Location: " + pair.Key + ", Length: " + pair.Value);
+            Debug.Log("Location: " + pair.Key + ", Length: " + pair.Value);
         }
     }
 }
