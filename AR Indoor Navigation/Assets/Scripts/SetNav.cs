@@ -35,12 +35,12 @@ public class SetNav : MonoBehaviour
         {
             SetCurrentNavigationTarget(target.Name);
             lineToggle = true;
-            Debug.Log("target set: " + target.Name + ". Is the line on? " + lineToggle);
+            //Debug.Log("target set: " + target.Name + ". Is the line on? " + lineToggle);
             NavMesh.CalculatePath(transform.position, targetPosition, NavMesh.AllAreas, path);
             line.positionCount = path.corners.Length;
             line.SetPositions(path.corners);
             locations.Add(target.Name, CalculateLineLength(path.corners));
-            Debug.Log("Path length to " + target.Name + ": " + CalculateLineLength(path.corners));
+            //Debug.Log("Path length to " + target.Name + ": " + CalculateLineLength(path.corners));
         }
         estimateData.CollectEstimates(locations);
         if (GameObject.Find("NavigationManager") != null)
@@ -54,7 +54,7 @@ public class SetNav : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        Debug.Log("Line length: " + CalculateLineLength(path.corners) + ". target is " + navManager.GetComponent<SceneLoader>().GetTargetedText());
+        //Debug.Log("Line length: " + CalculateLineLength(path.corners) + ". target is " + navManager.GetComponent<SceneLoader>().GetTargetedText());
 
         if (lineToggle && targetPosition != Vector3.zero)
         {
@@ -106,8 +106,6 @@ public class SetNav : MonoBehaviour
 
     IEnumerator ShowAndHideObject()
     {
-        Debug.Log("set true");
-        // Show the object
         ArrivedAtDestinationText.gameObject.SetActive(true);
 
         // Wait for 5 seconds
@@ -115,6 +113,5 @@ public class SetNav : MonoBehaviour
 
         // Hide the object after 5 seconds
         ArrivedAtDestinationText.gameObject.SetActive(false);
-        Debug.Log("set false");
     }
 }
