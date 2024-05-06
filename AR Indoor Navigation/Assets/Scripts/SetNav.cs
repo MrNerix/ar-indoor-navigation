@@ -8,13 +8,11 @@ using Unity.VisualScripting;
 
 public class SetNav : MonoBehaviour
 {
+    private Dictionary<string, float> locations = new Dictionary<string, float>();
 
-    //[SerializeField]
-    //private TMP_Dropdown navigationTargetDropDown;
     [SerializeField]
     private List<Target> navigationTargetObjects = new List<Target>();
     public TextMeshProUGUI locationNameTMP;
-    public Canvas mapOverViewCanvas;
 
     [SerializeField]
     private TextMeshProUGUI ArrivedAtDestinationText;
@@ -26,18 +24,36 @@ public class SetNav : MonoBehaviour
 
     public GameObject navMangager;
 
-
     // Start is called before the first frame update
     void Start()
     {
-        mapOverViewCanvas.gameObject.SetActive(true);
         path = new NavMeshPath();
         line = transform.GetComponent<LineRenderer>();
         line.enabled = lineToggle;
+        //Debug.Log("Startuota");
+        if (GameObject.Find("NavigationManager") != null)
+        {
+            navMangager = GameObject.Find("NavigationManager");
+            SetCurrentNavigationTarget(navMangager.GetComponent<SceneLoader>().GetTargetedText());
+            locationNameTMP.text = navMangager.GetComponent<SceneLoader>().GetTargetedText();
+        }
+        else
+        {
+            //Debug.Log("Checkinu...");
 
-        navMangager = GameObject.Find("NavigationManager");
-        SetCurrentNavigationTarget(navMangager.GetComponent<SceneLoader>().GetTargetedText());
-        locationNameTMP.text = navMangager.GetComponent<SceneLoader>().GetTargetedText();
+            foreach (Target target in navigationTargetObjects)
+            {
+                SetCurrentNavigationTarget(target.Name);
+                lineToggle = true;
+                Debug.Log("nusetintas targetas i " + target.Name + ". Ar linija ijungta? " + lineToggle);
+                NavMesh.CalculatePath(transform.position, targetPosition, NavMesh.AllAreas, path);
+                line.positionCount = path.corners.Length;
+                line.SetPositions(path.corners);
+                //Debug.Log("bandau skaiciuot ir gaunu " + CalculateLineLength(path.corners));
+                locations.Add(target.Name, CalculateLineLength(path.corners));
+                Debug.Log("Path length to " + target.Name + ": " + CalculateLineLength(path.corners));
+            }
+        }
     }
 
     // Update is called once per frame
@@ -57,15 +73,12 @@ public class SetNav : MonoBehaviour
                 isFinished = true;
                 StartCoroutine(ShowAndHideObject());
             }
-            //Debug.Log("Line length: " + CalculateLineLength(path.corners) + ". target is " + navMangager.GetComponent<TargetValue>().GetTargetedText());
         }
     }
 
     public void SetCurrentNavigationTarget(string selectedText)
     {
         targetPosition = Vector3.zero;
-        //string selectedText = navigationTargetDropDown.options[selectedValue].text;
-        //locationNameTMP.text = navigationTargetDropDown.options[selectedValue].text;
         Target currentTarget = navigationTargetObjects.Find(x => x.Name.Equals(selectedText));
         if (currentTarget != null)
         {
@@ -79,7 +92,8 @@ public class SetNav : MonoBehaviour
         line.enabled = lineToggle;
     }
 
-    public void VoidTargetPosition() {
+    public void VoidTargetPosition()
+    {
         targetPosition = Vector3.zero;
         line.enabled = false;
         lineToggle = false;
@@ -108,5 +122,4 @@ public class SetNav : MonoBehaviour
         ArrivedAtDestinationText.gameObject.SetActive(false);
         Debug.Log("set false");
     }
-
 }
