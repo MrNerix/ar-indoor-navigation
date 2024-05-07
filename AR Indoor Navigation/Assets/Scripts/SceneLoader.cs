@@ -40,8 +40,6 @@ public class SceneLoader : MonoBehaviour
     public void ToNavigation()
     {
         GameObject OldEstimatedDistances = GameObject.Find("DestinationEstimateData");
-        EstimateData estimateData = OldEstimatedDistances.GetComponent<EstimateData>();
-        estimateData.WriteEstimates();
         Destroy(OldEstimatedDistances);
         selectedText = navigationTargetDropDown.options[navigationTargetDropDown.value].text;
         SceneManager.LoadScene("Navigation");

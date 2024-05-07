@@ -210,8 +210,12 @@ MonoBehaviour:
     PositionObject: {fileID: 1770508006}
   - Name: C04.03
     PositionObject: {fileID: 960151506}
+  - Name: C04.08
+    PositionObject: {fileID: 824268046}
   - Name: C04.01
     PositionObject: {fileID: 673316483}
+  - Name: C04.10
+    PositionObject: {fileID: 1593493730}
   locationNameTMP: {fileID: 1605312530}
   ArrivedAtDestinationText: {fileID: 1421467831}
 --- !u!120 &40919616

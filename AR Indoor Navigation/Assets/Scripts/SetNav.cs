@@ -28,21 +28,10 @@ public class SetNav : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        path = new NavMeshPath();
-        line = transform.GetComponent<LineRenderer>();
-        line.enabled = lineToggle;
-        foreach (Target target in navigationTargetObjects)
-        {
-            SetCurrentNavigationTarget(target.Name);
-            lineToggle = true;
-            //Debug.Log("target set: " + target.Name + ". Is the line on? " + lineToggle);
-            NavMesh.CalculatePath(transform.position, targetPosition, NavMesh.AllAreas, path);
-            line.positionCount = path.corners.Length;
-            line.SetPositions(path.corners);
-            locations.Add(target.Name, CalculateLineLength(path.corners));
-            //Debug.Log("Path length to " + target.Name + ": " + CalculateLineLength(path.corners));
-        }
-        estimateData.CollectEstimates(locations);
+        CalculateAllDistances();
+        estimateData.CollectNewEstimates(locations);
+
+        //sets the target
         if (GameObject.Find("NavigationManager") != null)
         {
             navManager = GameObject.Find("NavigationManager");
@@ -94,6 +83,21 @@ public class SetNav : MonoBehaviour
         lineToggle = false;
     }
 
+    private void CalculateAllDistances()
+    {
+        path = new NavMeshPath();
+        line = transform.GetComponent<LineRenderer>();
+        line.enabled = lineToggle;
+        foreach (Target target in navigationTargetObjects)
+        {
+            SetCurrentNavigationTarget(target.Name);
+            lineToggle = true;
+            NavMesh.CalculatePath(transform.position, targetPosition, NavMesh.AllAreas, path);
+            line.positionCount = path.corners.Length;
+            line.SetPositions(path.corners);
+            locations.Add(target.Name, CalculateLineLength(path.corners));
+        }
+    }
     private float CalculateLineLength(Vector3[] corners)
     {
         float length = 0f;

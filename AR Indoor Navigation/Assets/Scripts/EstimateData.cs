@@ -9,11 +9,16 @@ public class EstimateData : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
     }
-    public void CollectEstimates(Dictionary<string, float> locations)
+    public void CollectNewEstimates(Dictionary<string, float> locations)
     {
         collectedEstimates = new Dictionary<string, float>(locations);
         WriteEstimates();
     }
+    public Dictionary<string, float> getCurrentEstimates()
+    {
+        return collectedEstimates;
+    }
+
     public void WriteEstimates()
     {
         foreach (KeyValuePair<string, float> pair in collectedEstimates)
