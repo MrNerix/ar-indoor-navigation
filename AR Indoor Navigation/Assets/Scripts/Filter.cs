@@ -108,7 +108,7 @@ public class Filter : MonoBehaviour
             {
                 Transform extraLabelTransform = destinations.transform.GetChild(4).GetChild(0).GetChild(0).GetChild(i + 1).GetChild(2);
                 TextMeshProUGUI extraLabel = extraLabelTransform.GetComponent<TextMeshProUGUI>();
-                extraLabel.text = estimateData[destinations.options[i].text].ToString();
+                extraLabel.text = estimateData[destinations.options[i].text].ToString("F0") + " meters away";
             }
         }
         // Add your code to handle the dropdown opening here
@@ -157,6 +157,5 @@ public class Filter : MonoBehaviour
         filteredOptions.Sort();
         destinations.options.Insert(0, new TMP_Dropdown.OptionData("Choose Location"));
         destinations.AddOptions(filteredOptions);
-
     }
 }
