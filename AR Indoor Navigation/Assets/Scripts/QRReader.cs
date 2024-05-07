@@ -4,6 +4,7 @@ using TMPro;
 using Unity.Collections;
 using Unity.XR.CoreUtils;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 using ZXing;
@@ -21,9 +22,14 @@ public class QRReader : MonoBehaviour
     [SerializeField]
     private List<Target> navigationTargetObjects = new List<Target>();
 
-
     private Texture2D cameraImageTexture;
     private IBarcodeReader reader = new BarcodeReader();
+    
+    public GameObject viaC04v14;
+    public GameObject c04map;
+    public GameObject searchButton;
+    public GameObject footerExpanded;
+    public GameObject qrMaskOnStart;
     private void Update()
     {
 
@@ -32,6 +38,11 @@ public class QRReader : MonoBehaviour
     private void OnEnable()
     {
         cameraManager.frameReceived += OnCameraFrameReceived;
+        viaC04v14.SetActive(false);
+        c04map.SetActive(false);
+        searchButton.SetActive(false);
+        footerExpanded.SetActive(false);
+        qrMaskOnStart.SetActive(true);
     }
     private void OnDisable()
     {
@@ -94,6 +105,12 @@ public class QRReader : MonoBehaviour
             StartCoroutine(ShowAndHideObject());
             sessionOrigin.transform.position = currentTarget.PositionObject.transform.position;
             sessionOrigin.transform.rotation = currentTarget.PositionObject.transform.rotation;
+            
+            viaC04v14.SetActive(true);
+            c04map.SetActive(true);
+            searchButton.SetActive(true);
+            footerExpanded.SetActive(true);
+            qrMaskOnStart.SetActive(false);
         }
     }
 
