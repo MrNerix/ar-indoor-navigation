@@ -4,6 +4,7 @@ using TMPro;
 using Unity.Collections;
 using Unity.XR.CoreUtils;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 using ZXing;
@@ -21,11 +22,10 @@ public class QRReader : MonoBehaviour
     [SerializeField]
     private List<Target> navigationTargetObjects = new List<Target>();
 
-
     private Texture2D cameraImageTexture;
     private IBarcodeReader reader = new BarcodeReader();
-
     public SetNav setNav;
+
     public GameObject viaC04v14;
     public GameObject c04map;
     public GameObject searchButton;
