@@ -25,6 +25,7 @@ public class QRReader : MonoBehaviour
     private Texture2D cameraImageTexture;
     private IBarcodeReader reader = new BarcodeReader();
     public SetNav setNav;
+    public SceneLoader sceneLoader;
 
     public GameObject viaC04v14;
     public GameObject c04map;
@@ -113,6 +114,10 @@ public class QRReader : MonoBehaviour
             footerExpanded.SetActive(true);
             qrMaskOnStart.SetActive(false);
             setNav.CalculateAllDistances(currentTarget.PositionObject.transform);
+            if (GameObject.Find("NavigationManager") == null)
+            {
+                sceneLoader.ToSelection();
+            }
         }
     }
 

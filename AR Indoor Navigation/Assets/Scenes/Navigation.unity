@@ -2719,6 +2719,7 @@ MonoBehaviour:
   - Name: C04.Stairs_2
     PositionObject: {fileID: 652828880}
   setNav: {fileID: 40919615}
+  sceneLoader: {fileID: 407515126}
   viaC04v14: {fileID: 131265445}
   c04map: {fileID: 1845600547}
   searchButton: {fileID: 1080348805}
