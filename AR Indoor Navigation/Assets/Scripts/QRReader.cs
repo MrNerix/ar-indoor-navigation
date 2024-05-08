@@ -32,6 +32,15 @@ public class QRReader : MonoBehaviour
     public GameObject searchButton;
     public GameObject footerExpanded;
     public GameObject qrMaskOnStart;
+
+    public float qrScanStart = 0f;
+    public float qrCooldown = 5f;
+
+
+    private void Start()
+    {
+        qrScanStart = Time.time - qrCooldown;
+    }
     private void Update()
     {
 
@@ -93,7 +102,11 @@ public class QRReader : MonoBehaviour
         var result = reader.Decode(cameraImageTexture.GetPixels32(), cameraImageTexture.width, cameraImageTexture.height);
         if (result != null)
         {
-            SetQrCodeRecenterTarget(result.Text);
+            if (Time.time > qrScanStart + qrCooldown)
+            {
+                qrScanStart = Time.time;
+                SetQrCodeRecenterTarget(result.Text);
+            }
         }
 
     }
