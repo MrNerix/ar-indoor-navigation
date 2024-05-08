@@ -28,9 +28,13 @@ public class SetNav : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CalculateAllDistances();
-        estimateData.CollectNewEstimates(locations);
-
+        path = new NavMeshPath();
+        line = transform.GetComponent<LineRenderer>();
+        line.enabled = lineToggle;
+        if (locations.Count == 0)
+        {
+            CalculateAllDistances(transform);
+        }
         //sets the target
         if (GameObject.Find("NavigationManager") != null)
         {
@@ -83,19 +87,24 @@ public class SetNav : MonoBehaviour
         lineToggle = false;
     }
 
-    private void CalculateAllDistances()
+    public void CalculateAllDistances(Transform position)
     {
-        path = new NavMeshPath();
-        line = transform.GetComponent<LineRenderer>();
-        line.enabled = lineToggle;
+        locations.Clear();
         foreach (Target target in navigationTargetObjects)
         {
             SetCurrentNavigationTarget(target.Name);
             lineToggle = true;
-            NavMesh.CalculatePath(transform.position, targetPosition, NavMesh.AllAreas, path);
+            NavMesh.CalculatePath(position.position, targetPosition, NavMesh.AllAreas, path);
             line.positionCount = path.corners.Length;
             line.SetPositions(path.corners);
             locations.Add(target.Name, CalculateLineLength(path.corners));
+        }
+        estimateData.CollectNewEstimates(locations);
+        if (GameObject.Find("NavigationManager") != null)
+        {
+            navManager = GameObject.Find("NavigationManager");
+            SetCurrentNavigationTarget(navManager.GetComponent<SceneLoader>().GetTargetedText());
+            locationNameTMP.text = navManager.GetComponent<SceneLoader>().GetTargetedText();
         }
     }
     private float CalculateLineLength(Vector3[] corners)

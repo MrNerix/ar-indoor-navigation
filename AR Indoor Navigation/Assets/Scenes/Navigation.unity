@@ -2718,6 +2718,12 @@ MonoBehaviour:
     PositionObject: {fileID: 431103847}
   - Name: C04.Stairs_2
     PositionObject: {fileID: 652828880}
+  setNav: {fileID: 40919615}
+  viaC04v14: {fileID: 131265445}
+  c04map: {fileID: 1845600547}
+  searchButton: {fileID: 1080348805}
+  footerExpanded: {fileID: 175396978}
+  qrMaskOnStart: {fileID: 1420137243}
 --- !u!1 &638401278
 GameObject:
   m_ObjectHideFlags: 0
@@ -4974,7 +4980,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1070075789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6833,7 +6839,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.5882353}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
