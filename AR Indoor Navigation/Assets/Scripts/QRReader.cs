@@ -24,7 +24,8 @@ public class QRReader : MonoBehaviour
 
     private Texture2D cameraImageTexture;
     private IBarcodeReader reader = new BarcodeReader();
-    
+    public SetNav setNav;
+
     public GameObject viaC04v14;
     public GameObject c04map;
     public GameObject searchButton;
@@ -105,12 +106,13 @@ public class QRReader : MonoBehaviour
             StartCoroutine(ShowAndHideObject());
             sessionOrigin.transform.position = currentTarget.PositionObject.transform.position;
             sessionOrigin.transform.rotation = currentTarget.PositionObject.transform.rotation;
-            
+
             viaC04v14.SetActive(true);
             c04map.SetActive(true);
             searchButton.SetActive(true);
             footerExpanded.SetActive(true);
             qrMaskOnStart.SetActive(false);
+            setNav.CalculateAllDistances(currentTarget.PositionObject.transform);
         }
     }
 

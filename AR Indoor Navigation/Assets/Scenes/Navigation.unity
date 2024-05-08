@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44402185, g: 0.49316472, b: 0.57223153, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -154,6 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0f52090ccc59a141bc5a9947f1ce91e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  estimateData: {fileID: 1243129047}
   navigationTargetObjects:
   - Name: C04.18
     PositionObject: {fileID: 680524793}
@@ -209,12 +210,14 @@ MonoBehaviour:
     PositionObject: {fileID: 1770508006}
   - Name: C04.03
     PositionObject: {fileID: 960151506}
+  - Name: C04.08
+    PositionObject: {fileID: 824268046}
   - Name: C04.01
     PositionObject: {fileID: 673316483}
+  - Name: C04.10
+    PositionObject: {fileID: 1593493730}
   locationNameTMP: {fileID: 1605312530}
-  mapOverViewCanvas: {fileID: 1070075791}
   ArrivedAtDestinationText: {fileID: 1421467831}
-  navMangager: {fileID: 0}
 --- !u!120 &40919616
 LineRenderer:
   serializedVersion: 2
@@ -2715,6 +2718,7 @@ MonoBehaviour:
     PositionObject: {fileID: 431103847}
   - Name: C04.Stairs_2
     PositionObject: {fileID: 652828880}
+  setNav: {fileID: 40919615}
   viaC04v14: {fileID: 131265445}
   c04map: {fileID: 1845600547}
   searchButton: {fileID: 1080348805}
@@ -4976,7 +4980,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1070075789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5905,6 +5909,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1220680239}
   m_CullTransparentMesh: 1
+--- !u!1 &1243129045
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1243129046}
+  - component: {fileID: 1243129047}
+  m_Layer: 0
+  m_Name: DestinationEstimateData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1243129046
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243129045}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.631424, y: 0.8416939, z: -5.3173676}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1243129047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243129045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5321eb740ce50c8499328095f94fce17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1266067574
 GameObject:
   m_ObjectHideFlags: 0
@@ -6791,7 +6839,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.5058824}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.5882353}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8682,3 +8730,4 @@ SceneRoots:
   - {fileID: 1489335449}
   - {fileID: 818897728}
   - {fileID: 779975990}
+  - {fileID: 1243129046}

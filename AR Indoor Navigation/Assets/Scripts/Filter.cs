@@ -14,10 +14,14 @@ public class Filter : MonoBehaviour
     public TMP_Dropdown destinations;
     public TMP_Text chosenBlock;
     public TMP_Text chosenFloor;
-
+    private bool isDropdownOpen = false;
+    private GameObject est;
+    private EstimateData estimates;
     // Lists (used before we implement a database)
 
+    public Dictionary<string, float> estimateData = new Dictionary<string, float>();
     public Dictionary<string, List<string>> listDictionary = new Dictionary<string, List<string>>();
+    public TextMeshProUGUI[] extraLabels;
     private List<string> filteredOptions = new List<string>();
     private List<string> classrooms = new List<string>();
     private List<string> groupRooms = new List<string>();
@@ -31,6 +35,9 @@ public class Filter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        est = GameObject.Find("DestinationEstimateData");
+        estimates = est.GetComponent<EstimateData>();
+        estimateData = estimates.getCurrentEstimates();
 
         listDictionary.Add("Classroom", classrooms);
         listDictionary.Add("Group Room", groupRooms);
@@ -75,6 +82,38 @@ public class Filter : MonoBehaviour
         lockers.Add("C04.Lockers");
     }
 
+
+    // Update is called once per frame
+    void Update()
+    {
+        // Check if the dropdown is expanded (i.e., opened)
+        if (destinations.IsExpanded && !isDropdownOpen)
+        {
+            // Dropdown is opened
+            OnDropdownOpened();
+            isDropdownOpen = true;
+        }
+        else if (!destinations.IsExpanded && isDropdownOpen)
+        {
+            // Dropdown is closed
+            isDropdownOpen = false;
+        }
+    }
+
+    // Method to be called when the dropdown menu is opened
+    void OnDropdownOpened()
+    {
+        for (int i = 1; i < destinations.options.Count; i++)
+        {
+            {
+                Transform extraLabelTransform = destinations.transform.GetChild(4).GetChild(0).GetChild(0).GetChild(i + 1).GetChild(2);
+                TextMeshProUGUI extraLabel = extraLabelTransform.GetComponent<TextMeshProUGUI>();
+                extraLabel.text = estimateData[destinations.options[i].text].ToString("F0") + " meters away";
+            }
+        }
+        // Add your code to handle the dropdown opening here
+    }
+
     public void ClearFilters()
     {
         blockSlider.value = 0f;
@@ -108,7 +147,6 @@ public class Filter : MonoBehaviour
         {
             if (!filteredOptions[i].StartsWith(chosenBlock.text))
             {
-                Debug.Log(filteredOptions[i] + " is not at " + chosenBlock.text + " block");
                 filteredOptions.RemoveAt(i);
             }
             else if (filteredOptions[i][2] != chosenFloor.text[0])
