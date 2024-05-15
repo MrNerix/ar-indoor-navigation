@@ -1,13 +1,18 @@
+using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.Collections;
 using Unity.XR.CoreUtils;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 using ZXing;
 
 public class QRReader : MonoBehaviour
 {
+    [SerializeField]
+    private TMP_Text popup;
     [SerializeField]
     private ARSession session;
     [SerializeField]
@@ -17,9 +22,25 @@ public class QRReader : MonoBehaviour
     [SerializeField]
     private List<Target> navigationTargetObjects = new List<Target>();
 
-
     private Texture2D cameraImageTexture;
     private IBarcodeReader reader = new BarcodeReader();
+    public SetNav setNav;
+    public SceneLoader sceneLoader;
+
+    public GameObject viaC04v14;
+    public GameObject c04map;
+    public GameObject searchButton;
+    public GameObject footerExpanded;
+    public GameObject qrMaskOnStart;
+
+    public float qrScanStart = 0f;
+    public float qrCooldown = 5f;
+
+
+    private void Start()
+    {
+        qrScanStart = Time.time - qrCooldown;
+    }
     private void Update()
     {
 
@@ -28,6 +49,11 @@ public class QRReader : MonoBehaviour
     private void OnEnable()
     {
         cameraManager.frameReceived += OnCameraFrameReceived;
+        viaC04v14.SetActive(false);
+        c04map.SetActive(false);
+        searchButton.SetActive(false);
+        footerExpanded.SetActive(false);
+        qrMaskOnStart.SetActive(true);
     }
     private void OnDisable()
     {
@@ -76,7 +102,11 @@ public class QRReader : MonoBehaviour
         var result = reader.Decode(cameraImageTexture.GetPixels32(), cameraImageTexture.width, cameraImageTexture.height);
         if (result != null)
         {
-            SetQrCodeRecenterTarget(result.Text);
+            if (Time.time > qrScanStart + qrCooldown)
+            {
+                qrScanStart = Time.time;
+                SetQrCodeRecenterTarget(result.Text);
+            }
         }
 
     }
@@ -86,9 +116,35 @@ public class QRReader : MonoBehaviour
         if (currentTarget != null)
         {
             session.Reset();
-
+            popup.text = " your current location is set to " + targetText;
+            StartCoroutine(ShowAndHideObject());
             sessionOrigin.transform.position = currentTarget.PositionObject.transform.position;
             sessionOrigin.transform.rotation = currentTarget.PositionObject.transform.rotation;
+
+            viaC04v14.SetActive(true);
+            c04map.SetActive(true);
+            searchButton.SetActive(true);
+            footerExpanded.SetActive(true);
+            qrMaskOnStart.SetActive(false);
+            setNav.CalculateAllDistances(currentTarget.PositionObject.transform);
+            if (GameObject.Find("NavigationManager") == null)
+            {
+                sceneLoader.ToSelection();
+            }
         }
+    }
+
+    IEnumerator ShowAndHideObject()
+    {
+        Debug.Log("set true");
+        // Show the object
+        popup.gameObject.SetActive(true);
+
+        // Wait for 5 seconds
+        yield return new WaitForSeconds(5f);
+
+        // Hide the object after 5 seconds
+        popup.gameObject.SetActive(false);
+        Debug.Log("set false");
     }
 }
