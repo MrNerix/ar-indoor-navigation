@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -21,14 +22,13 @@ public class QRReader : MonoBehaviour
     private ARCameraManager cameraManager;
     [SerializeField]
     private List<Target> navigationTargetObjects = new List<Target>();
-
     private Texture2D cameraImageTexture;
     private IBarcodeReader reader = new BarcodeReader();
     public SetNav setNav;
     public SceneLoader sceneLoader;
-
     public GameObject models;
     public GameObject maps;
+    public GameObject targets;
     public GameObject searchButton;
     public GameObject footerExpanded;
     public GameObject qrMaskOnStart;
@@ -121,8 +121,10 @@ public class QRReader : MonoBehaviour
             sessionOrigin.transform.position = currentTarget.PositionObject.transform.position;
             sessionOrigin.transform.rotation = currentTarget.PositionObject.transform.rotation;
 
-            //viaC04v14.SetActive(true);
-            //c04map.SetActive(true);
+            maps.transform.Find(targetText.Substring(0, Mathf.Min(3, targetText.Length))).gameObject.SetActive(true);
+            models.transform.Find(targetText.Substring(0, Mathf.Min(3, targetText.Length))).gameObject.SetActive(true);
+            targets.transform.Find(targetText.Substring(0, Mathf.Min(3, targetText.Length))).gameObject.SetActive(true);
+
             searchButton.SetActive(true);
             footerExpanded.SetActive(true);
             qrMaskOnStart.SetActive(false);

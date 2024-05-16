@@ -1308,7 +1308,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 142352a5e126d1a4fac598f950d6cc7a, type: 3}
       propertyPath: m_Name
-      value: VIA C04
+      value: C04
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 142352a5e126d1a4fac598f950d6cc7a, type: 3}
       propertyPath: m_IsActive
@@ -1807,7 +1807,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &184731134
 Transform:
   m_ObjectHideFlags: 0
@@ -3369,7 +3369,7 @@ GameObject:
   - component: {fileID: 526502071}
   - component: {fileID: 526502070}
   m_Layer: 0
-  m_Name: C05 map
+  m_Name: C05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4047,8 +4047,9 @@ MonoBehaviour:
     PositionObject: {fileID: 652828880}
   setNav: {fileID: 40919615}
   sceneLoader: {fileID: 407515126}
-  models: {fileID: 0}
-  maps: {fileID: 0}
+  models: {fileID: 1861584538}
+  maps: {fileID: 1608866457}
+  targets: {fileID: 1061770723}
   searchButton: {fileID: 1080348805}
   footerExpanded: {fileID: 175396978}
   qrMaskOnStart: {fileID: 1420137243}
@@ -5643,7 +5644,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &834338349
 Transform:
   m_ObjectHideFlags: 0
@@ -6841,8 +6842,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1061770723}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.114418, y: -5.403068, z: -2.849506}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -8.114418, y: -5.403068, z: -2.8495064}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9602,11 +9603,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 142352a5e126d1a4fac598f950d6cc7a, type: 3}
       propertyPath: m_Name
-      value: VIA C05
+      value: C05
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 142352a5e126d1a4fac598f950d6cc7a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 142352a5e126d1a4fac598f950d6cc7a, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -11308,7 +11309,7 @@ GameObject:
   - component: {fileID: 1845600550}
   - component: {fileID: 1845600549}
   m_Layer: 0
-  m_Name: C04 map
+  m_Name: C04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11611,7 +11612,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.1
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 4dba8f7eb1688e84eb228164db0bbbf8, type: 2}
+  m_NavMeshData: {fileID: 0}
   m_BuildHeightMesh: 0
 --- !u!1 &1956178471
 GameObject:
@@ -12321,13 +12322,13 @@ SceneRoots:
   - {fileID: 596374146}
   - {fileID: 1861584539}
   - {fileID: 1608866458}
+  - {fileID: 1061770724}
   - {fileID: 40919618}
   - {fileID: 223974230}
   - {fileID: 1070075792}
   - {fileID: 782628378}
   - {fileID: 229235674}
   - {fileID: 637951353}
-  - {fileID: 1061770724}
   - {fileID: 1489335449}
   - {fileID: 818897728}
   - {fileID: 779975990}
