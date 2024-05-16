@@ -47,11 +47,8 @@ public class SetNav : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        //Debug.Log("Line length: " + CalculateLineLength(path.corners) + ". target is " + navManager.GetComponent<SceneLoader>().GetTargetedText());
-
         if (lineToggle && targetPosition != Vector3.zero)
         {
-
             NavMesh.CalculatePath(transform.position, targetPosition, NavMesh.AllAreas, path);
             line.positionCount = path.corners.Length;
             line.SetPositions(path.corners);

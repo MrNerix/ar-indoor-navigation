@@ -27,8 +27,8 @@ public class QRReader : MonoBehaviour
     public SetNav setNav;
     public SceneLoader sceneLoader;
 
-    public GameObject viaC04v14;
-    public GameObject c04map;
+    public GameObject models;
+    public GameObject maps;
     public GameObject searchButton;
     public GameObject footerExpanded;
     public GameObject qrMaskOnStart;
@@ -49,8 +49,8 @@ public class QRReader : MonoBehaviour
     private void OnEnable()
     {
         cameraManager.frameReceived += OnCameraFrameReceived;
-        viaC04v14.SetActive(false);
-        c04map.SetActive(false);
+        //viaC04v14.SetActive(false);
+        //c04map.SetActive(false);
         searchButton.SetActive(false);
         footerExpanded.SetActive(false);
         qrMaskOnStart.SetActive(true);
@@ -121,8 +121,8 @@ public class QRReader : MonoBehaviour
             sessionOrigin.transform.position = currentTarget.PositionObject.transform.position;
             sessionOrigin.transform.rotation = currentTarget.PositionObject.transform.rotation;
 
-            viaC04v14.SetActive(true);
-            c04map.SetActive(true);
+            //viaC04v14.SetActive(true);
+            //c04map.SetActive(true);
             searchButton.SetActive(true);
             footerExpanded.SetActive(true);
             qrMaskOnStart.SetActive(false);
