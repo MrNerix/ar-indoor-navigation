@@ -108,7 +108,14 @@ public class Filter : MonoBehaviour
             {
                 Transform extraLabelTransform = destinations.transform.GetChild(4).GetChild(0).GetChild(0).GetChild(i + 1).GetChild(2);
                 TextMeshProUGUI extraLabel = extraLabelTransform.GetComponent<TextMeshProUGUI>();
-                extraLabel.text = estimateData[destinations.options[i].text].ToString("F0") + " meters away";
+                if (!estimateData.ContainsKey(destinations.options[i].text))
+                {
+                    extraLabel.text = "destination is in a different block / floor";
+                }
+                else
+                {
+                    extraLabel.text = estimateData[destinations.options[i].text].ToString("F0") + " meters away";
+                }
             }
         }
         // Add your code to handle the dropdown opening here
