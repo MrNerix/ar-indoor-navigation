@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 10852148}
   m_Layer: 0
   m_Name: C05.Stairs_1
-  m_TagString: Untagged
+  m_TagString: stairs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -1132,7 +1132,7 @@ GameObject:
   - component: {fileID: 95284099}
   m_Layer: 0
   m_Name: C04.Elevator_2
-  m_TagString: Untagged
+  m_TagString: elevators
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -1414,7 +1414,7 @@ GameObject:
   - component: {fileID: 138485537}
   m_Layer: 0
   m_Name: C05.WC_1
-  m_TagString: WC
+  m_TagString: wc
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -1624,7 +1624,7 @@ GameObject:
   - component: {fileID: 171231705}
   m_Layer: 0
   m_Name: C04.Lockers
-  m_TagString: Untagged
+  m_TagString: lockers
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -1990,7 +1990,7 @@ GameObject:
   - component: {fileID: 241132690}
   m_Layer: 0
   m_Name: C05.Elevator_1
-  m_TagString: Untagged
+  m_TagString: elevators
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -2200,7 +2200,7 @@ GameObject:
   - component: {fileID: 285656755}
   m_Layer: 0
   m_Name: C04.Printer
-  m_TagString: Untagged
+  m_TagString: printers
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -2305,7 +2305,7 @@ GameObject:
   - component: {fileID: 288493563}
   m_Layer: 0
   m_Name: C05.Stairs_2
-  m_TagString: Untagged
+  m_TagString: stairs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -2507,7 +2507,7 @@ GameObject:
   - component: {fileID: 374376861}
   m_Layer: 0
   m_Name: C04.09
-  m_TagString: Untagged
+  m_TagString: groupRooms
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -2612,7 +2612,7 @@ GameObject:
   - component: {fileID: 395649830}
   m_Layer: 0
   m_Name: C04.Stairs_2
-  m_TagString: Untagged
+  m_TagString: stairs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -3083,7 +3083,7 @@ GameObject:
   - component: {fileID: 475867738}
   m_Layer: 0
   m_Name: C04.13a
-  m_TagString: Untagged
+  m_TagString: classrooms
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -3645,7 +3645,7 @@ GameObject:
   - component: {fileID: 592309814}
   m_Layer: 0
   m_Name: C05.WC_2
-  m_TagString: WC
+  m_TagString: wc
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -4107,7 +4107,7 @@ GameObject:
   - component: {fileID: 638401280}
   m_Layer: 0
   m_Name: C04.WC_1
-  m_TagString: WC
+  m_TagString: wc
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -4212,7 +4212,7 @@ GameObject:
   - component: {fileID: 650253407}
   m_Layer: 0
   m_Name: C05.Elevator_2
-  m_TagString: Untagged
+  m_TagString: elevators
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -4797,7 +4797,7 @@ GameObject:
   - component: {fileID: 680524794}
   m_Layer: 0
   m_Name: C04.18
-  m_TagString: Untagged
+  m_TagString: classrooms
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -4996,7 +4996,7 @@ GameObject:
   - component: {fileID: 736054149}
   m_Layer: 0
   m_Name: C04.WC_2
-  m_TagString: WC
+  m_TagString: wc
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -5322,7 +5322,7 @@ GameObject:
   - component: {fileID: 811249839}
   m_Layer: 0
   m_Name: C04.07
-  m_TagString: Untagged
+  m_TagString: groupRooms
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -5471,7 +5471,7 @@ GameObject:
   - component: {fileID: 824268048}
   m_Layer: 0
   m_Name: C04.08
-  m_TagString: Untagged
+  m_TagString: groupRooms
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -5576,7 +5576,7 @@ GameObject:
   - component: {fileID: 828710141}
   m_Layer: 0
   m_Name: C05.Lockers
-  m_TagString: Untagged
+  m_TagString: lockers
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -5742,7 +5742,7 @@ GameObject:
   - component: {fileID: 861966366}
   m_Layer: 0
   m_Name: C04.13b
-  m_TagString: Untagged
+  m_TagString: classrooms
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -5952,7 +5952,7 @@ GameObject:
   - component: {fileID: 941090850}
   m_Layer: 0
   m_Name: C04.Stairs_1
-  m_TagString: Untagged
+  m_TagString: stairs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -6317,7 +6317,7 @@ GameObject:
   - component: {fileID: 994750466}
   m_Layer: 0
   m_Name: C04.11
-  m_TagString: Untagged
+  m_TagString: groupRooms
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -6660,7 +6660,7 @@ GameObject:
   - component: {fileID: 1051409740}
   m_Layer: 0
   m_Name: C04.WC_HC
-  m_TagString: Untagged
+  m_TagString: wcHandicapped
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -7268,7 +7268,7 @@ GameObject:
   - component: {fileID: 1114859807}
   m_Layer: 0
   m_Name: C04.12
-  m_TagString: Untagged
+  m_TagString: classrooms
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -8314,7 +8314,7 @@ GameObject:
   - component: {fileID: 1322157357}
   m_Layer: 0
   m_Name: C04.16
-  m_TagString: Untagged
+  m_TagString: classrooms
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -8629,7 +8629,7 @@ GameObject:
   - component: {fileID: 1375274352}
   m_Layer: 0
   m_Name: C04.Elevator_1
-  m_TagString: Untagged
+  m_TagString: elevators
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -9150,7 +9150,7 @@ GameObject:
   - component: {fileID: 1394937131}
   m_Layer: 0
   m_Name: C05.Coffee
-  m_TagString: Untagged
+  m_TagString: coffeeSpots
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -9844,7 +9844,7 @@ GameObject:
   - component: {fileID: 1593493732}
   m_Layer: 0
   m_Name: C04.10
-  m_TagString: Untagged
+  m_TagString: groupRooms
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -10803,7 +10803,7 @@ GameObject:
   - component: {fileID: 1770508008}
   m_Layer: 0
   m_Name: C04.Coffee
-  m_TagString: Untagged
+  m_TagString: coffeeSpots
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -11971,7 +11971,7 @@ GameObject:
   - component: {fileID: 2066306853}
   m_Layer: 0
   m_Name: C04.05
-  m_TagString: Untagged
+  m_TagString: groupRooms
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -12076,7 +12076,7 @@ GameObject:
   - component: {fileID: 2122932779}
   m_Layer: 0
   m_Name: C05.Printer
-  m_TagString: Untagged
+  m_TagString: printers
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -12181,7 +12181,7 @@ GameObject:
   - component: {fileID: 2124927387}
   m_Layer: 0
   m_Name: C05.WC_HC
-  m_TagString: Untagged
+  m_TagString: wcHandicapped
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
