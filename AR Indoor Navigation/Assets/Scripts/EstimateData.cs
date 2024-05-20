@@ -4,10 +4,19 @@ using System.Collections.Generic;
 public class EstimateData : MonoBehaviour
 {
     private Dictionary<string, float> collectedEstimates;
-
+    private Dictionary<string, string> allTargets = new Dictionary<string, string>();
+    public GameObject targets;
     void Start()
     {
         DontDestroyOnLoad(gameObject);
+        foreach (Transform child in targets.transform)
+        {
+            foreach (Transform grandChild in child)
+            {
+                allTargets.Add(grandChild.gameObject.name, grandChild.gameObject.tag);
+                Debug.Log("target: " + grandChild.gameObject.name + ", its tag: " + grandChild.gameObject.tag);
+            }
+        }
     }
     public void CollectNewEstimates(Dictionary<string, float> locations)
     {

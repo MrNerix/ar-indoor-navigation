@@ -121,9 +121,14 @@ public class QRReader : MonoBehaviour
             sessionOrigin.transform.position = currentTarget.PositionObject.transform.position;
             sessionOrigin.transform.rotation = currentTarget.PositionObject.transform.rotation;
 
+            DisableAllChildObjects(maps.transform);
+            DisableAllChildObjects(models.transform);
+            DisableAllChildObjects(targets.transform);
+
             maps.transform.Find(targetText.Substring(0, Mathf.Min(3, targetText.Length))).gameObject.SetActive(true);
             models.transform.Find(targetText.Substring(0, Mathf.Min(3, targetText.Length))).gameObject.SetActive(true);
             targets.transform.Find(targetText.Substring(0, Mathf.Min(3, targetText.Length))).gameObject.SetActive(true);
+            setNav.CollectTargets(targetText);
 
             searchButton.SetActive(true);
             footerExpanded.SetActive(true);
@@ -135,7 +140,13 @@ public class QRReader : MonoBehaviour
             }
         }
     }
-
+    private void DisableAllChildObjects(Transform parent)
+    {
+        foreach (Transform child in parent)
+        {
+            child.gameObject.SetActive(false);
+        }
+    }
     IEnumerator ShowAndHideObject()
     {
         Debug.Log("set true");

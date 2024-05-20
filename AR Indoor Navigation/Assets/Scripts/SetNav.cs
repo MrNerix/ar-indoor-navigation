@@ -5,12 +5,13 @@ using UnityEngine.AI;
 using TMPro;
 using UnityEngine.UI;
 using Unity.VisualScripting;
+using Unity.XR.CoreUtils;
 
 public class SetNav : MonoBehaviour
 {
     public EstimateData estimateData;
+    public GameObject targets;
     public Dictionary<string, float> locations = new Dictionary<string, float>();
-
     [SerializeField]
     private List<Target> navigationTargetObjects = new List<Target>();
     public TextMeshProUGUI locationNameTMP;
@@ -31,17 +32,6 @@ public class SetNav : MonoBehaviour
         path = new NavMeshPath();
         line = transform.GetComponent<LineRenderer>();
         line.enabled = lineToggle;
-        if (locations.Count == 0)
-        {
-            CalculateAllDistances(transform);
-        }
-        //sets the target
-        if (GameObject.Find("NavigationManager") != null)
-        {
-            navManager = GameObject.Find("NavigationManager");
-            SetCurrentNavigationTarget(navManager.GetComponent<SceneLoader>().GetTargetedText());
-            locationNameTMP.text = navManager.GetComponent<SceneLoader>().GetTargetedText();
-        }
     }
 
     // Update is called once per frame
@@ -69,6 +59,25 @@ public class SetNav : MonoBehaviour
         {
             targetPosition = currentTarget.PositionObject.transform.position;
         }
+    }
+
+    public void CollectTargets(string location)
+    {
+        navigationTargetObjects.Clear();
+        GameObject loc = targets.transform.Find(location.Substring(0, Mathf.Min(3, location.Length))).gameObject;
+        for (int i = 0; i < loc.transform.childCount; i++)
+        {
+            Target newTarget = new Target();
+            newTarget.Name = loc.transform.GetChild(i).name;
+            newTarget.PositionObject = loc.transform.GetChild(i).gameObject;
+            navigationTargetObjects.Add(newTarget);
+        }
+        // if (GameObject.Find("NavigationManager") != null)
+        // {
+        //     navManager = GameObject.Find("NavigationManager");
+        //     SetCurrentNavigationTarget(navManager.GetComponent<SceneLoader>().GetTargetedText());
+        //     locationNameTMP.text = navManager.GetComponent<SceneLoader>().GetTargetedText();
+        // }
     }
 
     public void ToggleVisibility()
