@@ -12,7 +12,6 @@ public class SetNav : MonoBehaviour
     public EstimateData estimateData;
     public GameObject targets;
     public Dictionary<string, float> locations = new Dictionary<string, float>();
-    [SerializeField]
     private List<Target> navigationTargetObjects = new List<Target>();
     public TextMeshProUGUI locationNameTMP;
 

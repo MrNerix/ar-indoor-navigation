@@ -4,15 +4,15 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - classrooms
-  - groupRooms
-  - wc
-  - wcHandicapped
-  - stairs
-  - elevators
-  - coffeeSpots
-  - printers
-  - lockers
+  - Classroom
+  - Group Room
+  - WC
+  - WC (Handicap)
+  - Stairs
+  - Elevator
+  - Coffee Spot
+  - Printer
+  - Lockers
   layers:
   - Default
   - TransparentFX

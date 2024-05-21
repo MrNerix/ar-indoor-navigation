@@ -14,7 +14,7 @@ public class EstimateData : MonoBehaviour
             foreach (Transform grandChild in child)
             {
                 allTargets.Add(grandChild.gameObject.name, grandChild.gameObject.tag);
-                Debug.Log("target: " + grandChild.gameObject.name + ", its tag: " + grandChild.gameObject.tag);
+                Debug.Log("name: " + grandChild.gameObject.name + ", tag: " + grandChild.gameObject.tag);
             }
         }
     }
@@ -26,6 +26,11 @@ public class EstimateData : MonoBehaviour
     public Dictionary<string, float> getCurrentEstimates()
     {
         return collectedEstimates;
+    }
+
+    public Dictionary<string, string> getAllDestinations()
+    {
+        return allTargets;
     }
 
     public void WriteEstimates()
