@@ -8,12 +8,10 @@ using UnityEngine.UI;
 public class Filter : MonoBehaviour
 {
 
-    public Slider blockSlider;
-    public Slider floorSlider;
+    public TMP_Dropdown blockDropdown;
+    public TMP_Dropdown floorDropdown;
     public TMP_Dropdown typeDropdown;
     public TMP_Dropdown destinations;
-    public TMP_Text chosenBlock;
-    public TMP_Text chosenFloor;
     private bool isDropdownOpen = false;
     private GameObject est;
     private EstimateData estimates;
@@ -116,10 +114,12 @@ public class Filter : MonoBehaviour
 
     public void ClearFilters()
     {
-        blockSlider.value = 0f;
-        floorSlider.value = 0f;
         typeDropdown.value = 0;
         typeDropdown.RefreshShownValue();
+        blockDropdown.value = 0;
+        blockDropdown.RefreshShownValue();
+        floorDropdown.value = 0;
+        floorDropdown.RefreshShownValue();
     }
 
     public void ApplyFilters()
@@ -142,18 +142,21 @@ public class Filter : MonoBehaviour
         {
             filteredOptions.AddRange(listDictionary[typeDropdown.options[typeDropdown.value].text]);
         }
-
+        
+        // New filtering using a dropdown menu
         for (int i = filteredOptions.Count - 1; i >= 0; i--)
         {
-            if (!filteredOptions[i].StartsWith(chosenBlock.text))
+            if (!filteredOptions[i].StartsWith(blockDropdown.captionText.text))
             {
                 filteredOptions.RemoveAt(i);
             }
-            else if (filteredOptions[i][2] != chosenFloor.text[0])
+            else if (filteredOptions[i][2] != floorDropdown.captionText.text[0])
             {
                 filteredOptions.RemoveAt(i);
             }
         }
+        
+        
         filteredOptions.Sort();
         destinations.options.Insert(0, new TMP_Dropdown.OptionData("Choose Location"));
         destinations.AddOptions(filteredOptions);
