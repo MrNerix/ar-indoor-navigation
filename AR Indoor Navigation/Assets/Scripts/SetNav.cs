@@ -6,6 +6,7 @@ using TMPro;
 using UnityEngine.UI;
 using Unity.VisualScripting;
 using Unity.XR.CoreUtils;
+using UnityEngine.Assertions.Must;
 
 public class SetNav : MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class SetNav : MonoBehaviour
 
     [SerializeField]
     private TextMeshProUGUI ArrivedAtDestinationText;
+    private string currentLocation;
+    private string currentDest;
+    //private string finalDest;
     private NavMeshPath path;
     private LineRenderer line;
     private Vector3 targetPosition = Vector3.zero;
@@ -50,33 +54,74 @@ public class SetNav : MonoBehaviour
         }
     }
 
-    public void SetCurrentNavigationTarget(string selectedText)
+    private void SetCurrentNavigationTarget(string selectedText)
     {
         targetPosition = Vector3.zero;
+
         Target currentTarget = navigationTargetObjects.Find(x => x.Name.Equals(selectedText));
         if (currentTarget != null)
         {
-            targetPosition = currentTarget.PositionObject.transform.position;
+            currentDest += selectedText;
+            if (selectedText[0] == currentLocation[0] && selectedText[2] == currentLocation[2])
+            {
+                targetPosition = currentTarget.PositionObject.transform.position;
+                //currentDest = currentLocation + " S " + selectedText + " E, " + selectedText[0] + currentLocation[0] + selectedText[2] + currentLocation[2];
+            }
+            else if (selectedText[0] == currentLocation[0])
+            {
+                Transform parent = targets.transform.Find(currentLocation[0].ToString() + currentLocation[1].ToString() + currentLocation[2].ToString());
+                targetPosition = parent.Find(estimateData.getClosestElevator()).transform.position;
+                currentDest = parent.Find(estimateData.getClosestElevator()).name + " only 0";
+            }
         }
     }
+
 
     public void CollectTargets(string location)
     {
         navigationTargetObjects.Clear();
-        GameObject loc = targets.transform.Find(location.Substring(0, Mathf.Min(3, location.Length))).gameObject;
-        for (int i = 0; i < loc.transform.childCount; i++)
-        {
-            Target newTarget = new Target();
-            newTarget.Name = loc.transform.GetChild(i).name;
-            newTarget.PositionObject = loc.transform.GetChild(i).gameObject;
-            navigationTargetObjects.Add(newTarget);
-        }
-        // if (GameObject.Find("NavigationManager") != null)
+        //string a = "C04";
+        //string b = "C05";
+        // GameObject loc = targets.transform.Find(a.Substring(0, Mathf.Min(3, a.Length))).gameObject;
+        // //GameObject loc2 = targets.transform.GetChild(1).gameObject;
+        // for (int i = 0; i < loc.transform.childCount; i++)
         // {
-        //     navManager = GameObject.Find("NavigationManager");
-        //     SetCurrentNavigationTarget(navManager.GetComponent<SceneLoader>().GetTargetedText());
-        //     locationNameTMP.text = navManager.GetComponent<SceneLoader>().GetTargetedText();
+        //     Target newTarget = new Target();
+        //     newTarget.Name = loc.transform.GetChild(i).name;
+        //     newTarget.PositionObject = loc.transform.GetChild(i).gameObject;
+        //     navigationTargetObjects.Add(newTarget);
         // }
+        // for (int i = 0; i < loc2.transform.childCount; i++)
+        // {
+        //     Target newTarget = new Target();
+        //     newTarget.Name = loc2.transform.GetChild(i).name;
+        //     newTarget.PositionObject = loc2.transform.GetChild(i).gameObject;
+        //     navigationTargetObjects.Add(newTarget);
+        // }
+
+        // GameObject loc2 = targets.transform.Find("C04").gameObject;
+        // for (int i = 0; i < loc2.transform.childCount; i++)
+        // {
+        //     Target newTarget = new Target();
+        //     newTarget.Name = loc2.transform.GetChild(i).name;
+        //     newTarget.PositionObject = loc2.transform.GetChild(i).gameObject;
+        //     navigationTargetObjects.Add(newTarget);
+        // }
+        foreach (Transform child in targets.transform)
+        {
+            foreach (Transform grandChild in child)
+            {
+                Target newTarget = new Target();
+                newTarget.Name = grandChild.name;
+                newTarget.PositionObject = grandChild.gameObject;
+                navigationTargetObjects.Add(newTarget);
+            }
+        }
+    }
+
+    public void SetCurrentLocation(string location)
+    {
+        currentLocation = location;
     }
 
     public void ToggleVisibility()
@@ -95,20 +140,25 @@ public class SetNav : MonoBehaviour
     public void CalculateAllDistances(Transform position)
     {
         locations.Clear();
+        locationNameTMP.text = "";
         foreach (Target target in navigationTargetObjects)
         {
-            SetCurrentNavigationTarget(target.Name);
-            lineToggle = true;
-            NavMesh.CalculatePath(position.position, targetPosition, NavMesh.AllAreas, path);
-            line.positionCount = path.corners.Length;
-            line.SetPositions(path.corners);
-            locations.Add(target.Name, CalculateLineLength(path.corners));
+            if (target.Name[0] == currentLocation[0] && target.Name[2] == currentLocation[2])
+            {
+                SetCurrentNavigationTarget(target.Name);
+                lineToggle = true;
+                NavMesh.CalculatePath(position.position, targetPosition, NavMesh.AllAreas, path);
+                line.positionCount = path.corners.Length;
+                line.SetPositions(path.corners);
+                locations.Add(target.Name, CalculateLineLength(path.corners));
+            }
         }
         estimateData.CollectNewEstimates(locations);
         if (GameObject.Find("NavigationManager") != null)
         {
             navManager = GameObject.Find("NavigationManager");
             SetCurrentNavigationTarget(navManager.GetComponent<SceneLoader>().GetTargetedText());
+
             locationNameTMP.text = navManager.GetComponent<SceneLoader>().GetTargetedText();
         }
     }

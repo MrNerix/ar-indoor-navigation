@@ -17,7 +17,6 @@ public class Filter : MonoBehaviour
     private bool isDropdownOpen = false;
     private GameObject est;
     private EstimateData estimates;
-    // Lists (used before we implement a database)
 
     public Dictionary<string, float> estimateData = new Dictionary<string, float>();
     public Dictionary<string, string> listDictionary = new Dictionary<string, string>();
@@ -48,46 +47,6 @@ public class Filter : MonoBehaviour
         filteredOptions.Sort();
         destinations.AddOptions(filteredOptions);
         destinations.options.Insert(0, new TMP_Dropdown.OptionData("Choose Location"));
-
-        // listDictionary.Add("Classroom", classrooms);
-        // listDictionary.Add("Group Room", groupRooms);
-        // listDictionary.Add("WC", wc);
-        // listDictionary.Add("WC (Handicap)", wcHandicapped);
-        // listDictionary.Add("Stairs", stairs);
-        // listDictionary.Add("Elevator", elevators);
-        // listDictionary.Add("Coffee Spot", coffeeSpots);
-        // listDictionary.Add("Printer", printers);
-        // listDictionary.Add("Lockers", lockers);
-
-        // classrooms.Add("C04.12");
-        // classrooms.Add("C04.13a");
-        // classrooms.Add("C04.13b");
-        // classrooms.Add("C04.16");
-        // classrooms.Add("C04.18");
-
-        // groupRooms.Add("C04.05");
-        // groupRooms.Add("C04.07");
-        // groupRooms.Add("C04.08");
-        // groupRooms.Add("C04.09");
-        // groupRooms.Add("C04.10");
-        // groupRooms.Add("C04.11");
-
-        // wc.Add("C04.WC_1");
-        // wc.Add("C04.WC_2");
-
-        // wcHandicapped.Add("C04.WC_HC");
-
-        // stairs.Add("C04.Stairs_1");
-        // stairs.Add("C04.Stairs_2");
-
-        // elevators.Add("C04.Elevator_1");
-        // elevators.Add("C04.Elevator_2");
-
-        // coffeeSpots.Add("C04.Coffee");
-
-        // printers.Add("C04.Printer");
-
-        // lockers.Add("C04.Lockers");
     }
 
 
@@ -126,7 +85,6 @@ public class Filter : MonoBehaviour
                 }
             }
         }
-        // Add your code to handle the dropdown opening here
     }
 
     public void ClearFilters()
@@ -147,15 +105,6 @@ public class Filter : MonoBehaviour
             {
                 filteredOptions.Add(kvp.Key);
             }
-            // filteredOptions.AddRange(classrooms);
-            // filteredOptions.AddRange(groupRooms);
-            // filteredOptions.AddRange(wc);
-            // filteredOptions.AddRange(wcHandicapped);
-            // filteredOptions.AddRange(stairs);
-            // filteredOptions.AddRange(elevators);
-            // filteredOptions.AddRange(coffeeSpots);
-            // filteredOptions.AddRange(printers);
-            // filteredOptions.AddRange(lockers);
         }
         else
         {

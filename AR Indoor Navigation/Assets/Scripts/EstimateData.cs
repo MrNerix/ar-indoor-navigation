@@ -33,6 +33,24 @@ public class EstimateData : MonoBehaviour
         return allTargets;
     }
 
+    public string getClosestElevator()
+    {
+        string closestEname = null;
+        float closestEfloat = 9999.0f;
+        foreach (KeyValuePair<string, float> kvp in collectedEstimates)
+        {
+            if (kvp.Key[4] == 'E' && kvp.Key[11] == 'r')
+            {
+                if (closestEname == null || closestEfloat > kvp.Value)
+                {
+                    closestEname = kvp.Key;
+                    closestEfloat = kvp.Value;
+                }
+            }
+        }
+        return closestEname;
+    }
+
     public void WriteEstimates()
     {
         foreach (KeyValuePair<string, float> pair in collectedEstimates)

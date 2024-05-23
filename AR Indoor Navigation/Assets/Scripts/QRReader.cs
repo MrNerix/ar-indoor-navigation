@@ -112,11 +112,13 @@ public class QRReader : MonoBehaviour
     }
     private void SetQrCodeRecenterTarget(string targetText)
     {
+
         Target currentTarget = navigationTargetObjects.Find(x => x.Name.ToLower().Equals(targetText.ToLower()));
         if (currentTarget != null)
         {
             session.Reset();
             popup.text = " your current location is set to " + targetText;
+            setNav.SetCurrentLocation(targetText);
             StartCoroutine(ShowAndHideObject());
             sessionOrigin.transform.position = currentTarget.PositionObject.transform.position;
             sessionOrigin.transform.rotation = currentTarget.PositionObject.transform.rotation;
@@ -127,12 +129,18 @@ public class QRReader : MonoBehaviour
 
             maps.transform.Find(targetText.Substring(0, Mathf.Min(3, targetText.Length))).gameObject.SetActive(true);
             models.transform.Find(targetText.Substring(0, Mathf.Min(3, targetText.Length))).gameObject.SetActive(true);
-            targets.transform.Find(targetText.Substring(0, Mathf.Min(3, targetText.Length))).gameObject.SetActive(true);
+            //targets.transform.Find(targetText.Substring(0, Mathf.Min(3, targetText.Length))).gameObject.SetActive(true);
+
+            targets.transform.Find("C04").gameObject.SetActive(true);
+            targets.transform.Find("C05").gameObject.SetActive(true);
+
+
             setNav.CollectTargets(targetText);
 
             searchButton.SetActive(true);
             footerExpanded.SetActive(true);
             qrMaskOnStart.SetActive(false);
+
             setNav.CalculateAllDistances(currentTarget.PositionObject.transform);
             if (GameObject.Find("NavigationManager") == null)
             {
