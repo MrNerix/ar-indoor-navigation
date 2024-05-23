@@ -20,7 +20,6 @@ public class SetNav : MonoBehaviour
     private TextMeshProUGUI ArrivedAtDestinationText;
     private string currentLocation;
     private string currentDest;
-    //private string finalDest;
     private NavMeshPath path;
     private LineRenderer line;
     private Vector3 targetPosition = Vector3.zero;
@@ -45,7 +44,7 @@ public class SetNav : MonoBehaviour
             NavMesh.CalculatePath(transform.position, targetPosition, NavMesh.AllAreas, path);
             line.positionCount = path.corners.Length;
             line.SetPositions(path.corners);
-            if (isFinished == false && CalculateLineLength(path.corners) != 0 && CalculateLineLength(path.corners) <= 2)
+            if (isFinished == false && CalculateLineLength(path.corners) != 0 && CalculateLineLength(path.corners) <= 2 && currentDest == navManager.GetComponent<SceneLoader>().GetTargetedText())
             {
                 ArrivedAtDestinationText.text = "You have arrived at your destination: " + navManager.GetComponent<SceneLoader>().GetTargetedText();
                 isFinished = true;
@@ -65,7 +64,6 @@ public class SetNav : MonoBehaviour
             if (selectedText[0] == currentLocation[0] && selectedText[2] == currentLocation[2])
             {
                 targetPosition = currentTarget.PositionObject.transform.position;
-                //currentDest = currentLocation + " S " + selectedText + " E, " + selectedText[0] + currentLocation[0] + selectedText[2] + currentLocation[2];
             }
             else if (selectedText[0] == currentLocation[0])
             {
@@ -80,33 +78,6 @@ public class SetNav : MonoBehaviour
     public void CollectTargets(string location)
     {
         navigationTargetObjects.Clear();
-        //string a = "C04";
-        //string b = "C05";
-        // GameObject loc = targets.transform.Find(a.Substring(0, Mathf.Min(3, a.Length))).gameObject;
-        // //GameObject loc2 = targets.transform.GetChild(1).gameObject;
-        // for (int i = 0; i < loc.transform.childCount; i++)
-        // {
-        //     Target newTarget = new Target();
-        //     newTarget.Name = loc.transform.GetChild(i).name;
-        //     newTarget.PositionObject = loc.transform.GetChild(i).gameObject;
-        //     navigationTargetObjects.Add(newTarget);
-        // }
-        // for (int i = 0; i < loc2.transform.childCount; i++)
-        // {
-        //     Target newTarget = new Target();
-        //     newTarget.Name = loc2.transform.GetChild(i).name;
-        //     newTarget.PositionObject = loc2.transform.GetChild(i).gameObject;
-        //     navigationTargetObjects.Add(newTarget);
-        // }
-
-        // GameObject loc2 = targets.transform.Find("C04").gameObject;
-        // for (int i = 0; i < loc2.transform.childCount; i++)
-        // {
-        //     Target newTarget = new Target();
-        //     newTarget.Name = loc2.transform.GetChild(i).name;
-        //     newTarget.PositionObject = loc2.transform.GetChild(i).gameObject;
-        //     navigationTargetObjects.Add(newTarget);
-        // }
         foreach (Transform child in targets.transform)
         {
             foreach (Transform grandChild in child)
@@ -158,7 +129,6 @@ public class SetNav : MonoBehaviour
         {
             navManager = GameObject.Find("NavigationManager");
             SetCurrentNavigationTarget(navManager.GetComponent<SceneLoader>().GetTargetedText());
-
             locationNameTMP.text = navManager.GetComponent<SceneLoader>().GetTargetedText();
         }
     }

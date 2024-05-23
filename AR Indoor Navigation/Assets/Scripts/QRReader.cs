@@ -43,14 +43,11 @@ public class QRReader : MonoBehaviour
     }
     private void Update()
     {
-
     }
 
     private void OnEnable()
     {
         cameraManager.frameReceived += OnCameraFrameReceived;
-        //viaC04v14.SetActive(false);
-        //c04map.SetActive(false);
         searchButton.SetActive(false);
         footerExpanded.SetActive(false);
         qrMaskOnStart.SetActive(true);
@@ -129,11 +126,10 @@ public class QRReader : MonoBehaviour
 
             maps.transform.Find(targetText.Substring(0, Mathf.Min(3, targetText.Length))).gameObject.SetActive(true);
             models.transform.Find(targetText.Substring(0, Mathf.Min(3, targetText.Length))).gameObject.SetActive(true);
-            //targets.transform.Find(targetText.Substring(0, Mathf.Min(3, targetText.Length))).gameObject.SetActive(true);
 
+            //hardcoded for now
             targets.transform.Find("C04").gameObject.SetActive(true);
             targets.transform.Find("C05").gameObject.SetActive(true);
-
 
             setNav.CollectTargets(targetText);
 
