@@ -3,7 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Classroom
+  - Group Room
+  - WC
+  - WC (Handicap)
+  - Stairs
+  - Elevator
+  - Coffee Spot
+  - Printer
+  - Lockers
   layers:
   - Default
   - TransparentFX

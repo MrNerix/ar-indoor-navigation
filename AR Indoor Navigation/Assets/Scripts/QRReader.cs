@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -21,14 +22,13 @@ public class QRReader : MonoBehaviour
     private ARCameraManager cameraManager;
     [SerializeField]
     private List<Target> navigationTargetObjects = new List<Target>();
-
     private Texture2D cameraImageTexture;
     private IBarcodeReader reader = new BarcodeReader();
     public SetNav setNav;
     public SceneLoader sceneLoader;
-
-    public GameObject viaC04v14;
-    public GameObject c04map;
+    public GameObject models;
+    public GameObject maps;
+    public GameObject targets;
     public GameObject searchButton;
     public GameObject footerExpanded;
     public GameObject qrMaskOnStart;
@@ -43,14 +43,11 @@ public class QRReader : MonoBehaviour
     }
     private void Update()
     {
-
     }
 
     private void OnEnable()
     {
         cameraManager.frameReceived += OnCameraFrameReceived;
-        viaC04v14.SetActive(false);
-        c04map.SetActive(false);
         searchButton.SetActive(false);
         footerExpanded.SetActive(false);
         qrMaskOnStart.SetActive(true);
@@ -112,20 +109,34 @@ public class QRReader : MonoBehaviour
     }
     private void SetQrCodeRecenterTarget(string targetText)
     {
+
         Target currentTarget = navigationTargetObjects.Find(x => x.Name.ToLower().Equals(targetText.ToLower()));
         if (currentTarget != null)
         {
             session.Reset();
             popup.text = " your current location is set to " + targetText;
+            setNav.SetCurrentLocation(targetText);
             StartCoroutine(ShowAndHideObject());
             sessionOrigin.transform.position = currentTarget.PositionObject.transform.position;
             sessionOrigin.transform.rotation = currentTarget.PositionObject.transform.rotation;
 
-            viaC04v14.SetActive(true);
-            c04map.SetActive(true);
+            DisableAllChildObjects(maps.transform);
+            DisableAllChildObjects(models.transform);
+            DisableAllChildObjects(targets.transform);
+
+            maps.transform.Find(targetText.Substring(0, Mathf.Min(3, targetText.Length))).gameObject.SetActive(true);
+            models.transform.Find(targetText.Substring(0, Mathf.Min(3, targetText.Length))).gameObject.SetActive(true);
+
+            //hardcoded for now
+            targets.transform.Find("C04").gameObject.SetActive(true);
+            targets.transform.Find("C05").gameObject.SetActive(true);
+
+            setNav.CollectTargets(targetText);
+
             searchButton.SetActive(true);
             footerExpanded.SetActive(true);
             qrMaskOnStart.SetActive(false);
+
             setNav.CalculateAllDistances(currentTarget.PositionObject.transform);
             if (GameObject.Find("NavigationManager") == null)
             {
@@ -133,7 +144,13 @@ public class QRReader : MonoBehaviour
             }
         }
     }
-
+    private void DisableAllChildObjects(Transform parent)
+    {
+        foreach (Transform child in parent)
+        {
+            child.gameObject.SetActive(false);
+        }
+    }
     IEnumerator ShowAndHideObject()
     {
         Debug.Log("set true");

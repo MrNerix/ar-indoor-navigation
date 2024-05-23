@@ -5,18 +5,21 @@ using UnityEngine.AI;
 using TMPro;
 using UnityEngine.UI;
 using Unity.VisualScripting;
+using Unity.XR.CoreUtils;
+using UnityEngine.Assertions.Must;
 
 public class SetNav : MonoBehaviour
 {
     public EstimateData estimateData;
+    public GameObject targets;
     public Dictionary<string, float> locations = new Dictionary<string, float>();
-
-    [SerializeField]
     private List<Target> navigationTargetObjects = new List<Target>();
     public TextMeshProUGUI locationNameTMP;
 
     [SerializeField]
     private TextMeshProUGUI ArrivedAtDestinationText;
+    private string currentLocation;
+    private string currentDest;
     private NavMeshPath path;
     private LineRenderer line;
     private Vector3 targetPosition = Vector3.zero;
@@ -31,31 +34,17 @@ public class SetNav : MonoBehaviour
         path = new NavMeshPath();
         line = transform.GetComponent<LineRenderer>();
         line.enabled = lineToggle;
-        if (locations.Count == 0)
-        {
-            CalculateAllDistances(transform);
-        }
-        //sets the target
-        if (GameObject.Find("NavigationManager") != null)
-        {
-            navManager = GameObject.Find("NavigationManager");
-            SetCurrentNavigationTarget(navManager.GetComponent<SceneLoader>().GetTargetedText());
-            locationNameTMP.text = navManager.GetComponent<SceneLoader>().GetTargetedText();
-        }
     }
 
     // Update is called once per frame
     private void Update()
     {
-        //Debug.Log("Line length: " + CalculateLineLength(path.corners) + ". target is " + navManager.GetComponent<SceneLoader>().GetTargetedText());
-
         if (lineToggle && targetPosition != Vector3.zero)
         {
-
             NavMesh.CalculatePath(transform.position, targetPosition, NavMesh.AllAreas, path);
             line.positionCount = path.corners.Length;
             line.SetPositions(path.corners);
-            if (isFinished == false && CalculateLineLength(path.corners) != 0 && CalculateLineLength(path.corners) <= 2)
+            if (isFinished == false && CalculateLineLength(path.corners) != 0 && CalculateLineLength(path.corners) <= 2 && currentDest == navManager.GetComponent<SceneLoader>().GetTargetedText())
             {
                 ArrivedAtDestinationText.text = "You have arrived at your destination: " + navManager.GetComponent<SceneLoader>().GetTargetedText();
                 isFinished = true;
@@ -64,14 +53,46 @@ public class SetNav : MonoBehaviour
         }
     }
 
-    public void SetCurrentNavigationTarget(string selectedText)
+    private void SetCurrentNavigationTarget(string selectedText)
     {
         targetPosition = Vector3.zero;
+
         Target currentTarget = navigationTargetObjects.Find(x => x.Name.Equals(selectedText));
         if (currentTarget != null)
         {
-            targetPosition = currentTarget.PositionObject.transform.position;
+            currentDest += selectedText;
+            if (selectedText[0] == currentLocation[0] && selectedText[2] == currentLocation[2])
+            {
+                targetPosition = currentTarget.PositionObject.transform.position;
+            }
+            else if (selectedText[0] == currentLocation[0])
+            {
+                Transform parent = targets.transform.Find(currentLocation[0].ToString() + currentLocation[1].ToString() + currentLocation[2].ToString());
+                targetPosition = parent.Find(estimateData.getClosestElevator()).transform.position;
+                currentDest = parent.Find(estimateData.getClosestElevator()).name + " only 0";
+            }
         }
+    }
+
+
+    public void CollectTargets(string location)
+    {
+        navigationTargetObjects.Clear();
+        foreach (Transform child in targets.transform)
+        {
+            foreach (Transform grandChild in child)
+            {
+                Target newTarget = new Target();
+                newTarget.Name = grandChild.name;
+                newTarget.PositionObject = grandChild.gameObject;
+                navigationTargetObjects.Add(newTarget);
+            }
+        }
+    }
+
+    public void SetCurrentLocation(string location)
+    {
+        currentLocation = location;
     }
 
     public void ToggleVisibility()
@@ -90,14 +111,18 @@ public class SetNav : MonoBehaviour
     public void CalculateAllDistances(Transform position)
     {
         locations.Clear();
+        locationNameTMP.text = "";
         foreach (Target target in navigationTargetObjects)
         {
-            SetCurrentNavigationTarget(target.Name);
-            lineToggle = true;
-            NavMesh.CalculatePath(position.position, targetPosition, NavMesh.AllAreas, path);
-            line.positionCount = path.corners.Length;
-            line.SetPositions(path.corners);
-            locations.Add(target.Name, CalculateLineLength(path.corners));
+            if (target.Name[0] == currentLocation[0] && target.Name[2] == currentLocation[2])
+            {
+                SetCurrentNavigationTarget(target.Name);
+                lineToggle = true;
+                NavMesh.CalculatePath(position.position, targetPosition, NavMesh.AllAreas, path);
+                line.positionCount = path.corners.Length;
+                line.SetPositions(path.corners);
+                locations.Add(target.Name, CalculateLineLength(path.corners));
+            }
         }
         estimateData.CollectNewEstimates(locations);
         if (GameObject.Find("NavigationManager") != null)

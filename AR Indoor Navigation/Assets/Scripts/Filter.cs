@@ -15,10 +15,9 @@ public class Filter : MonoBehaviour
     private bool isDropdownOpen = false;
     private GameObject est;
     private EstimateData estimates;
-    // Lists (used before we implement a database)
 
     public Dictionary<string, float> estimateData = new Dictionary<string, float>();
-    public Dictionary<string, List<string>> listDictionary = new Dictionary<string, List<string>>();
+    public Dictionary<string, string> listDictionary = new Dictionary<string, string>();
     public TextMeshProUGUI[] extraLabels;
     private List<string> filteredOptions = new List<string>();
     private List<string> classrooms = new List<string>();
@@ -37,47 +36,15 @@ public class Filter : MonoBehaviour
         estimates = est.GetComponent<EstimateData>();
         estimateData = estimates.getCurrentEstimates();
 
-        listDictionary.Add("Classroom", classrooms);
-        listDictionary.Add("Group Room", groupRooms);
-        listDictionary.Add("WC", wc);
-        listDictionary.Add("WC (Handicap)", wcHandicapped);
-        listDictionary.Add("Stairs", stairs);
-        listDictionary.Add("Elevator", elevators);
-        listDictionary.Add("Coffee Spot", coffeeSpots);
-        listDictionary.Add("Printer", printers);
-        listDictionary.Add("Lockers", lockers);
-
-        classrooms.Add("C04.12");
-        classrooms.Add("C04.13a");
-        classrooms.Add("C04.13b");
-        classrooms.Add("C04.16");
-        classrooms.Add("C04.18");
-
-        groupRooms.Add("C04.05");
-        groupRooms.Add("C04.07");
-        groupRooms.Add("C04.08");
-        groupRooms.Add("C04.09");
-        groupRooms.Add("C04.10");
-        groupRooms.Add("C04.11");
-
-        wc.Add("C04.WC_1");
-        wc.Add("C04.WC_2");
-
-        wcHandicapped.Add("C04.WC_HC");
-
-        stairs.Add("C04.Stairs_1");
-        stairs.Add("C04.Stairs_2");
-        //stairs.Add("C04.54");
-
-        elevators.Add("C04.Elevator_1");
-        elevators.Add("C04.Elevator_2");
-        //elevators.Add("C04.55");
-
-        coffeeSpots.Add("C04.Coffee");
-
-        printers.Add("C04.Printer");
-
-        lockers.Add("C04.Lockers");
+        foreach (KeyValuePair<string, string> kvp in estimates.getAllDestinations())
+        {
+            listDictionary.Add(kvp.Key, kvp.Value);
+            filteredOptions.Add(kvp.Key);
+        }
+        destinations.ClearOptions();
+        filteredOptions.Sort();
+        destinations.AddOptions(filteredOptions);
+        destinations.options.Insert(0, new TMP_Dropdown.OptionData("Choose Location"));
     }
 
 
@@ -106,10 +73,16 @@ public class Filter : MonoBehaviour
             {
                 Transform extraLabelTransform = destinations.transform.GetChild(4).GetChild(0).GetChild(0).GetChild(i + 1).GetChild(2);
                 TextMeshProUGUI extraLabel = extraLabelTransform.GetComponent<TextMeshProUGUI>();
-                extraLabel.text = estimateData[destinations.options[i].text].ToString("F0") + " meters away";
+                if (!estimateData.ContainsKey(destinations.options[i].text))
+                {
+                    extraLabel.text = "destination is in a different block / floor";
+                }
+                else
+                {
+                    extraLabel.text = estimateData[destinations.options[i].text].ToString("F0") + " meters away";
+                }
             }
         }
-        // Add your code to handle the dropdown opening here
     }
 
     public void ClearFilters()
@@ -128,19 +101,20 @@ public class Filter : MonoBehaviour
         filteredOptions.Clear();
         if (typeDropdown.value == 0)
         {
-            filteredOptions.AddRange(classrooms);
-            filteredOptions.AddRange(groupRooms);
-            filteredOptions.AddRange(wc);
-            filteredOptions.AddRange(wcHandicapped);
-            filteredOptions.AddRange(stairs);
-            filteredOptions.AddRange(elevators);
-            filteredOptions.AddRange(coffeeSpots);
-            filteredOptions.AddRange(printers);
-            filteredOptions.AddRange(lockers);
+            foreach (KeyValuePair<string, string> kvp in listDictionary)
+            {
+                filteredOptions.Add(kvp.Key);
+            }
         }
         else
         {
-            filteredOptions.AddRange(listDictionary[typeDropdown.options[typeDropdown.value].text]);
+            foreach (KeyValuePair<string, string> kvp in listDictionary)
+            {
+                if (kvp.Value == typeDropdown.options[typeDropdown.value].text)
+                {
+                    filteredOptions.Add(kvp.Key);
+                }
+            }
         }
         
         // New filtering using a dropdown menu
