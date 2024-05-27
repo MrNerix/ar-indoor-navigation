@@ -23,7 +23,7 @@ public class SetNav : MonoBehaviour
     private NavMeshPath path;
     private LineRenderer line;
     private Vector3 targetPosition = Vector3.zero;
-    private bool lineToggle = false;
+    private bool lineToggle = true;
     private bool isFinished = false;
 
     private GameObject navManager;
@@ -95,12 +95,6 @@ public class SetNav : MonoBehaviour
         currentLocation = location;
     }
 
-    public void ToggleVisibility()
-    {
-        lineToggle = !lineToggle;
-        line.enabled = lineToggle;
-    }
-
     public void VoidTargetPosition()
     {
         targetPosition = Vector3.zero;
@@ -117,7 +111,7 @@ public class SetNav : MonoBehaviour
             if (target.Name[0] == currentLocation[0] && target.Name[2] == currentLocation[2])
             {
                 SetCurrentNavigationTarget(target.Name);
-                lineToggle = true;
+                //lineToggle = true;
                 NavMesh.CalculatePath(position.position, targetPosition, NavMesh.AllAreas, path);
                 line.positionCount = path.corners.Length;
                 line.SetPositions(path.corners);
