@@ -629,7 +629,7 @@ GameObject:
   - component: {fileID: 54371884}
   m_Layer: 0
   m_Name: B03.09
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -1148,7 +1148,7 @@ GameObject:
   - component: {fileID: 81857189}
   m_Layer: 0
   m_Name: C03.11
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -1253,7 +1253,7 @@ GameObject:
   - component: {fileID: 82850925}
   m_Layer: 0
   m_Name: B03.WC_2
-  m_TagString: Elevator
+  m_TagString: WC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -2094,7 +2094,7 @@ GameObject:
   - component: {fileID: 218892942}
   m_Layer: 0
   m_Name: C03.04
-  m_TagString: Elevator
+  m_TagString: Group Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -2424,7 +2424,7 @@ GameObject:
   - component: {fileID: 255146541}
   m_Layer: 0
   m_Name: B03.18
-  m_TagString: Elevator
+  m_TagString: Group Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -2634,7 +2634,7 @@ GameObject:
   - component: {fileID: 266982834}
   m_Layer: 0
   m_Name: C03.24
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -2949,7 +2949,7 @@ GameObject:
   - component: {fileID: 291474566}
   m_Layer: 0
   m_Name: B03.04
-  m_TagString: Elevator
+  m_TagString: Group Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -3054,7 +3054,7 @@ GameObject:
   - component: {fileID: 323908324}
   m_Layer: 0
   m_Name: C03.21
-  m_TagString: Elevator
+  m_TagString: Group Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -3159,7 +3159,7 @@ GameObject:
   - component: {fileID: 324171527}
   m_Layer: 0
   m_Name: B03.WC_HC
-  m_TagString: Elevator
+  m_TagString: WC (Handicap)
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -3264,7 +3264,7 @@ GameObject:
   - component: {fileID: 327273111}
   m_Layer: 0
   m_Name: A03.03
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -3369,7 +3369,7 @@ GameObject:
   - component: {fileID: 333473211}
   m_Layer: 0
   m_Name: C03.Lockers
-  m_TagString: Elevator
+  m_TagString: Lockers
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -3712,7 +3712,7 @@ GameObject:
   - component: {fileID: 376397170}
   m_Layer: 0
   m_Name: A03.Stairs_1
-  m_TagString: Elevator
+  m_TagString: Stairs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -3922,7 +3922,7 @@ GameObject:
   - component: {fileID: 403053847}
   m_Layer: 0
   m_Name: A03.15
-  m_TagString: Elevator
+  m_TagString: Group Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -4058,7 +4058,7 @@ GameObject:
   - component: {fileID: 424532198}
   m_Layer: 0
   m_Name: A03.12
-  m_TagString: Elevator
+  m_TagString: Group Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -4194,7 +4194,7 @@ GameObject:
   - component: {fileID: 440042066}
   m_Layer: 0
   m_Name: B03.17
-  m_TagString: Elevator
+  m_TagString: Group Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -4299,7 +4299,7 @@ GameObject:
   - component: {fileID: 460108210}
   m_Layer: 0
   m_Name: C03.13
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -4509,7 +4509,7 @@ GameObject:
   - component: {fileID: 497220779}
   m_Layer: 0
   m_Name: A03.20
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -4614,7 +4614,7 @@ GameObject:
   - component: {fileID: 502649419}
   m_Layer: 0
   m_Name: C03.22
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -5024,7 +5024,7 @@ GameObject:
   - component: {fileID: 562863230}
   m_Layer: 0
   m_Name: C03.06
-  m_TagString: Elevator
+  m_TagString: Group Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -5129,7 +5129,7 @@ GameObject:
   - component: {fileID: 567644211}
   m_Layer: 0
   m_Name: B03.02
-  m_TagString: Elevator
+  m_TagString: Group Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -5234,7 +5234,7 @@ GameObject:
   - component: {fileID: 580068769}
   m_Layer: 0
   m_Name: C03.05
-  m_TagString: Elevator
+  m_TagString: Group Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -5549,7 +5549,7 @@ GameObject:
   - component: {fileID: 595241764}
   m_Layer: 0
   m_Name: C03.Stairs_1
-  m_TagString: Elevator
+  m_TagString: Stairs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -5654,7 +5654,7 @@ GameObject:
   - component: {fileID: 595842721}
   m_Layer: 0
   m_Name: B03.Stairs_1
-  m_TagString: Elevator
+  m_TagString: Stairs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -6704,7 +6704,7 @@ GameObject:
   - component: {fileID: 697639969}
   m_Layer: 0
   m_Name: A03.WC_2
-  m_TagString: Elevator
+  m_TagString: WC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -6903,7 +6903,7 @@ GameObject:
   - component: {fileID: 727711899}
   m_Layer: 0
   m_Name: A03.05
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -7008,7 +7008,7 @@ GameObject:
   - component: {fileID: 732423107}
   m_Layer: 0
   m_Name: C03.10
-  m_TagString: Elevator
+  m_TagString: Group Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -7218,7 +7218,7 @@ GameObject:
   - component: {fileID: 740511971}
   m_Layer: 0
   m_Name: A03.WC_1
-  m_TagString: Elevator
+  m_TagString: WC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -7323,7 +7323,7 @@ GameObject:
   - component: {fileID: 750598932}
   m_Layer: 0
   m_Name: C03.09
-  m_TagString: Elevator
+  m_TagString: Group Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -7533,7 +7533,7 @@ GameObject:
   - component: {fileID: 771735908}
   m_Layer: 0
   m_Name: A03.04
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -7638,7 +7638,7 @@ GameObject:
   - component: {fileID: 775000573}
   m_Layer: 0
   m_Name: C03.08a
-  m_TagString: Elevator
+  m_TagString: Group Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -8384,7 +8384,7 @@ GameObject:
   - component: {fileID: 862668250}
   m_Layer: 0
   m_Name: A03.14
-  m_TagString: Elevator
+  m_TagString: Group Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -8489,7 +8489,7 @@ GameObject:
   - component: {fileID: 882175617}
   m_Layer: 0
   m_Name: A03.13
-  m_TagString: Elevator
+  m_TagString: Group Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -8594,7 +8594,7 @@ GameObject:
   - component: {fileID: 895292736}
   m_Layer: 0
   m_Name: A03.11
-  m_TagString: Elevator
+  m_TagString: Group Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -8699,7 +8699,7 @@ GameObject:
   - component: {fileID: 910739620}
   m_Layer: 0
   m_Name: C03.23
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -9014,7 +9014,7 @@ GameObject:
   - component: {fileID: 944658432}
   m_Layer: 0
   m_Name: A03.02
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -9224,7 +9224,7 @@ GameObject:
   - component: {fileID: 962042049}
   m_Layer: 0
   m_Name: C03.20
-  m_TagString: Elevator
+  m_TagString: Group Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -9461,7 +9461,7 @@ GameObject:
   - component: {fileID: 971518356}
   m_Layer: 0
   m_Name: C03.Printer
-  m_TagString: Elevator
+  m_TagString: Printer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -10363,7 +10363,7 @@ GameObject:
   - component: {fileID: 1064930332}
   m_Layer: 0
   m_Name: C03.16
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -10572,7 +10572,7 @@ GameObject:
   - component: {fileID: 1092464378}
   m_Layer: 0
   m_Name: B03.15
-  m_TagString: Elevator
+  m_TagString: Group Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -10947,7 +10947,7 @@ GameObject:
   - component: {fileID: 1121533198}
   m_Layer: 0
   m_Name: B03.13
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -11052,7 +11052,7 @@ GameObject:
   - component: {fileID: 1133365494}
   m_Layer: 0
   m_Name: C03.12
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -11157,7 +11157,7 @@ GameObject:
   - component: {fileID: 1134292678}
   m_Layer: 0
   m_Name: B03.10
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -11262,7 +11262,7 @@ GameObject:
   - component: {fileID: 1145505087}
   m_Layer: 0
   m_Name: A03.06
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -11367,7 +11367,7 @@ GameObject:
   - component: {fileID: 1153692503}
   m_Layer: 0
   m_Name: A03.07
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -11472,7 +11472,7 @@ GameObject:
   - component: {fileID: 1159435424}
   m_Layer: 0
   m_Name: A03.WC_HC
-  m_TagString: Elevator
+  m_TagString: WC (Handicap)
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -11577,7 +11577,7 @@ GameObject:
   - component: {fileID: 1162400276}
   m_Layer: 0
   m_Name: B03.06
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -11787,7 +11787,7 @@ GameObject:
   - component: {fileID: 1179417284}
   m_Layer: 0
   m_Name: B03.03
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -11892,7 +11892,7 @@ GameObject:
   - component: {fileID: 1183443016}
   m_Layer: 0
   m_Name: B03.05
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -12402,7 +12402,7 @@ GameObject:
   - component: {fileID: 1295074189}
   m_Layer: 0
   m_Name: A03.17
-  m_TagString: Elevator
+  m_TagString: Group Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -12687,7 +12687,7 @@ GameObject:
   - component: {fileID: 1327792803}
   m_Layer: 0
   m_Name: C03.15
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -13107,7 +13107,7 @@ GameObject:
   - component: {fileID: 1376173517}
   m_Layer: 0
   m_Name: C03.WC_1
-  m_TagString: Elevator
+  m_TagString: WC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -13212,7 +13212,7 @@ GameObject:
   - component: {fileID: 1377976149}
   m_Layer: 0
   m_Name: C03.08b
-  m_TagString: Elevator
+  m_TagString: Group Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -13940,7 +13940,7 @@ GameObject:
   - component: {fileID: 1417292834}
   m_Layer: 0
   m_Name: A03.01a
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -14635,7 +14635,7 @@ GameObject:
   - component: {fileID: 1510575960}
   m_Layer: 0
   m_Name: C03.14
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -14845,7 +14845,7 @@ GameObject:
   - component: {fileID: 1598262439}
   m_Layer: 0
   m_Name: B03.08
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -15223,7 +15223,7 @@ GameObject:
   - component: {fileID: 1621496721}
   m_Layer: 0
   m_Name: C03.07
-  m_TagString: Elevator
+  m_TagString: Group Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -15328,7 +15328,7 @@ GameObject:
   - component: {fileID: 1639438589}
   m_Layer: 0
   m_Name: B03.01
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -15748,7 +15748,7 @@ GameObject:
   - component: {fileID: 1738195792}
   m_Layer: 0
   m_Name: A03.19
-  m_TagString: Elevator
+  m_TagString: Group Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -15975,7 +15975,7 @@ GameObject:
   - component: {fileID: 1748064239}
   m_Layer: 0
   m_Name: A03.Stairs_2
-  m_TagString: Elevator
+  m_TagString: Stairs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -16290,7 +16290,7 @@ GameObject:
   - component: {fileID: 1784467072}
   m_Layer: 0
   m_Name: B03.07
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -16395,7 +16395,7 @@ GameObject:
   - component: {fileID: 1788559008}
   m_Layer: 0
   m_Name: B03.Stairs_2
-  m_TagString: Elevator
+  m_TagString: Stairs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -17002,7 +17002,7 @@ GameObject:
   - component: {fileID: 1850826579}
   m_Layer: 0
   m_Name: A03.01b
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -17279,7 +17279,7 @@ GameObject:
   - component: {fileID: 1913406028}
   m_Layer: 0
   m_Name: A03.18
-  m_TagString: Elevator
+  m_TagString: Group Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -17563,7 +17563,7 @@ GameObject:
   - component: {fileID: 1963911486}
   m_Layer: 0
   m_Name: B03.16
-  m_TagString: Elevator
+  m_TagString: Group Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -17773,7 +17773,7 @@ GameObject:
   - component: {fileID: 2010546329}
   m_Layer: 0
   m_Name: B03.14
-  m_TagString: Elevator
+  m_TagString: Group Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -17878,7 +17878,7 @@ GameObject:
   - component: {fileID: 2021793385}
   m_Layer: 0
   m_Name: B03.WC_1
-  m_TagString: Elevator
+  m_TagString: WC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -18120,7 +18120,7 @@ GameObject:
   - component: {fileID: 2094460281}
   m_Layer: 0
   m_Name: C03.Stairs_2
-  m_TagString: Elevator
+  m_TagString: Stairs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
