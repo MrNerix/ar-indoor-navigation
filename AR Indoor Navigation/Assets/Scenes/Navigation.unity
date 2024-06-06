@@ -5854,6 +5854,8 @@ MonoBehaviour:
     PositionObject: {fileID: 652828880}
   - Name: C05.Elevator_1
     PositionObject: {fileID: 1880087131}
+  - Name: B03.Stairs_1
+    PositionObject: {fileID: 1849779549}
   setNav: {fileID: 40919615}
   sceneLoader: {fileID: 407515126}
   models: {fileID: 1861584538}
