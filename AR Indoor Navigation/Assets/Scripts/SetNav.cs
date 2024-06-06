@@ -60,22 +60,25 @@ public class SetNav : MonoBehaviour
         Target currentTarget = navigationTargetObjects.Find(x => x.Name.Equals(selectedText));
         if (currentTarget != null)
         {
-            currentDest += selectedText;
-            if (selectedText[0] == currentLocation[0] && selectedText[2] == currentLocation[2])
+            currentDest = selectedText;
+            if (selectedText[0] == currentLocation[0] || (currentLocation[2] - '0') <= 3)
             {
-                targetPosition = currentTarget.PositionObject.transform.position;
-            }
-            else if (selectedText[0] == currentLocation[0])
-            {
-                Transform parent = targets.transform.Find(currentLocation[0].ToString() + currentLocation[1].ToString() + currentLocation[2].ToString());
-                targetPosition = parent.Find(estimateData.getClosestElevator()).transform.position;
-                currentDest = parent.Find(estimateData.getClosestElevator()).name + " only 0";
+                if (selectedText[2] == currentLocation[2])
+                {
+                    targetPosition = currentTarget.PositionObject.transform.position;
+                }
+                else
+                {
+                    Transform parent = targets.transform.Find(currentLocation[0].ToString() + currentLocation[1].ToString() + currentLocation[2].ToString());
+                    targetPosition = parent.Find(estimateData.getClosestElevator(selectedText[0])).transform.position;
+                    //currentDest = parent.Find(estimateData.getClosestElevator()).name + " only 0";
+                }
             }
         }
     }
 
 
-    public void CollectTargets(string location)
+    public void CollectTargets()
     {
         navigationTargetObjects.Clear();
         foreach (Transform child in targets.transform)
@@ -108,7 +111,7 @@ public class SetNav : MonoBehaviour
         locationNameTMP.text = "";
         foreach (Target target in navigationTargetObjects)
         {
-            if (target.Name[0] == currentLocation[0] && target.Name[2] == currentLocation[2])
+            if (target.Name[0] == currentLocation[0] || (currentLocation[2] - '0') <= 3 && target.Name[2] == currentLocation[2])
             {
                 SetCurrentNavigationTarget(target.Name);
                 //lineToggle = true;

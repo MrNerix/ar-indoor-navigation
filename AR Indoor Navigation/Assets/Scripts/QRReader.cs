@@ -40,10 +40,6 @@ public class QRReader : MonoBehaviour
     {
         qrScanStart = Time.time - qrCooldown;
     }
-    private void Update()
-    {
-    }
-
     private void OnEnable()
     {
         cameraManager.frameReceived += OnCameraFrameReceived;
@@ -122,14 +118,23 @@ public class QRReader : MonoBehaviour
             DisableAllChildObjects(models.transform);
             DisableAllChildObjects(targets.transform);
 
-            maps.transform.Find(targetText.Substring(0, Mathf.Min(3, targetText.Length))).gameObject.SetActive(true);
-            models.transform.Find(targetText.Substring(0, Mathf.Min(3, targetText.Length))).gameObject.SetActive(true);
+            if ((targetText[2] - '0') >= 4)
+            {
+                maps.transform.Find(targetText.Substring(0, Mathf.Min(3, targetText.Length))).gameObject.SetActive(true);
+                models.transform.Find(targetText.Substring(0, Mathf.Min(3, targetText.Length))).gameObject.SetActive(true);
+            }
+            else
+            {
+                maps.transform.Find("X" + targetText[1] + targetText[2]).gameObject.SetActive(true);
+                models.transform.Find("X" + targetText[1] + targetText[2]).gameObject.SetActive(true);
 
+            }
             //hardcoded for now
             targets.transform.Find("C04").gameObject.SetActive(true);
             targets.transform.Find("C05").gameObject.SetActive(true);
+            targets.transform.Find("X03").gameObject.SetActive(true);
 
-            setNav.CollectTargets(targetText);
+            setNav.CollectTargets();
 
             footerExpanded.SetActive(true);
             qrMaskOnStart.SetActive(false);
