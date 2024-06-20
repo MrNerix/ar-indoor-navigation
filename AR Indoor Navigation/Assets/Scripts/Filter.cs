@@ -29,22 +29,50 @@ public class Filter : MonoBehaviour
     private List<string> coffeeSpots = new List<string>();
     private List<string> printers = new List<string>();
     private List<string> lockers = new List<string>();
+    
+    public Sprite favoriteIconAdd;
+    public GameObject favIcon;
+
+    
     // Start is called before the first frame update
     void Start()
     {
         est = GameObject.Find("DestinationEstimateData");
         estimates = est.GetComponent<EstimateData>();
         estimateData = estimates.getCurrentEstimates();
-
         foreach (KeyValuePair<string, string> kvp in estimates.getAllDestinations())
         {
             listDictionary.Add(kvp.Key, kvp.Value);
             filteredOptions.Add(kvp.Key);
         }
+        
+
         destinations.ClearOptions();
         filteredOptions.Sort();
         destinations.AddOptions(filteredOptions);
         destinations.options.Insert(0, new TMP_Dropdown.OptionData("Choose Location"));
+
+        HandleFavourites();
+    }
+
+    private void HandleFavourites()
+    {
+        AddEmptyHeartToAllOptions(); // Adding a favourite icon to all the destination options
+        // Initial loading favourites from a file
+        favIcon.GetComponent<FavIconHandler>().LoadFavouritesOptionsFromFile();
+    }
+
+    private void AddEmptyHeartToAllOptions()
+    {
+        TMP_Dropdown.OptionData option = new TMP_Dropdown.OptionData();
+        for (int i = 1; i < destinations.options.Count; i++)
+        {
+            option = destinations.options[i];
+            //option.text = "" + option.text + "AAA";
+            option.image = favoriteIconAdd;
+            destinations.options.RemoveAt(i);
+            destinations.options.Insert(i, option);
+        }
     }
 
 
@@ -134,5 +162,6 @@ public class Filter : MonoBehaviour
         filteredOptions.Sort();
         destinations.options.Insert(0, new TMP_Dropdown.OptionData("Choose Location"));
         destinations.AddOptions(filteredOptions);
+        HandleFavourites();
     }
 }
