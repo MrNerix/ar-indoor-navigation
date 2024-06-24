@@ -61,6 +61,7 @@ public class SetNav : MonoBehaviour
         if (currentTarget != null)
         {
             currentDest = selectedText;
+            locationNameTMP.text = "current: " + currentLocation + " target:" + selectedText;
             if (selectedText[0] == currentLocation[0] || (currentLocation[2] - '0') <= 3)
             {
                 if (selectedText[2] == currentLocation[2])
@@ -69,8 +70,17 @@ public class SetNav : MonoBehaviour
                 }
                 else
                 {
-                    Transform parent = targets.transform.Find(currentLocation[0].ToString() + currentLocation[1].ToString() + currentLocation[2].ToString());
-                    targetPosition = parent.Find(estimateData.getClosestElevator(selectedText[0])).transform.position;
+                    if ((currentLocation[2] - '0') <= 3)
+                    {
+                        Transform parent = targets.transform.Find("X" + currentLocation[1].ToString() + currentLocation[2].ToString());
+                        targetPosition = parent.Find(estimateData.getClosestElevator(selectedText[0])).transform.position;
+                    }
+                    else
+                    {
+                        Transform parent = targets.transform.Find(currentLocation[0].ToString() + currentLocation[1].ToString() + currentLocation[2].ToString());
+                        targetPosition = parent.Find(estimateData.getClosestElevator(selectedText[0])).transform.position;
+                    }
+
                     //currentDest = parent.Find(estimateData.getClosestElevator()).name + " only 0";
                 }
             }
@@ -111,8 +121,10 @@ public class SetNav : MonoBehaviour
         locationNameTMP.text = "";
         foreach (Target target in navigationTargetObjects)
         {
-            if (target.Name[0] == currentLocation[0] || (currentLocation[2] - '0') <= 3 && target.Name[2] == currentLocation[2])
+            //locationNameTMP.text = "tsg target:" + target.Name + " Current:" + currentLocation;
+            if ((target.Name[0] == currentLocation[0] || (currentLocation[2] - '0') <= 3) && target.Name[2] == currentLocation[2])
             {
+                //locationNameTMP.text = "tiko target:" + target.Name + " Current:" + currentLocation;
                 SetCurrentNavigationTarget(target.Name);
                 //lineToggle = true;
                 NavMesh.CalculatePath(position.position, targetPosition, NavMesh.AllAreas, path);
@@ -121,6 +133,7 @@ public class SetNav : MonoBehaviour
                 locations.Add(target.Name, CalculateLineLength(path.corners));
             }
         }
+        //locationNameTMP.text = "trying to estimate";
         estimateData.CollectNewEstimates(locations);
         if (GameObject.Find("NavigationManager") != null)
         {

@@ -134,12 +134,18 @@ public class QRReader : MonoBehaviour
             targets.transform.Find("C05").gameObject.SetActive(true);
             targets.transform.Find("X03").gameObject.SetActive(true);
 
+            popup.text = " A " + targetText;
+
             setNav.CollectTargets();
 
             footerExpanded.SetActive(true);
             qrMaskOnStart.SetActive(false);
 
+            popup.text = " B " + targetText;
+
             setNav.CalculateAllDistances(currentTarget.PositionObject.transform);
+
+            popup.text = " C " + targetText;
             if (GameObject.Find("NavigationManager") == null)
             {
                 sceneLoader.ToSelection();
