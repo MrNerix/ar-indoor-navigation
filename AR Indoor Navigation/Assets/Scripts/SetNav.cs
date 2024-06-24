@@ -46,7 +46,7 @@ public class SetNav : MonoBehaviour
             line.SetPositions(path.corners);
             if (isFinished == false && CalculateLineLength(path.corners) != 0 && CalculateLineLength(path.corners) <= 2 && currentDest == navManager.GetComponent<SceneLoader>().GetTargetedText())
             {
-                ArrivedAtDestinationText.text = "You have arrived at your destination: " + navManager.GetComponent<SceneLoader>().GetTargetedText();
+                ArrivedAtDestinationText.text = "You have arrived at your destination: " + currentDest;
                 isFinished = true;
                 StartCoroutine(ShowAndHideObject());
             }
@@ -69,9 +69,18 @@ public class SetNav : MonoBehaviour
                 }
                 else
                 {
-                    Transform parent = targets.transform.Find(currentLocation[0].ToString() + currentLocation[1].ToString() + currentLocation[2].ToString());
-                    targetPosition = parent.Find(estimateData.getClosestElevator(selectedText[0])).transform.position;
-                    //currentDest = parent.Find(estimateData.getClosestElevator()).name + " only 0";
+                    if ((currentLocation[2] - '0') <= 3)
+                    {
+                        Transform parent = targets.transform.Find("X" + currentLocation[1].ToString() + currentLocation[2].ToString());
+                        targetPosition = parent.Find(estimateData.getClosestElevator(selectedText[0])).transform.position;
+                        currentDest = parent.Find(estimateData.getClosestElevator(selectedText[0])).transform.name;
+                    }
+                    else
+                    {
+                        Transform parent = targets.transform.Find(currentLocation[0].ToString() + currentLocation[1].ToString() + currentLocation[2].ToString());
+                        targetPosition = parent.Find(estimateData.getClosestElevator(selectedText[0])).transform.position;
+                        currentDest = parent.Find(estimateData.getClosestElevator(selectedText[0])).transform.name;
+                    }
                 }
             }
         }
@@ -111,7 +120,7 @@ public class SetNav : MonoBehaviour
         locationNameTMP.text = "";
         foreach (Target target in navigationTargetObjects)
         {
-            if (target.Name[0] == currentLocation[0] || (currentLocation[2] - '0') <= 3 && target.Name[2] == currentLocation[2])
+            if ((target.Name[0] == currentLocation[0] || (currentLocation[2] - '0') <= 3) && target.Name[2] == currentLocation[2])
             {
                 SetCurrentNavigationTarget(target.Name);
                 //lineToggle = true;
