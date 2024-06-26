@@ -1,17 +1,18 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.InputSystem.XR;
+using UnityEngine.XR.ARFoundation;
 
 public class Reposition : MonoBehaviour
 {
-    public float speed = 20.0f; // Speed at which the object moves
-    public GameObject cameraOffset; // The Camera Offset object
-    public GameObject user; // The Main Camera object
+    public GameObject user;
     public LineRenderer NavigationLineRenderer; // Assume you have a line renderer to draw the path
     public LineRenderer lineRenderer;
-    //private TrackedPoseDriver trackedPoseDriver;
+    private TrackedPoseDriver arPoseDriver;
 
     void Start()
     {
+        arPoseDriver = user.GetComponent<TrackedPoseDriver>();
         SetupLineRenderer();
     }
 
@@ -22,7 +23,7 @@ public class Reposition : MonoBehaviour
         Debug.Log("Distance to nearest NavMesh position: " + distance);
         DrawPathToNavMesh(nearestPosition);
 
-        if (distance > 0.1f)
+        if (distance != 0)
         {
             SetPositionToNavMesh(nearestPosition);
         }
@@ -42,12 +43,20 @@ public class Reposition : MonoBehaviour
 
     void SetPositionToNavMesh(Vector3 targetPosition)
     {
-        //Debug.Log("Setting position to NavMesh. TrackedPoseDriver enabled: " + (trackedPoseDriver != null && trackedPoseDriver.enabled));
+        // // Temporarily disable the ARPoseDriver to prevent it from overriding the position change
+        // if (arPoseDriver != null)
+        // {
+        //     arPoseDriver.enabled = false;
+        // }
 
-        // Move the Camera Offset instead of the Main Camera
-        Vector3 newPosition = new Vector3(targetPosition.x, cameraOffset.transform.position.y, targetPosition.z); // Ignore Y-axis for the movement
-        cameraOffset.transform.position = newPosition;
-        Debug.Log("New position set: " + newPosition);
+        Vector3 newPosition = new Vector3(targetPosition.x, user.transform.position.y, targetPosition.z); // Keep the original Y position
+        user.transform.position = newPosition;
+
+        // // Re-enable the ARPoseDriver after setting the position
+        // if (arPoseDriver != null)
+        // {
+        //     arPoseDriver.enabled = true;
+        // }
     }
 
     public Vector3 FindNearestNavMeshPosition(Vector3 position, out float distance)
@@ -59,22 +68,12 @@ public class Reposition : MonoBehaviour
 
         if (NavMesh.SamplePosition(flatPosition, out hit, 10.0f, NavMesh.AllAreas)) // Increased search radius to 10.0f
         {
-            Vector3 targetPosition = new Vector3(hit.position.x, 0, hit.position.z); // Ignore Y-axis for both distance and movement
-            distance = Vector3.Distance(new Vector3(position.x, 0, position.z), targetPosition);
+            Vector3 targetPosition = new Vector3(hit.position.x, position.y, hit.position.z); // Ignore Y-axis for the movement
+            distance = Vector3.Distance(new Vector3(position.x, 0, position.z), new Vector3(hit.position.x, 0, hit.position.z));
             return targetPosition;
         }
 
         Debug.LogWarning("Could not find position on NavMesh.");
         return position;
-    }
-
-    private float CalculateLineLength(Vector3[] corners)
-    {
-        float length = 0f;
-        for (int i = 0; i < corners.Length - 1; i++)
-        {
-            length += Vector3.Distance(corners[i], corners[i + 1]);
-        }
-        return length;
     }
 }
