@@ -628,8 +628,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9426c1cc0fbda34db4f01fa94ab6412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
-  cameraOffset: {fileID: 1741943635}
   user: {fileID: 1378089888}
   NavigationLineRenderer: {fileID: 40919616}
   lineRenderer: {fileID: 1378089895}
@@ -13934,7 +13932,7 @@ LineRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1378089888}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
