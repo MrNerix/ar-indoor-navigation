@@ -85,6 +85,12 @@ public class SetNav : MonoBehaviour
                     }
                 }
             }
+            else
+            {
+                Transform parent = targets.transform.Find(currentLocation[0].ToString() + currentLocation[1].ToString() + currentLocation[2].ToString());
+                targetPosition = parent.Find(estimateData.getClosestElevator(currentLocation[0])).transform.position;
+                currentDest = parent.Find(estimateData.getClosestElevator(currentLocation[0])).transform.name;
+            }
         }
     }
 
