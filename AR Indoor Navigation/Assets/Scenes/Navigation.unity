@@ -5997,6 +5997,7 @@ MonoBehaviour:
   targets: {fileID: 1061770723}
   footerExpanded: {fileID: 175396978}
   qrMaskOnStart: {fileID: 1420137243}
+  popupBg: {fileID: 639939857}
   qrScanStart: 0
   qrCooldown: 5
 --- !u!1 &638401278
