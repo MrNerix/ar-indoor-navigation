@@ -18,6 +18,8 @@ public class SetNav : MonoBehaviour
 
     [SerializeField]
     private TextMeshProUGUI ArrivedAtDestinationText;
+    public GameObject ArrivedAtDestinationContainer;
+
     private string currentLocation;
     private string currentDest;
     private NavMeshPath path;
@@ -150,12 +152,12 @@ public class SetNav : MonoBehaviour
 
     IEnumerator ShowAndHideObject()
     {
-        ArrivedAtDestinationText.gameObject.SetActive(true);
+        ArrivedAtDestinationContainer.gameObject.SetActive(true);
 
         // Wait for 5 seconds
         yield return new WaitForSeconds(5f);
 
         // Hide the object after 5 seconds
-        ArrivedAtDestinationText.gameObject.SetActive(false);
+        ArrivedAtDestinationContainer.gameObject.SetActive(false);
     }
 }
