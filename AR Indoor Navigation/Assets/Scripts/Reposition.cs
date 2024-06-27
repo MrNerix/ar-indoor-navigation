@@ -1,3 +1,5 @@
+using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem.XR;
@@ -8,11 +10,12 @@ public class Reposition : MonoBehaviour
     public GameObject user;
     public LineRenderer NavigationLineRenderer; // Assume you have a line renderer to draw the path
     public LineRenderer lineRenderer;
-    private TrackedPoseDriver arPoseDriver;
+    public GameObject textBg;
+    public TextMeshProUGUI text;
+
 
     void Start()
     {
-        arPoseDriver = user.GetComponent<TrackedPoseDriver>();
         SetupLineRenderer();
     }
 
@@ -43,20 +46,8 @@ public class Reposition : MonoBehaviour
 
     void SetPositionToNavMesh(Vector3 targetPosition)
     {
-        // // Temporarily disable the ARPoseDriver to prevent it from overriding the position change
-        // if (arPoseDriver != null)
-        // {
-        //     arPoseDriver.enabled = false;
-        // }
-
         Vector3 newPosition = new Vector3(targetPosition.x, user.transform.position.y, targetPosition.z); // Keep the original Y position
         user.transform.position = newPosition;
-
-        // // Re-enable the ARPoseDriver after setting the position
-        // if (arPoseDriver != null)
-        // {
-        //     arPoseDriver.enabled = true;
-        // }
     }
 
     public Vector3 FindNearestNavMeshPosition(Vector3 position, out float distance)
@@ -73,7 +64,19 @@ public class Reposition : MonoBehaviour
             return targetPosition;
         }
 
-        Debug.LogWarning("Could not find position on NavMesh.");
+        AskForQR();
         return position;
+    }
+
+    IEnumerator AskForQR()
+    {
+        text.text = "Tracking lost, please scan thle closest QR code";
+        textBg.gameObject.SetActive(true);
+
+        // Wait for 5 seconds
+        yield return new WaitForSeconds(5f);
+
+        // Hide the object after 5 seconds
+        textBg.gameObject.SetActive(false);
     }
 }
