@@ -7,6 +7,7 @@ using UnityEngine.UI;
 using Unity.VisualScripting;
 using Unity.XR.CoreUtils;
 using UnityEngine.Assertions.Must;
+using System.Drawing.Printing;
 
 public class SetNav : MonoBehaviour
 {
@@ -20,14 +21,15 @@ public class SetNav : MonoBehaviour
     private TextMeshProUGUI ArrivedAtDestinationText;
     public GameObject ArrivedAtDestinationContainer;
     public bool IsNav = false;
-
     private string currentLocation;
+    private string finalDest;
     private string currentDest;
     private NavMeshPath path;
     private LineRenderer line;
     private Vector3 targetPosition = Vector3.zero;
     private bool lineToggle = true;
     private bool isFinished = false;
+    private bool isInstructed = false;
 
     private GameObject navManager;
 
@@ -47,11 +49,21 @@ public class SetNav : MonoBehaviour
             NavMesh.CalculatePath(transform.position, targetPosition, NavMesh.AllAreas, path);
             line.positionCount = path.corners.Length;
             line.SetPositions(path.corners);
-            if (isFinished == false && CalculateLineLength(path.corners) != 0 && CalculateLineLength(path.corners) <= 2 && currentDest == navManager.GetComponent<SceneLoader>().GetTargetedText())
+
+            if (CalculateLineLength(path.corners) != 0 && CalculateLineLength(path.corners) <= 2)
             {
-                ArrivedAtDestinationText.text = "You have arrived at your destination: " + currentDest;
-                isFinished = true;
-                StartCoroutine(ShowAndHideObject());
+                if (isFinished == false && currentDest == navManager.GetComponent<SceneLoader>().GetTargetedText())
+                {
+                    ArrivedAtDestinationText.text = "You have arrived at your destination: " + currentDest;
+                    isFinished = true;
+                    StartCoroutine(ShowAndHideObject());
+                }
+                else if (isInstructed == false && currentDest != navManager.GetComponent<SceneLoader>().GetTargetedText())
+                {
+                    isInstructed = true;
+                    ArrivedAtDestinationText.text = "Please go to floor " + finalDest[2] + " and scan the QR code there";
+                    StartCoroutine(ShowAndHideObject());
+                }
             }
         }
     }
@@ -59,11 +71,12 @@ public class SetNav : MonoBehaviour
     private void SetCurrentNavigationTarget(string selectedText)
     {
         targetPosition = Vector3.zero;
-
+        isInstructed = false;
         Target currentTarget = navigationTargetObjects.Find(x => x.Name.Equals(selectedText));
         if (currentTarget != null)
         {
             currentDest = selectedText;
+            finalDest = selectedText;
             if (selectedText[0] == currentLocation[0] || (currentLocation[2] - '0') <= 3)
             {
                 if (selectedText[2] == currentLocation[2])
