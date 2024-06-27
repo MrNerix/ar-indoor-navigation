@@ -8,19 +8,16 @@ using UnityEngine.UI;
 public class Filter : MonoBehaviour
 {
 
-    public Slider blockSlider;
-    public Slider floorSlider;
+    public TMP_Dropdown blockDropdown;
+    public TMP_Dropdown floorDropdown;
     public TMP_Dropdown typeDropdown;
     public TMP_Dropdown destinations;
-    public TMP_Text chosenBlock;
-    public TMP_Text chosenFloor;
     private bool isDropdownOpen = false;
     private GameObject est;
     private EstimateData estimates;
-    // Lists (used before we implement a database)
 
     public Dictionary<string, float> estimateData = new Dictionary<string, float>();
-    public Dictionary<string, List<string>> listDictionary = new Dictionary<string, List<string>>();
+    public Dictionary<string, string> listDictionary = new Dictionary<string, string>();
     public TextMeshProUGUI[] extraLabels;
     private List<string> filteredOptions = new List<string>();
     private List<string> classrooms = new List<string>();
@@ -32,54 +29,50 @@ public class Filter : MonoBehaviour
     private List<string> coffeeSpots = new List<string>();
     private List<string> printers = new List<string>();
     private List<string> lockers = new List<string>();
+
+    public Sprite favoriteIconAdd;
+    public GameObject favIcon;
+
+
     // Start is called before the first frame update
     void Start()
     {
         est = GameObject.Find("DestinationEstimateData");
         estimates = est.GetComponent<EstimateData>();
         estimateData = estimates.getCurrentEstimates();
+        foreach (KeyValuePair<string, string> kvp in estimates.getAllDestinations())
+        {
+            listDictionary.Add(kvp.Key, kvp.Value);
+            filteredOptions.Add(kvp.Key);
+        }
 
-        listDictionary.Add("Classroom", classrooms);
-        listDictionary.Add("Group Room", groupRooms);
-        listDictionary.Add("WC", wc);
-        listDictionary.Add("WC (Handicap)", wcHandicapped);
-        listDictionary.Add("Stairs", stairs);
-        listDictionary.Add("Elevator", elevators);
-        listDictionary.Add("Coffee Spot", coffeeSpots);
-        listDictionary.Add("Printer", printers);
-        listDictionary.Add("Lockers", lockers);
 
-        classrooms.Add("C04.12");
-        classrooms.Add("C04.13a");
-        classrooms.Add("C04.13b");
-        classrooms.Add("C04.16");
-        classrooms.Add("C04.18");
+        destinations.ClearOptions();
+        filteredOptions.Sort();
+        destinations.AddOptions(filteredOptions);
+        destinations.options.Insert(0, new TMP_Dropdown.OptionData("Choose Location"));
 
-        groupRooms.Add("C04.05");
-        groupRooms.Add("C04.07");
-        groupRooms.Add("C04.08");
-        groupRooms.Add("C04.09");
-        groupRooms.Add("C04.10");
-        groupRooms.Add("C04.11");
+        HandleFavourites();
+    }
 
-        wc.Add("C04.WC_1");
-        wc.Add("C04.WC_2");
+    private void HandleFavourites()
+    {
+        AddEmptyHeartToAllOptions(); // Adding a favourite icon to all the destination options
+        // Initial loading favourites from a file
+        favIcon.GetComponent<FavIconHandler>().LoadFavouritesOptionsFromFile();
+    }
 
-        wcHandicapped.Add("C04.WC_HC");
-
-        stairs.Add("C04.Stairs_1");
-        stairs.Add("C04.Stairs_2");
-        //stairs.Add("C04.54");
-
-        elevators.Add("C04.Elevator_1");
-        elevators.Add("C04.Elevator_2");
-        //elevators.Add("C04.55");
-
-        coffeeSpots.Add("C04.Coffee");
-
-        printers.Add("C04.Printer");
-
-        lockers.Add("C04.Lockers");
+    private void AddEmptyHeartToAllOptions()
+    {
+        TMP_Dropdown.OptionData option = new TMP_Dropdown.OptionData();
+        for (int i = 1; i < destinations.options.Count; i++)
+        {
+            option = destinations.options[i];
+            //option.text = "" + option.text + "AAA";
+            option.image = favoriteIconAdd;
+            destinations.options.RemoveAt(i);
+            destinations.options.Insert(i, option);
+        }
     }
 
 
@@ -108,54 +101,79 @@ public class Filter : MonoBehaviour
             {
                 Transform extraLabelTransform = destinations.transform.GetChild(4).GetChild(0).GetChild(0).GetChild(i + 1).GetChild(2);
                 TextMeshProUGUI extraLabel = extraLabelTransform.GetComponent<TextMeshProUGUI>();
-                extraLabel.text = estimateData[destinations.options[i].text].ToString("F0") + " meters away";
+                if (!estimateData.ContainsKey(destinations.options[i].text))
+                {
+                    extraLabel.text = "destination is in a different block / floor";
+                }
+                else
+                {
+                    extraLabel.text = estimateData[destinations.options[i].text].ToString("F0") + " meters away";
+                }
             }
         }
-        // Add your code to handle the dropdown opening here
     }
 
     public void ClearFilters()
     {
-        blockSlider.value = 0f;
-        floorSlider.value = 0f;
         typeDropdown.value = 0;
         typeDropdown.RefreshShownValue();
+        blockDropdown.value = 0;
+        blockDropdown.RefreshShownValue();
+        floorDropdown.value = 0;
+        floorDropdown.RefreshShownValue();
     }
 
     public void ApplyFilters()
     {
         destinations.ClearOptions();
         filteredOptions.Clear();
+
+        //Type filtering
         if (typeDropdown.value == 0)
         {
-            filteredOptions.AddRange(classrooms);
-            filteredOptions.AddRange(groupRooms);
-            filteredOptions.AddRange(wc);
-            filteredOptions.AddRange(wcHandicapped);
-            filteredOptions.AddRange(stairs);
-            filteredOptions.AddRange(elevators);
-            filteredOptions.AddRange(coffeeSpots);
-            filteredOptions.AddRange(printers);
-            filteredOptions.AddRange(lockers);
+            foreach (KeyValuePair<string, string> kvp in listDictionary)
+            {
+                filteredOptions.Add(kvp.Key);
+            }
         }
         else
         {
-            filteredOptions.AddRange(listDictionary[typeDropdown.options[typeDropdown.value].text]);
+            foreach (KeyValuePair<string, string> kvp in listDictionary)
+            {
+                if (kvp.Value == typeDropdown.options[typeDropdown.value].text)
+                {
+                    filteredOptions.Add(kvp.Key);
+                }
+            }
         }
 
-        for (int i = filteredOptions.Count - 1; i >= 0; i--)
+        // Block filtering
+        if (blockDropdown.value != 0)
         {
-            if (!filteredOptions[i].StartsWith(chosenBlock.text))
+            for (int i = filteredOptions.Count - 1; i >= 0; i--)
             {
-                filteredOptions.RemoveAt(i);
-            }
-            else if (filteredOptions[i][2] != chosenFloor.text[0])
-            {
-                filteredOptions.RemoveAt(i);
+                if (!filteredOptions[i].StartsWith(blockDropdown.captionText.text))
+                {
+                    filteredOptions.RemoveAt(i);
+                }
             }
         }
+        // Floor filtering
+        if (floorDropdown.value != 0)
+        {
+            for (int i = filteredOptions.Count - 1; i >= 0; i--)
+            {
+                if (filteredOptions[i][2] != floorDropdown.captionText.text[0])
+                {
+                    filteredOptions.RemoveAt(i);
+                }
+            }
+        }
+
+
         filteredOptions.Sort();
         destinations.options.Insert(0, new TMP_Dropdown.OptionData("Choose Location"));
         destinations.AddOptions(filteredOptions);
+        HandleFavourites();
     }
 }

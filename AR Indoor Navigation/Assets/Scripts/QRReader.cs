@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -21,17 +22,16 @@ public class QRReader : MonoBehaviour
     private ARCameraManager cameraManager;
     [SerializeField]
     private List<Target> navigationTargetObjects = new List<Target>();
-
     private Texture2D cameraImageTexture;
     private IBarcodeReader reader = new BarcodeReader();
     public SetNav setNav;
     public SceneLoader sceneLoader;
-
-    public GameObject viaC04v14;
-    public GameObject c04map;
-    public GameObject searchButton;
+    public GameObject models;
+    public GameObject maps;
+    public GameObject targets;
     public GameObject footerExpanded;
     public GameObject qrMaskOnStart;
+    public GameObject popupBg;
 
     public float qrScanStart = 0f;
     public float qrCooldown = 5f;
@@ -41,17 +41,9 @@ public class QRReader : MonoBehaviour
     {
         qrScanStart = Time.time - qrCooldown;
     }
-    private void Update()
-    {
-
-    }
-
     private void OnEnable()
     {
         cameraManager.frameReceived += OnCameraFrameReceived;
-        viaC04v14.SetActive(false);
-        c04map.SetActive(false);
-        searchButton.SetActive(false);
         footerExpanded.SetActive(false);
         qrMaskOnStart.SetActive(true);
     }
@@ -112,20 +104,42 @@ public class QRReader : MonoBehaviour
     }
     private void SetQrCodeRecenterTarget(string targetText)
     {
+
         Target currentTarget = navigationTargetObjects.Find(x => x.Name.ToLower().Equals(targetText.ToLower()));
         if (currentTarget != null)
         {
             session.Reset();
             popup.text = " your current location is set to " + targetText;
+            setNav.SetCurrentLocation(targetText);
             StartCoroutine(ShowAndHideObject());
             sessionOrigin.transform.position = currentTarget.PositionObject.transform.position;
             sessionOrigin.transform.rotation = currentTarget.PositionObject.transform.rotation;
 
-            viaC04v14.SetActive(true);
-            c04map.SetActive(true);
-            searchButton.SetActive(true);
+            DisableAllChildObjects(maps.transform);
+            DisableAllChildObjects(models.transform);
+            DisableAllChildObjects(targets.transform);
+
+            if ((targetText[2] - '0') >= 4)
+            {
+                maps.transform.Find(targetText.Substring(0, Mathf.Min(3, targetText.Length))).gameObject.SetActive(true);
+                models.transform.Find(targetText.Substring(0, Mathf.Min(3, targetText.Length))).gameObject.SetActive(true);
+            }
+            else
+            {
+                maps.transform.Find("X" + targetText[1] + targetText[2]).gameObject.SetActive(true);
+                models.transform.Find("X" + targetText[1] + targetText[2]).gameObject.SetActive(true);
+
+            }
+            //hardcoded for now
+            targets.transform.Find("C04").gameObject.SetActive(true);
+            targets.transform.Find("C05").gameObject.SetActive(true);
+            targets.transform.Find("X03").gameObject.SetActive(true);
+
+            setNav.CollectTargets();
+
             footerExpanded.SetActive(true);
             qrMaskOnStart.SetActive(false);
+
             setNav.CalculateAllDistances(currentTarget.PositionObject.transform);
             if (GameObject.Find("NavigationManager") == null)
             {
@@ -133,18 +147,22 @@ public class QRReader : MonoBehaviour
             }
         }
     }
-
+    private void DisableAllChildObjects(Transform parent)
+    {
+        foreach (Transform child in parent)
+        {
+            child.gameObject.SetActive(false);
+        }
+    }
     IEnumerator ShowAndHideObject()
     {
-        Debug.Log("set true");
         // Show the object
-        popup.gameObject.SetActive(true);
+        popupBg.gameObject.SetActive(true);
 
         // Wait for 5 seconds
         yield return new WaitForSeconds(5f);
 
         // Hide the object after 5 seconds
-        popup.gameObject.SetActive(false);
-        Debug.Log("set false");
+        popupBg.gameObject.SetActive(false);
     }
 }
