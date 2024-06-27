@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 10852150}
   - component: {fileID: 10852149}
   - component: {fileID: 10852148}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C05.Stairs_1
   m_TagString: Stairs
   m_Icon: {fileID: 0}
@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 27326117}
   - component: {fileID: 27326116}
   - component: {fileID: 27326115}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C05.02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -345,7 +345,7 @@ GameObject:
   - component: {fileID: 40502526}
   - component: {fileID: 40502525}
   - component: {fileID: 40502524}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C05.23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -677,7 +677,7 @@ GameObject:
   - component: {fileID: 54371886}
   - component: {fileID: 54371885}
   - component: {fileID: 54371884}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: B03.09
   m_TagString: Classroom
   m_Icon: {fileID: 0}
@@ -880,7 +880,7 @@ GameObject:
   - component: {fileID: 65593286}
   - component: {fileID: 65593285}
   - component: {fileID: 65593284}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C05.22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -985,7 +985,7 @@ GameObject:
   - component: {fileID: 65905628}
   - component: {fileID: 65905627}
   - component: {fileID: 65905626}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C05.12
   m_TagString: Group Room
   m_Icon: {fileID: 0}
@@ -1196,7 +1196,7 @@ GameObject:
   - component: {fileID: 81857191}
   - component: {fileID: 81857190}
   - component: {fileID: 81857189}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C03.11
   m_TagString: Classroom
   m_Icon: {fileID: 0}
@@ -1301,7 +1301,7 @@ GameObject:
   - component: {fileID: 82850927}
   - component: {fileID: 82850926}
   - component: {fileID: 82850925}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: B03.WC_2
   m_TagString: WC
   m_Icon: {fileID: 0}
@@ -1406,7 +1406,7 @@ GameObject:
   - component: {fileID: 95284101}
   - component: {fileID: 95284100}
   - component: {fileID: 95284099}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C04.Elevator_2
   m_TagString: Elevator
   m_Icon: {fileID: 0}
@@ -1696,7 +1696,7 @@ GameObject:
   - component: {fileID: 138485539}
   - component: {fileID: 138485538}
   - component: {fileID: 138485537}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C05.WC_1
   m_TagString: WC
   m_Icon: {fileID: 0}
@@ -1801,7 +1801,7 @@ GameObject:
   - component: {fileID: 154715065}
   - component: {fileID: 154715064}
   - component: {fileID: 154715063}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C04.06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1906,7 +1906,7 @@ GameObject:
   - component: {fileID: 171231707}
   - component: {fileID: 171231706}
   - component: {fileID: 171231705}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C04.Lockers
   m_TagString: Lockers
   m_Icon: {fileID: 0}
@@ -2181,7 +2181,7 @@ GameObject:
   - component: {fileID: 218892944}
   - component: {fileID: 218892943}
   - component: {fileID: 218892942}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C03.04
   m_TagString: Group Room
   m_Icon: {fileID: 0}
@@ -2406,7 +2406,7 @@ GameObject:
   - component: {fileID: 241132692}
   - component: {fileID: 241132691}
   - component: {fileID: 241132690}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C05.Elevator_1
   m_TagString: Elevator
   m_Icon: {fileID: 0}
@@ -2511,7 +2511,7 @@ GameObject:
   - component: {fileID: 255146543}
   - component: {fileID: 255146542}
   - component: {fileID: 255146541}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: B03.18
   m_TagString: Group Room
   m_Icon: {fileID: 0}
@@ -2616,7 +2616,7 @@ GameObject:
   - component: {fileID: 262215277}
   - component: {fileID: 262215276}
   - component: {fileID: 262215275}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C05.17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2721,7 +2721,7 @@ GameObject:
   - component: {fileID: 266982836}
   - component: {fileID: 266982835}
   - component: {fileID: 266982834}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C03.24
   m_TagString: Classroom
   m_Icon: {fileID: 0}
@@ -2826,7 +2826,7 @@ GameObject:
   - component: {fileID: 285656757}
   - component: {fileID: 285656756}
   - component: {fileID: 285656755}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C04.Printer
   m_TagString: Printer
   m_Icon: {fileID: 0}
@@ -2931,7 +2931,7 @@ GameObject:
   - component: {fileID: 288493565}
   - component: {fileID: 288493564}
   - component: {fileID: 288493563}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C05.Stairs_2
   m_TagString: Stairs
   m_Icon: {fileID: 0}
@@ -3036,7 +3036,7 @@ GameObject:
   - component: {fileID: 291474568}
   - component: {fileID: 291474567}
   - component: {fileID: 291474566}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: B03.04
   m_TagString: Group Room
   m_Icon: {fileID: 0}
@@ -3141,7 +3141,7 @@ GameObject:
   - component: {fileID: 323908326}
   - component: {fileID: 323908325}
   - component: {fileID: 323908324}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C03.21
   m_TagString: Group Room
   m_Icon: {fileID: 0}
@@ -3246,7 +3246,7 @@ GameObject:
   - component: {fileID: 324171529}
   - component: {fileID: 324171528}
   - component: {fileID: 324171527}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: B03.WC_HC
   m_TagString: WC (Handicap)
   m_Icon: {fileID: 0}
@@ -3351,7 +3351,7 @@ GameObject:
   - component: {fileID: 327273113}
   - component: {fileID: 327273112}
   - component: {fileID: 327273111}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: A03.03
   m_TagString: Classroom
   m_Icon: {fileID: 0}
@@ -3456,7 +3456,7 @@ GameObject:
   - component: {fileID: 333473213}
   - component: {fileID: 333473212}
   - component: {fileID: 333473211}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C03.Lockers
   m_TagString: Lockers
   m_Icon: {fileID: 0}
@@ -3750,7 +3750,7 @@ GameObject:
   - component: {fileID: 374376863}
   - component: {fileID: 374376862}
   - component: {fileID: 374376861}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C04.09
   m_TagString: Group Room
   m_Icon: {fileID: 0}
@@ -3855,7 +3855,7 @@ GameObject:
   - component: {fileID: 376397172}
   - component: {fileID: 376397171}
   - component: {fileID: 376397170}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: A03.Stairs_1
   m_TagString: Stairs
   m_Icon: {fileID: 0}
@@ -3960,7 +3960,7 @@ GameObject:
   - component: {fileID: 395649832}
   - component: {fileID: 395649831}
   - component: {fileID: 395649830}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C04.Stairs_2
   m_TagString: Stairs
   m_Icon: {fileID: 0}
@@ -4065,7 +4065,7 @@ GameObject:
   - component: {fileID: 403053849}
   - component: {fileID: 403053848}
   - component: {fileID: 403053847}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: A03.15
   m_TagString: Group Room
   m_Icon: {fileID: 0}
@@ -4201,7 +4201,7 @@ GameObject:
   - component: {fileID: 424532200}
   - component: {fileID: 424532199}
   - component: {fileID: 424532198}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: A03.12
   m_TagString: Group Room
   m_Icon: {fileID: 0}
@@ -4337,7 +4337,7 @@ GameObject:
   - component: {fileID: 440042068}
   - component: {fileID: 440042067}
   - component: {fileID: 440042066}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: B03.17
   m_TagString: Group Room
   m_Icon: {fileID: 0}
@@ -4442,7 +4442,7 @@ GameObject:
   - component: {fileID: 460108212}
   - component: {fileID: 460108211}
   - component: {fileID: 460108210}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C03.13
   m_TagString: Classroom
   m_Icon: {fileID: 0}
@@ -4547,7 +4547,7 @@ GameObject:
   - component: {fileID: 475867740}
   - component: {fileID: 475867739}
   - component: {fileID: 475867738}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C04.13a
   m_TagString: Classroom
   m_Icon: {fileID: 0}
@@ -4652,7 +4652,7 @@ GameObject:
   - component: {fileID: 497220781}
   - component: {fileID: 497220780}
   - component: {fileID: 497220779}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: A03.20
   m_TagString: Classroom
   m_Icon: {fileID: 0}
@@ -4757,7 +4757,7 @@ GameObject:
   - component: {fileID: 502649421}
   - component: {fileID: 502649420}
   - component: {fileID: 502649419}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C03.22
   m_TagString: Classroom
   m_Icon: {fileID: 0}
@@ -5167,7 +5167,7 @@ GameObject:
   - component: {fileID: 562863232}
   - component: {fileID: 562863231}
   - component: {fileID: 562863230}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C03.06
   m_TagString: Group Room
   m_Icon: {fileID: 0}
@@ -5272,7 +5272,7 @@ GameObject:
   - component: {fileID: 567644213}
   - component: {fileID: 567644212}
   - component: {fileID: 567644211}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: B03.02
   m_TagString: Group Room
   m_Icon: {fileID: 0}
@@ -5377,7 +5377,7 @@ GameObject:
   - component: {fileID: 580068771}
   - component: {fileID: 580068770}
   - component: {fileID: 580068769}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C03.05
   m_TagString: Group Room
   m_Icon: {fileID: 0}
@@ -5482,7 +5482,7 @@ GameObject:
   - component: {fileID: 592309816}
   - component: {fileID: 592309815}
   - component: {fileID: 592309814}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C05.WC_2
   m_TagString: WC
   m_Icon: {fileID: 0}
@@ -5587,7 +5587,7 @@ GameObject:
   - component: {fileID: 592405744}
   - component: {fileID: 592405743}
   - component: {fileID: 592405742}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C05.11
   m_TagString: Group Room
   m_Icon: {fileID: 0}
@@ -5723,7 +5723,7 @@ GameObject:
   - component: {fileID: 595241766}
   - component: {fileID: 595241765}
   - component: {fileID: 595241764}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C03.Stairs_1
   m_TagString: Stairs
   m_Icon: {fileID: 0}
@@ -5828,7 +5828,7 @@ GameObject:
   - component: {fileID: 595842723}
   - component: {fileID: 595842722}
   - component: {fileID: 595842721}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: B03.Stairs_1
   m_TagString: Stairs
   m_Icon: {fileID: 0}
@@ -6078,7 +6078,7 @@ GameObject:
   - component: {fileID: 638401282}
   - component: {fileID: 638401281}
   - component: {fileID: 638401280}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C04.WC_1
   m_TagString: WC
   m_Icon: {fileID: 0}
@@ -6259,7 +6259,7 @@ GameObject:
   - component: {fileID: 650253409}
   - component: {fileID: 650253408}
   - component: {fileID: 650253407}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C05.Elevator_2
   m_TagString: Elevator
   m_Icon: {fileID: 0}
@@ -6395,7 +6395,7 @@ GameObject:
   - component: {fileID: 663358654}
   - component: {fileID: 663358653}
   - component: {fileID: 663358652}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C04.14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6500,7 +6500,7 @@ GameObject:
   - component: {fileID: 668857018}
   - component: {fileID: 668857017}
   - component: {fileID: 668857016}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C05.14
   m_TagString: Group Room
   m_Icon: {fileID: 0}
@@ -6739,7 +6739,7 @@ GameObject:
   - component: {fileID: 673316487}
   - component: {fileID: 673316486}
   - component: {fileID: 673316485}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C04.01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6844,7 +6844,7 @@ GameObject:
   - component: {fileID: 680524796}
   - component: {fileID: 680524795}
   - component: {fileID: 680524794}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C04.18
   m_TagString: Classroom
   m_Icon: {fileID: 0}
@@ -6990,7 +6990,7 @@ GameObject:
   - component: {fileID: 697639971}
   - component: {fileID: 697639970}
   - component: {fileID: 697639969}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: A03.WC_2
   m_TagString: WC
   m_Icon: {fileID: 0}
@@ -7189,7 +7189,7 @@ GameObject:
   - component: {fileID: 727711901}
   - component: {fileID: 727711900}
   - component: {fileID: 727711899}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: A03.05
   m_TagString: Classroom
   m_Icon: {fileID: 0}
@@ -7294,7 +7294,7 @@ GameObject:
   - component: {fileID: 732423109}
   - component: {fileID: 732423108}
   - component: {fileID: 732423107}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C03.10
   m_TagString: Group Room
   m_Icon: {fileID: 0}
@@ -7399,7 +7399,7 @@ GameObject:
   - component: {fileID: 736054151}
   - component: {fileID: 736054150}
   - component: {fileID: 736054149}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C04.WC_2
   m_TagString: WC
   m_Icon: {fileID: 0}
@@ -7504,7 +7504,7 @@ GameObject:
   - component: {fileID: 740511973}
   - component: {fileID: 740511972}
   - component: {fileID: 740511971}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: A03.WC_1
   m_TagString: WC
   m_Icon: {fileID: 0}
@@ -7609,7 +7609,7 @@ GameObject:
   - component: {fileID: 750598934}
   - component: {fileID: 750598933}
   - component: {fileID: 750598932}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C03.09
   m_TagString: Group Room
   m_Icon: {fileID: 0}
@@ -7714,7 +7714,7 @@ GameObject:
   - component: {fileID: 758618183}
   - component: {fileID: 758618182}
   - component: {fileID: 758618181}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C05.10
   m_TagString: Group Room
   m_Icon: {fileID: 0}
@@ -7850,7 +7850,7 @@ GameObject:
   - component: {fileID: 771735910}
   - component: {fileID: 771735909}
   - component: {fileID: 771735908}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: A03.04
   m_TagString: Classroom
   m_Icon: {fileID: 0}
@@ -7955,7 +7955,7 @@ GameObject:
   - component: {fileID: 775000575}
   - component: {fileID: 775000574}
   - component: {fileID: 775000573}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C03.08a
   m_TagString: Group Room
   m_Icon: {fileID: 0}
@@ -8176,7 +8176,7 @@ GameObject:
   - component: {fileID: 811249841}
   - component: {fileID: 811249840}
   - component: {fileID: 811249839}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C04.07
   m_TagString: Group Room
   m_Icon: {fileID: 0}
@@ -8325,7 +8325,7 @@ GameObject:
   - component: {fileID: 824268050}
   - component: {fileID: 824268049}
   - component: {fileID: 824268048}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C04.08
   m_TagString: Group Room
   m_Icon: {fileID: 0}
@@ -8430,7 +8430,7 @@ GameObject:
   - component: {fileID: 828710143}
   - component: {fileID: 828710142}
   - component: {fileID: 828710141}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C05.Lockers
   m_TagString: Lockers
   m_Icon: {fileID: 0}
@@ -8627,7 +8627,7 @@ GameObject:
   - component: {fileID: 861966368}
   - component: {fileID: 861966367}
   - component: {fileID: 861966366}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C04.13b
   m_TagString: Classroom
   m_Icon: {fileID: 0}
@@ -8732,7 +8732,7 @@ GameObject:
   - component: {fileID: 862668252}
   - component: {fileID: 862668251}
   - component: {fileID: 862668250}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: A03.14
   m_TagString: Group Room
   m_Icon: {fileID: 0}
@@ -8868,7 +8868,7 @@ GameObject:
   - component: {fileID: 882175619}
   - component: {fileID: 882175618}
   - component: {fileID: 882175617}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: A03.13
   m_TagString: Group Room
   m_Icon: {fileID: 0}
@@ -8973,7 +8973,7 @@ GameObject:
   - component: {fileID: 895292738}
   - component: {fileID: 895292737}
   - component: {fileID: 895292736}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: A03.11
   m_TagString: Group Room
   m_Icon: {fileID: 0}
@@ -9078,7 +9078,7 @@ GameObject:
   - component: {fileID: 910739622}
   - component: {fileID: 910739621}
   - component: {fileID: 910739620}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C03.23
   m_TagString: Classroom
   m_Icon: {fileID: 0}
@@ -9214,7 +9214,7 @@ GameObject:
   - component: {fileID: 933281816}
   - component: {fileID: 933281815}
   - component: {fileID: 933281814}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C04.20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9319,7 +9319,7 @@ GameObject:
   - component: {fileID: 941090852}
   - component: {fileID: 941090851}
   - component: {fileID: 941090850}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C04.Stairs_1
   m_TagString: Stairs
   m_Icon: {fileID: 0}
@@ -9424,7 +9424,7 @@ GameObject:
   - component: {fileID: 944658434}
   - component: {fileID: 944658433}
   - component: {fileID: 944658432}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: A03.02
   m_TagString: Classroom
   m_Icon: {fileID: 0}
@@ -9529,7 +9529,7 @@ GameObject:
   - component: {fileID: 960151510}
   - component: {fileID: 960151509}
   - component: {fileID: 960151508}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C04.03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9634,7 +9634,7 @@ GameObject:
   - component: {fileID: 962042051}
   - component: {fileID: 962042050}
   - component: {fileID: 962042049}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C03.20
   m_TagString: Group Room
   m_Icon: {fileID: 0}
@@ -9871,7 +9871,7 @@ GameObject:
   - component: {fileID: 971518358}
   - component: {fileID: 971518357}
   - component: {fileID: 971518356}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C03.Printer
   m_TagString: Printer
   m_Icon: {fileID: 0}
@@ -9976,7 +9976,7 @@ GameObject:
   - component: {fileID: 994750468}
   - component: {fileID: 994750467}
   - component: {fileID: 994750466}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C04.11
   m_TagString: Group Room
   m_Icon: {fileID: 0}
@@ -10214,7 +10214,7 @@ GameObject:
   - component: {fileID: 1000326908}
   - component: {fileID: 1000326907}
   - component: {fileID: 1000326906}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: A03.Elevator_1
   m_TagString: Elevator
   m_Icon: {fileID: 0}
@@ -10319,7 +10319,7 @@ GameObject:
   - component: {fileID: 1032281305}
   - component: {fileID: 1032281304}
   - component: {fileID: 1032281303}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C04.19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10424,7 +10424,7 @@ GameObject:
   - component: {fileID: 1051409742}
   - component: {fileID: 1051409741}
   - component: {fileID: 1051409740}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C04.WC_HC
   m_TagString: WC (Handicap)
   m_Icon: {fileID: 0}
@@ -10529,7 +10529,7 @@ GameObject:
   - component: {fileID: 1055180459}
   - component: {fileID: 1055180458}
   - component: {fileID: 1055180457}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C05.16a
   m_TagString: Classroom
   m_Icon: {fileID: 0}
@@ -10634,7 +10634,7 @@ GameObject:
   - component: {fileID: 1057543742}
   - component: {fileID: 1057543741}
   - component: {fileID: 1057543740}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C03.Elevator_1
   m_TagString: Elevator
   m_Icon: {fileID: 0}
@@ -10804,7 +10804,7 @@ GameObject:
   - component: {fileID: 1064930334}
   - component: {fileID: 1064930333}
   - component: {fileID: 1064930332}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C03.16
   m_TagString: Classroom
   m_Icon: {fileID: 0}
@@ -11013,7 +11013,7 @@ GameObject:
   - component: {fileID: 1092464380}
   - component: {fileID: 1092464379}
   - component: {fileID: 1092464378}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: B03.15
   m_TagString: Group Room
   m_Icon: {fileID: 0}
@@ -11223,7 +11223,7 @@ GameObject:
   - component: {fileID: 1114859809}
   - component: {fileID: 1114859808}
   - component: {fileID: 1114859807}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C04.12
   m_TagString: Classroom
   m_Icon: {fileID: 0}
@@ -11388,7 +11388,7 @@ GameObject:
   - component: {fileID: 1121533200}
   - component: {fileID: 1121533199}
   - component: {fileID: 1121533198}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: B03.13
   m_TagString: Classroom
   m_Icon: {fileID: 0}
@@ -11493,7 +11493,7 @@ GameObject:
   - component: {fileID: 1133365496}
   - component: {fileID: 1133365495}
   - component: {fileID: 1133365494}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C03.12
   m_TagString: Classroom
   m_Icon: {fileID: 0}
@@ -11598,7 +11598,7 @@ GameObject:
   - component: {fileID: 1134292680}
   - component: {fileID: 1134292679}
   - component: {fileID: 1134292678}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: B03.10
   m_TagString: Classroom
   m_Icon: {fileID: 0}
@@ -11703,7 +11703,7 @@ GameObject:
   - component: {fileID: 1145505089}
   - component: {fileID: 1145505088}
   - component: {fileID: 1145505087}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: A03.06
   m_TagString: Classroom
   m_Icon: {fileID: 0}
@@ -11808,7 +11808,7 @@ GameObject:
   - component: {fileID: 1153692505}
   - component: {fileID: 1153692504}
   - component: {fileID: 1153692503}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: A03.07
   m_TagString: Classroom
   m_Icon: {fileID: 0}
@@ -11913,7 +11913,7 @@ GameObject:
   - component: {fileID: 1159435426}
   - component: {fileID: 1159435425}
   - component: {fileID: 1159435424}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: A03.WC_HC
   m_TagString: WC (Handicap)
   m_Icon: {fileID: 0}
@@ -12018,7 +12018,7 @@ GameObject:
   - component: {fileID: 1162400278}
   - component: {fileID: 1162400277}
   - component: {fileID: 1162400276}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: B03.06
   m_TagString: Classroom
   m_Icon: {fileID: 0}
@@ -12123,7 +12123,7 @@ GameObject:
   - component: {fileID: 1167176715}
   - component: {fileID: 1167176714}
   - component: {fileID: 1167176713}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C05.15
   m_TagString: Classroom
   m_Icon: {fileID: 0}
@@ -12228,7 +12228,7 @@ GameObject:
   - component: {fileID: 1179417286}
   - component: {fileID: 1179417285}
   - component: {fileID: 1179417284}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: B03.03
   m_TagString: Classroom
   m_Icon: {fileID: 0}
@@ -12333,7 +12333,7 @@ GameObject:
   - component: {fileID: 1183443018}
   - component: {fileID: 1183443017}
   - component: {fileID: 1183443016}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: B03.05
   m_TagString: Classroom
   m_Icon: {fileID: 0}
@@ -12800,7 +12800,7 @@ GameObject:
   - component: {fileID: 1278697663}
   - component: {fileID: 1278697662}
   - component: {fileID: 1278697661}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C05.24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12905,7 +12905,7 @@ GameObject:
   - component: {fileID: 1295074191}
   - component: {fileID: 1295074190}
   - component: {fileID: 1295074189}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: A03.17
   m_TagString: Group Room
   m_Icon: {fileID: 0}
@@ -13085,7 +13085,7 @@ GameObject:
   - component: {fileID: 1322157359}
   - component: {fileID: 1322157358}
   - component: {fileID: 1322157357}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C04.16
   m_TagString: Classroom
   m_Icon: {fileID: 0}
@@ -13190,7 +13190,7 @@ GameObject:
   - component: {fileID: 1327792805}
   - component: {fileID: 1327792804}
   - component: {fileID: 1327792803}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C03.15
   m_TagString: Classroom
   m_Icon: {fileID: 0}
@@ -13295,7 +13295,7 @@ GameObject:
   - component: {fileID: 1359233487}
   - component: {fileID: 1359233486}
   - component: {fileID: 1359233485}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C05.19
   m_TagString: Classroom
   m_Icon: {fileID: 0}
@@ -13400,7 +13400,7 @@ GameObject:
   - component: {fileID: 1363335521}
   - component: {fileID: 1363335520}
   - component: {fileID: 1363335519}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C04.17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13536,7 +13536,7 @@ GameObject:
   - component: {fileID: 1375274354}
   - component: {fileID: 1375274353}
   - component: {fileID: 1375274352}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C04.Elevator_1
   m_TagString: Elevator
   m_Icon: {fileID: 0}
@@ -13641,7 +13641,7 @@ GameObject:
   - component: {fileID: 1376173519}
   - component: {fileID: 1376173518}
   - component: {fileID: 1376173517}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C03.WC_1
   m_TagString: WC
   m_Icon: {fileID: 0}
@@ -13746,7 +13746,7 @@ GameObject:
   - component: {fileID: 1377976151}
   - component: {fileID: 1377976150}
   - component: {fileID: 1377976149}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C03.08b
   m_TagString: Group Room
   m_Icon: {fileID: 0}
@@ -14184,7 +14184,7 @@ GameObject:
   - component: {fileID: 1382495245}
   - component: {fileID: 1382495244}
   - component: {fileID: 1382495243}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C05.08
   m_TagString: Group Room
   m_Icon: {fileID: 0}
@@ -14474,7 +14474,7 @@ GameObject:
   - component: {fileID: 1394937133}
   - component: {fileID: 1394937132}
   - component: {fileID: 1394937131}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C05.Coffee
   m_TagString: Coffee Spot
   m_Icon: {fileID: 0}
@@ -14579,7 +14579,7 @@ GameObject:
   - component: {fileID: 1417292836}
   - component: {fileID: 1417292835}
   - component: {fileID: 1417292834}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: A03.01a
   m_TagString: Classroom
   m_Icon: {fileID: 0}
@@ -14925,7 +14925,7 @@ GameObject:
   - component: {fileID: 1459011767}
   - component: {fileID: 1459011766}
   - component: {fileID: 1459011765}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C05.16b
   m_TagString: Classroom
   m_Icon: {fileID: 0}
@@ -15174,7 +15174,7 @@ GameObject:
   - component: {fileID: 1469961922}
   - component: {fileID: 1469961921}
   - component: {fileID: 1469961920}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C05.20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15313,7 +15313,7 @@ GameObject:
   - component: {fileID: 1510575962}
   - component: {fileID: 1510575961}
   - component: {fileID: 1510575960}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C03.14
   m_TagString: Classroom
   m_Icon: {fileID: 0}
@@ -15418,7 +15418,7 @@ GameObject:
   - component: {fileID: 1593493734}
   - component: {fileID: 1593493733}
   - component: {fileID: 1593493732}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C04.10
   m_TagString: Group Room
   m_Icon: {fileID: 0}
@@ -15523,7 +15523,7 @@ GameObject:
   - component: {fileID: 1598262441}
   - component: {fileID: 1598262440}
   - component: {fileID: 1598262439}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: B03.08
   m_TagString: Classroom
   m_Icon: {fileID: 0}
@@ -15796,7 +15796,7 @@ GameObject:
   - component: {fileID: 1618460930}
   - component: {fileID: 1618460929}
   - component: {fileID: 1618460928}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C04.15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15901,7 +15901,7 @@ GameObject:
   - component: {fileID: 1621496723}
   - component: {fileID: 1621496722}
   - component: {fileID: 1621496721}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C03.07
   m_TagString: Group Room
   m_Icon: {fileID: 0}
@@ -16006,7 +16006,7 @@ GameObject:
   - component: {fileID: 1639438591}
   - component: {fileID: 1639438590}
   - component: {fileID: 1639438589}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: B03.01
   m_TagString: Classroom
   m_Icon: {fileID: 0}
@@ -16245,7 +16245,7 @@ GameObject:
   - component: {fileID: 1703187321}
   - component: {fileID: 1703187320}
   - component: {fileID: 1703187319}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C05.18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16426,7 +16426,7 @@ GameObject:
   - component: {fileID: 1738195794}
   - component: {fileID: 1738195793}
   - component: {fileID: 1738195792}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: A03.19
   m_TagString: Group Room
   m_Icon: {fileID: 0}
@@ -16653,7 +16653,7 @@ GameObject:
   - component: {fileID: 1748064241}
   - component: {fileID: 1748064240}
   - component: {fileID: 1748064239}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: A03.Stairs_2
   m_TagString: Stairs
   m_Icon: {fileID: 0}
@@ -16758,7 +16758,7 @@ GameObject:
   - component: {fileID: 1770508010}
   - component: {fileID: 1770508009}
   - component: {fileID: 1770508008}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C04.Coffee
   m_TagString: Coffee Spot
   m_Icon: {fileID: 0}
@@ -16863,7 +16863,7 @@ GameObject:
   - component: {fileID: 1774318820}
   - component: {fileID: 1774318819}
   - component: {fileID: 1774318818}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C04.04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16968,7 +16968,7 @@ GameObject:
   - component: {fileID: 1784467074}
   - component: {fileID: 1784467073}
   - component: {fileID: 1784467072}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: B03.07
   m_TagString: Classroom
   m_Icon: {fileID: 0}
@@ -17073,7 +17073,7 @@ GameObject:
   - component: {fileID: 1788559010}
   - component: {fileID: 1788559009}
   - component: {fileID: 1788559008}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: B03.Stairs_2
   m_TagString: Stairs
   m_Icon: {fileID: 0}
@@ -17178,7 +17178,7 @@ GameObject:
   - component: {fileID: 1790612624}
   - component: {fileID: 1790612623}
   - component: {fileID: 1790612622}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C05.07
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17283,7 +17283,7 @@ GameObject:
   - component: {fileID: 1818018036}
   - component: {fileID: 1818018035}
   - component: {fileID: 1818018034}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C05.09
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17680,7 +17680,7 @@ GameObject:
   - component: {fileID: 1850826581}
   - component: {fileID: 1850826580}
   - component: {fileID: 1850826579}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: A03.01b
   m_TagString: Classroom
   m_Icon: {fileID: 0}
@@ -17957,7 +17957,7 @@ GameObject:
   - component: {fileID: 1913406030}
   - component: {fileID: 1913406029}
   - component: {fileID: 1913406028}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: A03.18
   m_TagString: Group Room
   m_Icon: {fileID: 0}
@@ -18241,7 +18241,7 @@ GameObject:
   - component: {fileID: 1963911488}
   - component: {fileID: 1963911487}
   - component: {fileID: 1963911486}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: B03.16
   m_TagString: Group Room
   m_Icon: {fileID: 0}
@@ -18346,7 +18346,7 @@ GameObject:
   - component: {fileID: 1970138980}
   - component: {fileID: 1970138979}
   - component: {fileID: 1970138978}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C05.21
   m_TagString: Classroom
   m_Icon: {fileID: 0}
@@ -18451,7 +18451,7 @@ GameObject:
   - component: {fileID: 2010546331}
   - component: {fileID: 2010546330}
   - component: {fileID: 2010546329}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: B03.14
   m_TagString: Group Room
   m_Icon: {fileID: 0}
@@ -18556,7 +18556,7 @@ GameObject:
   - component: {fileID: 2021793387}
   - component: {fileID: 2021793386}
   - component: {fileID: 2021793385}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: B03.WC_1
   m_TagString: WC
   m_Icon: {fileID: 0}
@@ -18696,7 +18696,7 @@ GameObject:
   - component: {fileID: 2066306855}
   - component: {fileID: 2066306854}
   - component: {fileID: 2066306853}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C04.05
   m_TagString: Group Room
   m_Icon: {fileID: 0}
@@ -18801,7 +18801,7 @@ GameObject:
   - component: {fileID: 2094460283}
   - component: {fileID: 2094460282}
   - component: {fileID: 2094460281}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C03.Stairs_2
   m_TagString: Stairs
   m_Icon: {fileID: 0}
@@ -18906,7 +18906,7 @@ GameObject:
   - component: {fileID: 2108245414}
   - component: {fileID: 2108245413}
   - component: {fileID: 2108245412}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: B03.Elevator_1
   m_TagString: Elevator
   m_Icon: {fileID: 0}
@@ -19011,7 +19011,7 @@ GameObject:
   - component: {fileID: 2111490042}
   - component: {fileID: 2111490041}
   - component: {fileID: 2111490040}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C03.Elevator_2
   m_TagString: Elevator
   m_Icon: {fileID: 0}
@@ -19116,7 +19116,7 @@ GameObject:
   - component: {fileID: 2122932781}
   - component: {fileID: 2122932780}
   - component: {fileID: 2122932779}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C05.Printer
   m_TagString: Printer
   m_Icon: {fileID: 0}
@@ -19221,7 +19221,7 @@ GameObject:
   - component: {fileID: 2124927389}
   - component: {fileID: 2124927388}
   - component: {fileID: 2124927387}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C05.WC_HC
   m_TagString: WC (Handicap)
   m_Icon: {fileID: 0}
@@ -19326,7 +19326,7 @@ GameObject:
   - component: {fileID: 2138674502}
   - component: {fileID: 2138674501}
   - component: {fileID: 2138674500}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: C05.13
   m_TagString: Group Room
   m_Icon: {fileID: 0}
