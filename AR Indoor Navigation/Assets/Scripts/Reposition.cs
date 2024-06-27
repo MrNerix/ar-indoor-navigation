@@ -12,6 +12,7 @@ public class Reposition : MonoBehaviour
     public LineRenderer lineRenderer;
     public GameObject textBg;
     public TextMeshProUGUI text;
+    public SetNav setNav;
 
 
     void Start()
@@ -57,20 +58,22 @@ public class Reposition : MonoBehaviour
         NavMeshHit hit;
         Vector3 flatPosition = new Vector3(position.x, 0, position.z); // Ignore Y-axis for the search
 
-        if (NavMesh.SamplePosition(flatPosition, out hit, 10.0f, NavMesh.AllAreas)) // Increased search radius to 10.0f
+        if (NavMesh.SamplePosition(flatPosition, out hit, 5.0f, NavMesh.AllAreas)) //search
         {
             Vector3 targetPosition = new Vector3(hit.position.x, position.y, hit.position.z); // Ignore Y-axis for the movement
             distance = Vector3.Distance(new Vector3(position.x, 0, position.z), new Vector3(hit.position.x, 0, hit.position.z));
             return targetPosition;
         }
-
-        AskForQR();
+        else if (setNav.GetIsNav())
+        {
+            StartCoroutine(AskForQR());
+        }
         return position;
     }
 
     IEnumerator AskForQR()
     {
-        text.text = "Tracking lost, please scan thle closest QR code";
+        text.text = "Tracking lost, please scan the closest QR code";
         textBg.gameObject.SetActive(true);
 
         // Wait for 5 seconds

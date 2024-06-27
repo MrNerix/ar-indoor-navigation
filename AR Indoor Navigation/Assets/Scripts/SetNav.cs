@@ -19,6 +19,7 @@ public class SetNav : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI ArrivedAtDestinationText;
     public GameObject ArrivedAtDestinationContainer;
+    public bool IsNav = false;
 
     private string currentLocation;
     private string currentDest;
@@ -144,6 +145,7 @@ public class SetNav : MonoBehaviour
             navManager = GameObject.Find("NavigationManager");
             SetCurrentNavigationTarget(navManager.GetComponent<SceneLoader>().GetTargetedText());
             locationNameTMP.text = navManager.GetComponent<SceneLoader>().GetTargetedText();
+            IsNav = true;
         }
     }
     private float CalculateLineLength(Vector3[] corners)
@@ -165,5 +167,9 @@ public class SetNav : MonoBehaviour
 
         // Hide the object after 5 seconds
         ArrivedAtDestinationContainer.gameObject.SetActive(false);
+    }
+    public bool GetIsNav()
+    {
+        return IsNav;
     }
 }
