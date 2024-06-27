@@ -92,6 +92,18 @@ public class SetNav : MonoBehaviour
                 targetPosition = parent.Find(estimateData.getClosestElevator(currentLocation[0])).transform.position;
                 currentDest = parent.Find(estimateData.getClosestElevator(currentLocation[0])).transform.name;
             }
+            if (GameObject.Find("NavigationManager") != null)
+            {
+                navManager = GameObject.Find("NavigationManager");
+                if (currentDest != navManager.GetComponent<SceneLoader>().GetTargetedText())
+                {
+                    locationNameTMP.text = "Currently going to: " + currentDest + "\n Final destination: " + navManager.GetComponent<SceneLoader>().GetTargetedText();
+                }
+                else
+                {
+                    locationNameTMP.text = "Currently going to: " + navManager.GetComponent<SceneLoader>().GetTargetedText();
+                }
+            }
         }
     }
 
@@ -126,13 +138,11 @@ public class SetNav : MonoBehaviour
     public void CalculateAllDistances(Transform position)
     {
         locations.Clear();
-        locationNameTMP.text = "";
         foreach (Target target in navigationTargetObjects)
         {
             if ((target.Name[0] == currentLocation[0] || (currentLocation[2] - '0') <= 3) && target.Name[2] == currentLocation[2])
             {
                 SetCurrentNavigationTarget(target.Name);
-                //lineToggle = true;
                 NavMesh.CalculatePath(position.position, targetPosition, NavMesh.AllAreas, path);
                 line.positionCount = path.corners.Length;
                 line.SetPositions(path.corners);
@@ -144,7 +154,6 @@ public class SetNav : MonoBehaviour
         {
             navManager = GameObject.Find("NavigationManager");
             SetCurrentNavigationTarget(navManager.GetComponent<SceneLoader>().GetTargetedText());
-            locationNameTMP.text = navManager.GetComponent<SceneLoader>().GetTargetedText();
             IsNav = true;
         }
     }
