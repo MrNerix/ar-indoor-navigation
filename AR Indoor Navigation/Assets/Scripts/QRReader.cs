@@ -31,6 +31,7 @@ public class QRReader : MonoBehaviour
     public GameObject targets;
     public GameObject footerExpanded;
     public GameObject qrMaskOnStart;
+    public GameObject popupBg;
 
     public float qrScanStart = 0f;
     public float qrCooldown = 5f;
@@ -155,15 +156,13 @@ public class QRReader : MonoBehaviour
     }
     IEnumerator ShowAndHideObject()
     {
-        Debug.Log("set true");
         // Show the object
-        popup.gameObject.SetActive(true);
+        popupBg.gameObject.SetActive(true);
 
         // Wait for 5 seconds
         yield return new WaitForSeconds(5f);
 
         // Hide the object after 5 seconds
-        popup.gameObject.SetActive(false);
-        Debug.Log("set false");
+        popupBg.gameObject.SetActive(false);
     }
 }

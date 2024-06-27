@@ -29,11 +29,11 @@ public class Filter : MonoBehaviour
     private List<string> coffeeSpots = new List<string>();
     private List<string> printers = new List<string>();
     private List<string> lockers = new List<string>();
-    
+
     public Sprite favoriteIconAdd;
     public GameObject favIcon;
 
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,7 +45,7 @@ public class Filter : MonoBehaviour
             listDictionary.Add(kvp.Key, kvp.Value);
             filteredOptions.Add(kvp.Key);
         }
-        
+
 
         destinations.ClearOptions();
         filteredOptions.Sort();
@@ -127,6 +127,8 @@ public class Filter : MonoBehaviour
     {
         destinations.ClearOptions();
         filteredOptions.Clear();
+
+        //Type filtering
         if (typeDropdown.value == 0)
         {
             foreach (KeyValuePair<string, string> kvp in listDictionary)
@@ -144,21 +146,31 @@ public class Filter : MonoBehaviour
                 }
             }
         }
-        
-        // New filtering using a dropdown menu
-        for (int i = filteredOptions.Count - 1; i >= 0; i--)
+
+        // Block filtering
+        if (blockDropdown.value != 0)
         {
-            if (!filteredOptions[i].StartsWith(blockDropdown.captionText.text))
+            for (int i = filteredOptions.Count - 1; i >= 0; i--)
             {
-                filteredOptions.RemoveAt(i);
-            }
-            else if (filteredOptions[i][2] != floorDropdown.captionText.text[0])
-            {
-                filteredOptions.RemoveAt(i);
+                if (!filteredOptions[i].StartsWith(blockDropdown.captionText.text))
+                {
+                    filteredOptions.RemoveAt(i);
+                }
             }
         }
-        
-        
+        // Floor filtering
+        if (floorDropdown.value != 0)
+        {
+            for (int i = filteredOptions.Count - 1; i >= 0; i--)
+            {
+                if (filteredOptions[i][2] != floorDropdown.captionText.text[0])
+                {
+                    filteredOptions.RemoveAt(i);
+                }
+            }
+        }
+
+
         filteredOptions.Sort();
         destinations.options.Insert(0, new TMP_Dropdown.OptionData("Choose Location"));
         destinations.AddOptions(filteredOptions);
