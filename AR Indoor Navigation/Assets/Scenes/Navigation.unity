@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 10533370}
   m_Layer: 12
   m_Name: B04.WC_2
-  m_TagString: Elevator
+  m_TagString: WC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -347,7 +347,7 @@ GameObject:
   - component: {fileID: 20512503}
   m_Layer: 12
   m_Name: B05.13
-  m_TagString: Elevator
+  m_TagString: Group Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -1806,7 +1806,7 @@ GameObject:
   - component: {fileID: 125941072}
   m_Layer: 12
   m_Name: B05.08
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -2205,7 +2205,7 @@ GameObject:
   - component: {fileID: 145674829}
   m_Layer: 12
   m_Name: B05.Stairs_1
-  m_TagString: Elevator
+  m_TagString: Stairs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -2690,7 +2690,7 @@ GameObject:
   - component: {fileID: 201227634}
   m_Layer: 12
   m_Name: C02.08
-  m_TagString: Elevator
+  m_TagString: Group Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -2795,7 +2795,7 @@ GameObject:
   - component: {fileID: 205876060}
   m_Layer: 12
   m_Name: B04.10
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -3891,7 +3891,7 @@ GameObject:
   - component: {fileID: 315072843}
   m_Layer: 12
   m_Name: C02.Stairs_1
-  m_TagString: Elevator
+  m_TagString: Stairs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -4416,7 +4416,7 @@ GameObject:
   - component: {fileID: 335904705}
   m_Layer: 12
   m_Name: B02.12
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -4714,7 +4714,7 @@ GameObject:
   - component: {fileID: 351487938}
   m_Layer: 12
   m_Name: B04.WC_HC
-  m_TagString: Elevator
+  m_TagString: WC (Handicap)
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -5102,7 +5102,7 @@ GameObject:
   - component: {fileID: 380413142}
   m_Layer: 12
   m_Name: C02.04
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -5448,7 +5448,7 @@ GameObject:
   - component: {fileID: 404900280}
   m_Layer: 12
   m_Name: B04.Printer
-  m_TagString: Elevator
+  m_TagString: Printer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -5583,8 +5583,8 @@ GameObject:
   - component: {fileID: 411186135}
   - component: {fileID: 411186134}
   m_Layer: 12
-  m_Name: B05.02
-  m_TagString: Elevator
+  m_Name: B05.01
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -5780,6 +5780,111 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 424532196}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &427680956
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 427680957}
+  - component: {fileID: 427680960}
+  - component: {fileID: 427680959}
+  - component: {fileID: 427680958}
+  m_Layer: 12
+  m_Name: B05.14
+  m_TagString: Group Room
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &427680957
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427680956}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.8, y: 5.403068, z: -21.14}
+  m_LocalScale: {x: 0.19999999, y: 0.19999999, z: 0.19999999}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 527596202}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &427680958
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427680956}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &427680959
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427680956}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 2bfdaeda28d6d2d41aec0ba9f1a03b34, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &427680960
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427680956}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &431103847
 GameObject:
   m_ObjectHideFlags: 0
@@ -5825,7 +5930,7 @@ GameObject:
   - component: {fileID: 431619757}
   m_Layer: 12
   m_Name: B05.07
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -6140,7 +6245,7 @@ GameObject:
   - component: {fileID: 460740996}
   m_Layer: 12
   m_Name: B05.10
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -6560,7 +6665,7 @@ GameObject:
   - component: {fileID: 504007871}
   m_Layer: 12
   m_Name: B05.Printer
-  m_TagString: Elevator
+  m_TagString: Printer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -6833,7 +6938,7 @@ GameObject:
   - component: {fileID: 524893518}
   m_Layer: 12
   m_Name: C02.07
-  m_TagString: Elevator
+  m_TagString: Group Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -6938,7 +7043,7 @@ GameObject:
   - component: {fileID: 525237607}
   m_Layer: 12
   m_Name: B05.WC_1
-  m_TagString: Elevator
+  m_TagString: WC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -6952,7 +7057,7 @@ Transform:
   m_GameObject: {fileID: 525237605}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.02, y: 5.403068, z: -7.16}
+  m_LocalPosition: {x: 9.69, y: 5.403068, z: -8}
   m_LocalScale: {x: 0.19999999, y: 0.19999999, z: 0.19999999}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7150,7 +7255,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &527596202
 Transform:
   m_ObjectHideFlags: 0
@@ -7172,6 +7277,9 @@ Transform:
   - {fileID: 525237606}
   - {fileID: 1596839688}
   - {fileID: 411186133}
+  - {fileID: 1079760833}
+  - {fileID: 2113930412}
+  - {fileID: 1608895594}
   - {fileID: 1939294951}
   - {fileID: 1197840089}
   - {fileID: 431619756}
@@ -7180,6 +7288,7 @@ Transform:
   - {fileID: 460740995}
   - {fileID: 778687840}
   - {fileID: 20512502}
+  - {fileID: 427680957}
   m_Father: {fileID: 1061770724}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &548849837
@@ -7699,7 +7808,7 @@ GameObject:
   - component: {fileID: 579149750}
   m_Layer: 12
   m_Name: B04.08a
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -9501,7 +9610,7 @@ GameObject:
   - component: {fileID: 677885314}
   m_Layer: 12
   m_Name: B04.04
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -9711,7 +9820,7 @@ GameObject:
   - component: {fileID: 680839639}
   m_Layer: 12
   m_Name: B02.07
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -10056,7 +10165,7 @@ GameObject:
   - component: {fileID: 723836123}
   m_Layer: 12
   m_Name: C02.WC_1
-  m_TagString: Elevator
+  m_TagString: WC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -10266,7 +10375,7 @@ GameObject:
   - component: {fileID: 730601255}
   m_Layer: 12
   m_Name: B04.Stairs_2
-  m_TagString: Elevator
+  m_TagString: Stairs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -10686,7 +10795,7 @@ GameObject:
   - component: {fileID: 749790153}
   m_Layer: 12
   m_Name: C02.06
-  m_TagString: Elevator
+  m_TagString: Group Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -11242,7 +11351,7 @@ GameObject:
   - component: {fileID: 778687841}
   m_Layer: 12
   m_Name: B05.12a
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -11494,7 +11603,7 @@ GameObject:
   - component: {fileID: 786103846}
   m_Layer: 12
   m_Name: B02.Printer
-  m_TagString: Elevator
+  m_TagString: Printer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -11599,7 +11708,7 @@ GameObject:
   - component: {fileID: 790025247}
   m_Layer: 12
   m_Name: B02.08
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -12474,7 +12583,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &867415206
 Transform:
   m_ObjectHideFlags: 0
@@ -12510,7 +12619,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8dbfb0afa3ad46940ac6c825703be3df, type: 2}
+  - {fileID: 2100000, guid: 71a8a7eb21ae8ec41abb8303f016d500, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12712,7 +12821,7 @@ GameObject:
   - component: {fileID: 893905743}
   m_Layer: 12
   m_Name: A02.WC_1
-  m_TagString: Elevator
+  m_TagString: WC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -13027,7 +13136,7 @@ GameObject:
   - component: {fileID: 912755525}
   m_Layer: 12
   m_Name: C02.21
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -13478,7 +13587,7 @@ GameObject:
   - component: {fileID: 948921077}
   m_Layer: 12
   m_Name: B04.03
-  m_TagString: Elevator
+  m_TagString: Group Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -14030,7 +14139,7 @@ GameObject:
   - component: {fileID: 982692613}
   m_Layer: 12
   m_Name: A02.21
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -14478,7 +14587,7 @@ GameObject:
   - component: {fileID: 1008145506}
   m_Layer: 12
   m_Name: B04.05
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -14793,7 +14902,7 @@ GameObject:
   - component: {fileID: 1039209489}
   m_Layer: 12
   m_Name: B02.06
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -15476,6 +15585,111 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1079760832
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1079760833}
+  - component: {fileID: 1079760836}
+  - component: {fileID: 1079760835}
+  - component: {fileID: 1079760834}
+  m_Layer: 12
+  m_Name: B05.02
+  m_TagString: Classroom
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &1079760833
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1079760832}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.81, y: 5.403068, z: -8.1}
+  m_LocalScale: {x: 0.19999999, y: 0.19999999, z: 0.19999999}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 527596202}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1079760834
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1079760832}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1079760835
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1079760832}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 2bfdaeda28d6d2d41aec0ba9f1a03b34, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1079760836
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1079760832}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1092464376
 GameObject:
   m_ObjectHideFlags: 0
@@ -15917,7 +16131,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5bc4c50e08ff05b4aa1b48d9d7430781, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2489159159464621496, guid: 5bc4c50e08ff05b4aa1b48d9d7430781, type: 3}
       propertyPath: m_LocalPosition.y
@@ -16098,8 +16312,8 @@ GameObject:
   - component: {fileID: 1126601222}
   - component: {fileID: 1126601221}
   m_Layer: 12
-  m_Name: B02.WC
-  m_TagString: Elevator
+  m_Name: B02.WC_1
+  m_TagString: WC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -17360,7 +17574,7 @@ GameObject:
   - component: {fileID: 1185479082}
   m_Layer: 12
   m_Name: C02.Printer
-  m_TagString: Elevator
+  m_TagString: Printer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -17496,7 +17710,7 @@ GameObject:
   - component: {fileID: 1197840090}
   m_Layer: 12
   m_Name: B05.06
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -17753,7 +17967,7 @@ GameObject:
   - component: {fileID: 1225519766}
   m_Layer: 12
   m_Name: C02.10
-  m_TagString: Elevator
+  m_TagString: Group Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -17858,7 +18072,7 @@ GameObject:
   - component: {fileID: 1238849437}
   m_Layer: 12
   m_Name: A02.06
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -18008,7 +18222,7 @@ GameObject:
   - component: {fileID: 1260850386}
   m_Layer: 12
   m_Name: B04.12
-  m_TagString: Elevator
+  m_TagString: Group Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -18247,7 +18461,7 @@ GameObject:
   - component: {fileID: 1273438866}
   m_Layer: 12
   m_Name: B04.11
-  m_TagString: Elevator
+  m_TagString: Group Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -18457,7 +18671,7 @@ GameObject:
   - component: {fileID: 1278981141}
   m_Layer: 12
   m_Name: B04.09
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -18562,7 +18776,7 @@ GameObject:
   - component: {fileID: 1285073956}
   m_Layer: 12
   m_Name: C02.14
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -19057,7 +19271,7 @@ GameObject:
   - component: {fileID: 1336666998}
   m_Layer: 12
   m_Name: A02.Stairs_2
-  m_TagString: Elevator
+  m_TagString: Stairs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -19162,7 +19376,7 @@ GameObject:
   - component: {fileID: 1355130287}
   m_Layer: 12
   m_Name: B02.05
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -19308,7 +19522,7 @@ GameObject:
   - component: {fileID: 1358340947}
   m_Layer: 12
   m_Name: A02.Stairs_1
-  m_TagString: Elevator
+  m_TagString: Stairs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -19623,7 +19837,7 @@ GameObject:
   - component: {fileID: 1368234002}
   m_Layer: 12
   m_Name: B02.Library
-  m_TagString: Elevator
+  m_TagString: Group Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -21117,7 +21331,7 @@ GameObject:
   - component: {fileID: 1422388779}
   m_Layer: 12
   m_Name: C02.17
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -21506,7 +21720,7 @@ GameObject:
   - component: {fileID: 1465860577}
   m_Layer: 12
   m_Name: B04.Stairs_1
-  m_TagString: Elevator
+  m_TagString: Stairs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -21920,7 +22134,7 @@ GameObject:
   - component: {fileID: 1519649346}
   m_Layer: 12
   m_Name: B05.09
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -22161,7 +22375,7 @@ GameObject:
   - component: {fileID: 1570483238}
   m_Layer: 12
   m_Name: C02.09a
-  m_TagString: Elevator
+  m_TagString: Group Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -22266,7 +22480,7 @@ GameObject:
   - component: {fileID: 1592272269}
   m_Layer: 12
   m_Name: B05.WC_HC
-  m_TagString: Elevator
+  m_TagString: WC (Handicap)
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -22476,7 +22690,7 @@ GameObject:
   - component: {fileID: 1596839689}
   m_Layer: 12
   m_Name: B05.WC_2
-  m_TagString: Elevator
+  m_TagString: WC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -22843,6 +23057,111 @@ Transform:
   - {fileID: 867415206}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1608895593
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1608895594}
+  - component: {fileID: 1608895597}
+  - component: {fileID: 1608895596}
+  - component: {fileID: 1608895595}
+  m_Layer: 12
+  m_Name: B05.04
+  m_TagString: Classroom
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &1608895594
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608895593}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 12.63, y: 5.403068, z: -1}
+  m_LocalScale: {x: 0.19999999, y: 0.19999999, z: 0.19999999}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 527596202}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1608895595
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608895593}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1608895596
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608895593}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 2bfdaeda28d6d2d41aec0ba9f1a03b34, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1608895597
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608895593}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1611607868
 GameObject:
   m_ObjectHideFlags: 0
@@ -22857,7 +23176,7 @@ GameObject:
   - component: {fileID: 1611607870}
   m_Layer: 12
   m_Name: A02.03
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -23731,7 +24050,7 @@ GameObject:
   - component: {fileID: 1715901547}
   m_Layer: 12
   m_Name: B02.Stairs_1
-  m_TagString: Elevator
+  m_TagString: Stairs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -24337,7 +24656,7 @@ GameObject:
   - component: {fileID: 1760854955}
   m_Layer: 12
   m_Name: C02.05
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -24652,7 +24971,7 @@ GameObject:
   - component: {fileID: 1777464459}
   m_Layer: 12
   m_Name: C02.03
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -25072,7 +25391,7 @@ GameObject:
   - component: {fileID: 1802052321}
   m_Layer: 12
   m_Name: B04.WC_1
-  m_TagString: Elevator
+  m_TagString: WC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -25177,7 +25496,7 @@ GameObject:
   - component: {fileID: 1802662801}
   m_Layer: 12
   m_Name: C02.16
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -25542,7 +25861,7 @@ GameObject:
   - component: {fileID: 1839717479}
   m_Layer: 12
   m_Name: C02.18
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -26157,7 +26476,7 @@ GameObject:
   - component: {fileID: 1912029933}
   m_Layer: 12
   m_Name: C02.Stairs_2
-  m_TagString: Elevator
+  m_TagString: Stairs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -26401,7 +26720,7 @@ GameObject:
   - component: {fileID: 1914194705}
   m_Layer: 12
   m_Name: B05.Stairs_2
-  m_TagString: Elevator
+  m_TagString: Stairs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -26547,7 +26866,7 @@ GameObject:
   - component: {fileID: 1939294952}
   m_Layer: 12
   m_Name: B05.05
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -26561,7 +26880,7 @@ Transform:
   m_GameObject: {fileID: 1939294950}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.85, y: 5.403068, z: 0.81}
+  m_LocalPosition: {x: 15.75, y: 5.403068, z: 1.94}
   m_LocalScale: {x: 0.19999999, y: 0.19999999, z: 0.19999999}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -27000,7 +27319,7 @@ GameObject:
   - component: {fileID: 1999772851}
   m_Layer: 12
   m_Name: C02.09b
-  m_TagString: Elevator
+  m_TagString: Group Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -27105,7 +27424,7 @@ GameObject:
   - component: {fileID: 2010443584}
   m_Layer: 12
   m_Name: B04.08b
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -27315,7 +27634,7 @@ GameObject:
   - component: {fileID: 2015954612}
   m_Layer: 12
   m_Name: C02.15
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -27420,7 +27739,7 @@ GameObject:
   - component: {fileID: 2017338788}
   m_Layer: 12
   m_Name: C02.22
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -27665,7 +27984,7 @@ GameObject:
   - component: {fileID: 2040820810}
   m_Layer: 12
   m_Name: B04.07
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -27770,7 +28089,7 @@ GameObject:
   - component: {fileID: 2060643967}
   m_Layer: 12
   m_Name: C02.11
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -27980,7 +28299,7 @@ GameObject:
   - component: {fileID: 2075667661}
   m_Layer: 12
   m_Name: B04.06
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -28221,7 +28540,7 @@ GameObject:
   - component: {fileID: 2090150559}
   m_Layer: 12
   m_Name: B02.Stairs_2
-  m_TagString: Elevator
+  m_TagString: Stairs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -28326,7 +28645,7 @@ GameObject:
   - component: {fileID: 2093393663}
   m_Layer: 12
   m_Name: C02.01
-  m_TagString: Elevator
+  m_TagString: Classroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -28731,6 +29050,111 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2111490038}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2113930411
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2113930412}
+  - component: {fileID: 2113930415}
+  - component: {fileID: 2113930414}
+  - component: {fileID: 2113930413}
+  m_Layer: 12
+  m_Name: B05.03
+  m_TagString: Group Room
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &2113930412
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113930411}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 12.62, y: 5.403068, z: -5.44}
+  m_LocalScale: {x: 0.19999999, y: 0.19999999, z: 0.19999999}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 527596202}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2113930413
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113930411}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &2113930414
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113930411}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 2bfdaeda28d6d2d41aec0ba9f1a03b34, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &2113930415
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113930411}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &2122932777
 GameObject:
