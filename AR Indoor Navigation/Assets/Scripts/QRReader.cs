@@ -134,6 +134,8 @@ public class QRReader : MonoBehaviour
             targets.transform.Find("C04").gameObject.SetActive(true);
             targets.transform.Find("C05").gameObject.SetActive(true);
             targets.transform.Find("X03").gameObject.SetActive(true);
+            targets.transform.Find("A04").gameObject.SetActive(true);
+
 
             setNav.CollectTargets();
 
