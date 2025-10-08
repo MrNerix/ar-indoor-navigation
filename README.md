@@ -1,11 +1,32 @@
-# ar-indoor-navigation
-An AR indoor navigation system.
-## Guide:
-1. Create a 3D project.
-2. Clone repository to a file.
-3. Move files named Library, Logs, UserSettings from the local 3D project directory you created to the cloned project directory.
-4. Open Unity Hub.
-5. Press the little arrow next to Add on the top right of the screen.
-6. Select "Add project form disk", and navigate to where you cloned the repository.
-7. Open the "../ar-indoor-navigation/AR Indoor Navigation".
-8. Open the project.
+# AR Indoor Navigation
+
+An Augmented Reality (AR) indoor navigation system built with Unity.
+
+> Repo: https://github.com/MrNerix/ar-indoor-navigation
+
+---
+
+## Features
+
+- AR-powered guidance for indoor spaces
+- Unity project, ready to open via Unity Hub
+- Cross-platform project structure (ARKit/ARCore support depends on your Unity packages)
+
+---
+
+## Prerequisites
+
+- **Unity** (use an LTS version compatible with your AR packages)
+- **Unity Hub** installed
+- Platform SDKs/tooling as needed (e.g., Xcode for iOS, Android SDK for Android)
+
+> Make sure to install AR packages you plan to use (e.g., AR Foundation, ARCore XR Plugin, ARKit XR Plugin) from the Unity Package Manager.
+
+---
+
+## Getting Started
+
+1. **Create a new empty 3D project in Unity** (temporary, used to generate local project folders).
+2. **Clone this repository**:
+   ```bash
+   git clone https://github.com/MrNerix/ar-indoor-navigation.git
